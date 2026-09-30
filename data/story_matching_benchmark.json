@@ -1,0 +1,1202 @@
+[
+  {
+    "id": "pair_01_ather_konarc",
+    "type": "POSITIVE_MERGE",
+    "description": "Ather Konarc EV Scooter Launch",
+    "articleA": {
+      "id": "ARDJ5GroPekH3hRcdTfD",
+      "title": "Ather's Biggest Attempt Yet to Make EVs Mainstream: ₹99,999 Konarc",
+      "category": "News",
+      "summary": "Ather Energy unveils its mass-market Konarc electric scooter starting at Rs 99,999 with 140km range.",
+      "publishedAt": "2026-08-30T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "B3Am4mzhui8WBaq4BmhL",
+      "title": "Ather Energy Unveils Konarc EV Scooter Starting at ₹99,999",
+      "category": "News",
+      "summary": "Ather announces the Konarc EV priced at 99,999 rupees aimed at mainstream two-wheeler buyers across India.",
+      "publishedAt": "2026-08-30T00:00:00.000Z"
+    },
+    "expectedDecision": "AUTO_ATTACH"
+  },
+  {
+    "id": "pair_02_vigyanlabs_femto",
+    "type": "POSITIVE_MERGE",
+    "description": "Vigyanlabs FEMTO Sovereign AI Platform Launch",
+    "articleA": {
+      "id": "RUq3T0zn4n3UJuR96khR",
+      "title": "Mysuru-based Vigyanlabs launches sovereign AI platform FEMTO with waterless cooling",
+      "category": "AI & ML",
+      "summary": "Vigyanlabs launches FEMTO, an on-premises sovereign AI platform designed for energy-efficient data centres.",
+      "publishedAt": "2026-09-07T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "eDIb8zUMfLF3Ir44x6Rn",
+      "title": "Vigyanlabs launches FEMTO sovereign AI-in-a-Box for on-premises GPU workloads",
+      "category": "AI & ML",
+      "summary": "Vigyanlabs deploys FEMTO AI-in-a-box for enterprises seeking sovereign GPU acceleration and privacy.",
+      "publishedAt": "2026-09-09T00:00:00.000Z"
+    },
+    "expectedDecision": "AUTO_ATTACH"
+  },
+  {
+    "id": "pair_03_isro_semicryo",
+    "type": "POSITIVE_MERGE",
+    "description": "ISRO Semi-Cryogenic Rocket Engine 200-Tonne Thrust Test",
+    "articleA": {
+      "id": "jQ2IssXNX9zSqzVcGy6E",
+      "title": "ISRO Just Ran Its New Semi-Cryogenic Rocket Engine at Full Thrust for the First Time",
+      "category": "Tech",
+      "summary": "ISRO successfully conducts full-duration hot test of the semi-cryogenic engine power head at Mahendragiri facility.",
+      "publishedAt": "2026-09-06T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "KX0pvxG8rlBFOpB5cvi9",
+      "title": "ISRO tests semi-cryogenic engine power head at full 200-tonne thrust",
+      "category": "Engineering",
+      "summary": "ISRO completes critical 200-tonne thrust semi-cryogenic power head test validating high-thrust capabilities.",
+      "publishedAt": "2026-09-17T00:00:00.000Z"
+    },
+    "expectedDecision": "AUTO_ATTACH"
+  },
+  {
+    "id": "pair_04_indo_russia_hub",
+    "type": "POSITIVE_MERGE",
+    "description": "India-Russia Technology Hub AI Healthcare MoUs",
+    "articleA": {
+      "id": "FjcyZZNmobbheSMxm94j",
+      "title": "Indo-Russia technology hub signs four agreements spanning AI, healthcare and joint product development",
+      "category": "AI & ML",
+      "summary": "The Indo-Russia technology hub signs bilateral agreements to develop AI healthcare and joint electronics.",
+      "publishedAt": "2026-09-17T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "J11tgcVqVRvhK0oskkZw",
+      "title": "India-Russia technology hub signs MoUs spanning AI healthcare, advanced electronics and new AI-cybersecurity centre",
+      "category": "AI & ML",
+      "summary": "India and Russia formalise four MoUs covering medical diagnostics AI, cybersecurity research and electronics.",
+      "publishedAt": "2026-09-17T00:00:00.000Z"
+    },
+    "expectedDecision": "AUTO_ATTACH"
+  },
+  {
+    "id": "pair_05_fuel_cycle_gcc",
+    "type": "POSITIVE_MERGE",
+    "description": "Fuel Cycle Navi Mumbai GCC Expansion",
+    "articleA": {
+      "id": "4MffJGwDB0FvCVHyTu5m",
+      "title": "Fuel Cycle opens Navi Mumbai GCC for AI, engineering and product development",
+      "category": "AI & ML",
+      "summary": "Fuel Cycle inaugurates a new Global Capability Centre in Navi Mumbai to lead AI engineering operations.",
+      "publishedAt": "2026-09-24T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "synth_fc_hiring",
+      "title": "Fuel Cycle begins hiring 200 AI engineers for new Navi Mumbai GCC hub",
+      "category": "AI & ML",
+      "summary": "Fuel Cycle expands its engineering footprint with 200 new roles at its newly opened Navi Mumbai GCC.",
+      "publishedAt": "2026-09-26T00:00:00.000Z"
+    },
+    "expectedDecision": "AUTO_ATTACH"
+  },
+  {
+    "id": "pair_06_brics_ai",
+    "type": "POSITIVE_MERGE",
+    "description": "BRICS New Delhi AI Cooperation & Open Source Framework",
+    "articleA": {
+      "id": "9bKzXyxf4BbAyIPmnSiy",
+      "title": "India plans BRICS push for cooperation in AI, quantum computing and semiconductors",
+      "category": "AI & ML",
+      "summary": "India proposes framework for member nations to share AI models, research infrastructure and semiconductor tech.",
+      "publishedAt": "2026-09-07T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "jdB4kclKZv0MBeVzJdlV",
+      "title": "BRICS New Delhi Declaration pushes wider AI access, trustworthy systems and cooperation on cybersecurity, quantum and digital infrastructure",
+      "category": "AI & ML",
+      "summary": "BRICS nations adopt the New Delhi Declaration formalising joint AI research, open language models and cybersecurity.",
+      "publishedAt": "2026-09-17T00:00:00.000Z"
+    },
+    "expectedDecision": "AUTO_ATTACH"
+  },
+  {
+    "id": "pair_07_cdac_param",
+    "type": "POSITIVE_MERGE",
+    "description": "C-DAC PARAM Vidya & Shavak-QS Launch",
+    "articleA": {
+      "id": "Z6eyPIzj6TCazrPniEjK",
+      "title": "C-DAC launches PARAM Vidya AI Lab-in-a-Box and PARAM Shavak-QS quantum simulation platform",
+      "category": "AI & ML",
+      "summary": "C-DAC rolls out PARAM Vidya educational AI systems and quantum simulators for Indian universities.",
+      "publishedAt": "2026-09-23T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "synth_cdac_param_deploy",
+      "title": "PARAM Vidya AI Lab-in-a-Box rolled out by C-DAC to 50 engineering colleges",
+      "category": "AI & ML",
+      "summary": "C-DAC begins deploying PARAM Vidya AI kits to technical institutes following the national launch.",
+      "publishedAt": "2026-09-25T00:00:00.000Z"
+    },
+    "expectedDecision": "AUTO_ATTACH"
+  },
+  {
+    "id": "pair_08_coforge_strategy_vs_vehicle",
+    "type": "HARD_NEGATIVE_SAME_ENTITY",
+    "description": "Coforge Strategy vs Coforge Vehicle Lifecycle Platform (Different Events)",
+    "articleA": {
+      "id": "1eFiMz3BE1p3qklIqvc3",
+      "title": "Coforge expands AI-led engineering strategy to move high-tech firms from pilots to production",
+      "category": "AI & ML",
+      "summary": "Coforge outlines its enterprise AI transformation framework targeting high-tech clients transitioning to scale.",
+      "publishedAt": "2026-09-17T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "SNx010Ji4hEKB3syw9bE",
+      "title": "Coforge launches AI-powered vehicle lifecycle intelligence platform for lenders and fleet operators",
+      "category": "AI & ML",
+      "summary": "Coforge releases a specialized automotive intelligence solution for tracking fleet health and credit risk.",
+      "publishedAt": "2026-09-20T00:00:00.000Z"
+    },
+    "expectedDecision": "CREATE_NEW"
+  },
+  {
+    "id": "pair_09_coforge_vehicle_vs_valuegates",
+    "type": "HARD_NEGATIVE_SAME_ENTITY",
+    "description": "Coforge Vehicle Platform vs Value Gates Framework (Different Events)",
+    "articleA": {
+      "id": "SNx010Ji4hEKB3syw9bE",
+      "title": "Coforge launches AI-powered vehicle lifecycle intelligence platform for lenders and fleet operators",
+      "category": "AI & ML",
+      "summary": "Coforge releases an automotive solution for fleet operators and lenders.",
+      "publishedAt": "2026-09-20T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "VbcpjvNavzOMOhT95kCH",
+      "title": "Coforge launches Value Gates Framework to measure business outcomes from AI projects",
+      "category": "AI & ML",
+      "summary": "Coforge introduces an audit methodology called Value Gates to track enterprise ROI on generative AI investments.",
+      "publishedAt": "2026-09-20T00:00:00.000Z"
+    },
+    "expectedDecision": "CREATE_NEW"
+  },
+  {
+    "id": "pair_10_npci_fimi_vs_ainxt",
+    "type": "HARD_NEGATIVE_SAME_ENTITY",
+    "description": "NPCI FiMI Banking Model vs NPCI AiNxt Platform (Different Initiatives)",
+    "articleA": {
+      "id": "09ZsSpRHxKrRg2vQ3Lgf",
+      "title": "NPCI unveils sovereign FiMI Banking AI model with open benchmarks for Indian retail banking",
+      "category": "AI & ML",
+      "summary": "NPCI launches the FiMI domain-specific foundation model for Indian banking languages and financial workflows.",
+      "publishedAt": "2026-09-17T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "NWYUw7k68fWDHXno4qjo",
+      "title": "NPCI launches open-source agentic AI platforms AiNxt and AtOM for UPI partners and developers",
+      "category": "AI & ML",
+      "summary": "NPCI announces open-source developer SDKs AiNxt and AtOM for integrating autonomous agents with UPI rails.",
+      "publishedAt": "2026-09-10T00:00:00.000Z"
+    },
+    "expectedDecision": "CREATE_NEW"
+  },
+  {
+    "id": "pair_11_npci_ainxt_vs_registry",
+    "type": "HARD_NEGATIVE_SAME_ENTITY",
+    "description": "NPCI AiNxt Platform vs NPCI AI Payments Registry (Different Initiatives)",
+    "articleA": {
+      "id": "NWYUw7k68fWDHXno4qjo",
+      "title": "NPCI launches open-source agentic AI platforms AiNxt and AtOM for UPI partners and developers",
+      "category": "AI & ML",
+      "summary": "NPCI introduces agent platforms for UPI integration.",
+      "publishedAt": "2026-09-10T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "fdTqf3WbaE33dgRp7guY",
+      "title": "NPCI plans registry to verify AI agents making payments on UPI",
+      "category": "AI & ML",
+      "summary": "NPCI establishes an identity and security registry to authenticate automated agent transactions on UPI networks.",
+      "publishedAt": "2026-09-10T00:00:00.000Z"
+    },
+    "expectedDecision": "CREATE_NEW"
+  },
+  {
+    "id": "pair_12_salesforce_air_india_vs_christ",
+    "type": "HARD_NEGATIVE_SAME_ENTITY",
+    "description": "Salesforce Air India Partnership vs Salesforce CHRIST University Lab (Different Events)",
+    "articleA": {
+      "id": "9FlrtrGbkGi1jRhgti9P",
+      "title": "Air India partners with Salesforce to deploy Agentforce AI agents for refunds, baggage and ticket changes",
+      "category": "AI & ML",
+      "summary": "Air India deploys Salesforce Agentforce autonomous agents across passenger support systems.",
+      "publishedAt": "2026-09-15T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "OHdmZLLGD0aH0crDDfAP",
+      "title": "CHRIST University and Salesforce partner to establish AI Innovation Lab and Academia Centre of Excellence in Bengaluru",
+      "category": "AI & ML",
+      "summary": "Salesforce establishes an AI centre of excellence and innovation laboratory with CHRIST University in Bengaluru.",
+      "publishedAt": "2026-09-24T00:00:00.000Z"
+    },
+    "expectedDecision": "CREATE_NEW"
+  },
+  {
+    "id": "pair_13_isro_semicryo_vs_eos05",
+    "type": "HARD_NEGATIVE_SAME_ENTITY",
+    "description": "ISRO Semi-Cryogenic Engine Test vs ISRO EOS-05 Satellite (Different Missions)",
+    "articleA": {
+      "id": "KX0pvxG8rlBFOpB5cvi9",
+      "title": "ISRO tests semi-cryogenic engine power head at full 200-tonne thrust",
+      "category": "Engineering",
+      "summary": "ISRO achieves milestone 200-tonne thrust engine validation.",
+      "publishedAt": "2026-09-17T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "ePDuNm9jxKYZhryauDA5",
+      "title": "EOS-05 completes its first orbit-raising manoeuvre after GSLV-F17 launch",
+      "category": "Science",
+      "summary": "ISRO successfully conducts propulsion firing to elevate EOS-05 satellite into designated operational orbit.",
+      "publishedAt": "2026-09-06T00:00:00.000Z"
+    },
+    "expectedDecision": "CREATE_NEW"
+  },
+  {
+    "id": "pair_14_isro_eos05_vs_navic",
+    "type": "HARD_NEGATIVE_SAME_ENTITY",
+    "description": "ISRO EOS-05 Earth Observation vs ISRO NavIC NVS-03 Navigation (Different Missions)",
+    "articleA": {
+      "id": "ePDuNm9jxKYZhryauDA5",
+      "title": "EOS-05 completes its first orbit-raising manoeuvre after GSLV-F17 launch",
+      "category": "Science",
+      "summary": "EOS-05 completes orbit-raising manoeuvre.",
+      "publishedAt": "2026-09-06T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "wLcLLckHrccQFiEcj3ff",
+      "title": "India’s NavIC Gets a Boost: NVS-03 Satellite Ready for Launch",
+      "category": "Article",
+      "summary": "ISRO prepares NVS-03 navigation satellite for upcoming launch to augment the regional GPS constellation.",
+      "publishedAt": "2026-08-18T00:00:00.000Z"
+    },
+    "expectedDecision": "CREATE_NEW"
+  },
+  {
+    "id": "pair_15_google_gemini_vs_agri",
+    "type": "HARD_NEGATIVE_SAME_ENTITY",
+    "description": "Google Gemini 3.7 Flash vs Google Agri AI Models (Different Events)",
+    "articleA": {
+      "id": "o4Vl7Kolpk2q2pdDphDz",
+      "title": "Google Launches Gemini 3.7 Flash for Coding & AI Agents",
+      "category": "Article",
+      "summary": "Google releases Gemini 3.7 Flash featuring high-speed hybrid reasoning for code and agentic tools.",
+      "publishedAt": "2026-08-18T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "RUFV4GCYeD2DO2WlDO6Z",
+      "title": "AI and traditional farming can coexist: Google executive on Indian agri models",
+      "category": "AI & ML",
+      "summary": "Google India leadership discusses localized agricultural computer vision models supporting smallholder farmers.",
+      "publishedAt": "2026-09-06T00:00:00.000Z"
+    },
+    "expectedDecision": "CREATE_NEW"
+  },
+  {
+    "id": "pair_16_openai_gpt5_vs_ani",
+    "type": "HARD_NEGATIVE_SAME_ENTITY",
+    "description": "OpenAI GPT-5.6 Sol vs OpenAI ANI Delhi High Court Copyright Dispute (Different Events)",
+    "articleA": {
+      "id": "UmhQhBvhkfbTdBe47tEa",
+      "title": "OpenAI Unveils “Ultrafast” Mode for GPT‑5.6 Sol",
+      "category": "Article",
+      "summary": "OpenAI debuts new low-latency inference mode for its flagship model GPT-5.6 Sol.",
+      "publishedAt": "2026-08-18T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "3tP0JOcStQ1mnpyv8pi2",
+      "title": "ANI vs OpenAI: Delhi High Court refuses immediate stay on copyright ruling",
+      "category": "AI & ML",
+      "summary": "Delhi High Court hears copyright infringement proceedings brought by news agency ANI against OpenAI.",
+      "publishedAt": "2026-09-17T00:00:00.000Z"
+    },
+    "expectedDecision": "CREATE_NEW"
+  },
+  {
+    "id": "pair_17_openai_ani_vs_bccl",
+    "type": "HARD_NEGATIVE_SAME_ENTITY",
+    "description": "OpenAI ANI Lawsuit vs OpenAI BCCL Journalism Partnership (Different Events)",
+    "articleA": {
+      "id": "3tP0JOcStQ1mnpyv8pi2",
+      "title": "ANI vs OpenAI: Delhi High Court refuses immediate stay on copyright ruling",
+      "category": "AI & ML",
+      "summary": "Delhi High Court copyright case between ANI and OpenAI.",
+      "publishedAt": "2026-09-17T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "Vo9AzI0eY6OQVbKADxRK",
+      "title": "BCCL partners with OpenAI to surface Indian journalism in ChatGPT with attribution and source links",
+      "category": "AI & ML",
+      "summary": "Times Group publisher BCCL enters strategic content licensing and attribution agreement with OpenAI.",
+      "publishedAt": "2026-09-07T00:00:00.000Z"
+    },
+    "expectedDecision": "CREATE_NEW"
+  },
+  {
+    "id": "pair_18_meta_muse_vs_cloudflare_wallets",
+    "type": "CLEAR_NEGATIVE",
+    "description": "Meta Muse Code vs Cloudflare AI Agent Wallets",
+    "articleA": {
+      "id": "Ap64RkoSU1bFlek12mMI",
+      "title": "Meta Rolls Out Muse Code & Open-Weight Muse Glimmer for Agents",
+      "category": "Article",
+      "summary": "Meta open-sources Muse family models specialized in fast code execution and tool calling.",
+      "publishedAt": "2026-08-18T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "3Qokm8yWblLRw5aE95kQ",
+      "title": "Cloudflare Gives AI Agents Their Own Wallets",
+      "category": "Article",
+      "summary": "Cloudflare launches crypto and micro-payment wallets allowing autonomous agents to pay for web APIs.",
+      "publishedAt": "2026-08-18T00:00:00.000Z"
+    },
+    "expectedDecision": "CREATE_NEW"
+  },
+  {
+    "id": "pair_19_gujarat_vision_vs_karnataka_datacentre",
+    "type": "HARD_NEGATIVE_SAME_TOPIC",
+    "description": "Gujarat 2047 Vision vs Karnataka 2026-2031 Data Centre Policy (Different States/Policies)",
+    "articleA": {
+      "id": "3QgdX3DCrHAt3QwO4LnH",
+      "title": "Gujarat's 2047 industrial vision puts AI, semiconductors and data centres at the centre of growth",
+      "category": "AI & ML",
+      "summary": "Gujarat unveils long-term industrial masterplan prioritizing semiconductor fabrication and AI infrastructure.",
+      "publishedAt": "2026-09-06T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "nfanzMWVq3Sv5DmWxz6v",
+      "title": "Karnataka clears 2026–2031 data-centre policy targeting 1 GW IT load and 10–12% of India’s AI-ready capacity",
+      "category": "AI & ML",
+      "summary": "Karnataka state cabinet approves data centre incentives to attract 1GW green power hyperscalers.",
+      "publishedAt": "2026-09-18T00:00:00.000Z"
+    },
+    "expectedDecision": "CREATE_NEW"
+  },
+  {
+    "id": "pair_20_west_bengal_voice_vs_tripura_ai_utsav",
+    "type": "HARD_NEGATIVE_SAME_TOPIC",
+    "description": "West Bengal Voice Navigation vs Tripura AI Utsav (Different States)",
+    "articleA": {
+      "id": "4J1vhSSK5xtZfCboHBFj",
+      "title": "West Bengal moves to add AI-powered voice navigation to government websites",
+      "category": "AI & ML",
+      "summary": "West Bengal IT department integrates Bengali voice navigation for portal accessibility.",
+      "publishedAt": "2026-09-12T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "TeeMPM1t6Sh7wXqRlq22",
+      "title": "Tripura launches AI Utsav to bring free AI learning to students across 1,920 government schools",
+      "category": "AI & ML",
+      "summary": "Tripura education ministry rolls out statewide AI curriculum for high school students.",
+      "publishedAt": "2026-09-17T00:00:00.000Z"
+    },
+    "expectedDecision": "CREATE_NEW"
+  },
+  {
+    "id": "pair_21_matel_motion_funding",
+    "type": "POSITIVE_MERGE",
+    "description": "Matel Motion Series B ₹130 Cr Powertrain Scaling",
+    "articleA": {
+      "id": "matel_01",
+      "title": "Pune EV motor maker Matel Motion raises ₹130 crore in Series B round",
+      "category": "Startups",
+      "summary": "Matel Motion secures Rs 130 crore to expand magnetless powertrain manufacturing in Pune.",
+      "publishedAt": "2026-09-10T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "matel_02",
+      "title": "Matel Motion to scale Pune EV motor plant following ₹130 Cr Series B funding",
+      "category": "Startups",
+      "summary": "Matel Motion begins plant expansion in Pune to increase monthly drive unit output following fresh capital infusion.",
+      "publishedAt": "2026-09-14T00:00:00.000Z"
+    },
+    "expectedDecision": "AUTO_ATTACH"
+  },
+  {
+    "id": "pair_22_sarvam_bulbul_tts",
+    "type": "POSITIVE_MERGE",
+    "description": "Sarvam AI Bulbul Voice Model Deployment",
+    "articleA": {
+      "id": "sarvam_01",
+      "title": "Sarvam AI introduces bulbul:v3 neural TTS engine across Indian regional languages",
+      "category": "AI & ML",
+      "summary": "Sarvam unveils bulbul:v3 text-to-speech system supporting Hindi, Telugu, Tamil, and Marathi narration.",
+      "publishedAt": "2026-09-02T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "sarvam_02",
+      "title": "Indian enterprises deploy Sarvam AI bulbul:v3 for automated voice synthesis",
+      "category": "AI & ML",
+      "summary": "Early enterprise partners adopt Sarvam bulbul:v3 voice narration across mobile apps and customer support.",
+      "publishedAt": "2026-09-08T00:00:00.000Z"
+    },
+    "expectedDecision": "AUTO_ATTACH"
+  },
+  {
+    "id": "pair_23_nvidia_hyderabad_center",
+    "type": "POSITIVE_MERGE",
+    "description": "NVIDIA Hyderabad AI Design Center & Hiring",
+    "articleA": {
+      "id": "nv_hyd_01",
+      "title": "NVIDIA confirms new AI design and engineering center in Hyderabad",
+      "category": "Technology",
+      "summary": "NVIDIA announces a major engineering center in Hyderabad focusing on GPU architecture and AI software.",
+      "publishedAt": "2026-09-15T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "nv_hyd_02",
+      "title": "NVIDIA begins hiring engineers for newly established Hyderabad AI design center",
+      "category": "Technology",
+      "summary": "NVIDIA opens recruitment for semiconductor engineers at its new Hyderabad engineering facility.",
+      "publishedAt": "2026-09-22T00:00:00.000Z"
+    },
+    "expectedDecision": "AUTO_ATTACH"
+  },
+  {
+    "id": "pair_24_bharatgpt_hanuman",
+    "type": "POSITIVE_MERGE",
+    "description": "BharatGPT Hanooman Multimodal Model Release",
+    "articleA": {
+      "id": "bgpt_01",
+      "title": "BharatGPT ecosystem reveals Hanooman series of Indic foundation models",
+      "category": "AI & ML",
+      "summary": "IIT Bombay and Seetha AI consortium showcase Hanooman multimodal LLMs trained on 11 Indian languages.",
+      "publishedAt": "2026-08-28T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "bgpt_02",
+      "title": "Hanooman Indic AI models released for public testing across 11 regional languages",
+      "category": "AI & ML",
+      "summary": "The BharatGPT team opens developer access to Hanooman foundation models.",
+      "publishedAt": "2026-09-05T00:00:00.000Z"
+    },
+    "expectedDecision": "AUTO_ATTACH"
+  },
+  {
+    "id": "pair_25_tsmc_india_fab",
+    "type": "POSITIVE_MERGE",
+    "description": "Tata TSMC Dholera Semiconductor Fab Construction",
+    "articleA": {
+      "id": "tsmc_01",
+      "title": "Tata and TSMC break ground on ₹91,000 crore semiconductor fab in Dholera",
+      "category": "Hardware",
+      "summary": "Tata Electronics starts civil construction of its 28nm chip fabrication facility in Dholera, Gujarat.",
+      "publishedAt": "2026-09-01T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "tsmc_02",
+      "title": "Equipment orders placed for Tata-TSMC Dholera semiconductor fab",
+      "category": "Hardware",
+      "summary": "Tata Electronics finalises first phase tool and lithography orders for the Dholera semiconductor project.",
+      "publishedAt": "2026-09-18T00:00:00.000Z"
+    },
+    "expectedDecision": "AUTO_ATTACH"
+  },
+  {
+    "id": "pair_26_nvidia_hyd_vs_nvidia_quantum",
+    "type": "HARD_NEGATIVE_SAME_ENTITY",
+    "description": "NVIDIA Hyderabad Center vs NVIDIA cuQuantum Cloud SDK (Different Events)",
+    "articleA": {
+      "id": "nv_hyd_01",
+      "title": "NVIDIA confirms new AI design and engineering center in Hyderabad",
+      "category": "Technology",
+      "summary": "NVIDIA establishes engineering operations in Hyderabad.",
+      "publishedAt": "2026-09-15T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "nv_quant_01",
+      "title": "NVIDIA launches cuQuantum Cloud SDK for quantum circuit simulation on DGX Cloud",
+      "category": "Technology",
+      "summary": "NVIDIA provides cloud APIs for researchers simulating quantum algorithms using GPU clusters.",
+      "publishedAt": "2026-09-16T00:00:00.000Z"
+    },
+    "expectedDecision": "CREATE_NEW"
+  },
+  {
+    "id": "pair_27_sarvam_bulbul_vs_sarvam_legal",
+    "type": "HARD_NEGATIVE_SAME_ENTITY",
+    "description": "Sarvam Voice Model vs Sarvam Indian Legal Judgment Parser (Different Events)",
+    "articleA": {
+      "id": "sarvam_01",
+      "title": "Sarvam AI introduces bulbul:v3 neural TTS engine across Indian regional languages",
+      "category": "AI & ML",
+      "summary": "Sarvam unveils bulbul:v3 text-to-speech system.",
+      "publishedAt": "2026-09-02T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "sarvam_leg_01",
+      "title": "Sarvam AI open-sources Nyaya-LLM for Indian court judgment summarisation",
+      "category": "AI & ML",
+      "summary": "Sarvam releases domain model trained on Supreme Court and High Court precedents.",
+      "publishedAt": "2026-09-20T00:00:00.000Z"
+    },
+    "expectedDecision": "CREATE_NEW"
+  },
+  {
+    "id": "pair_28_zomato_drone_vs_zomato_blinkit_darkstores",
+    "type": "HARD_NEGATIVE_SAME_ENTITY",
+    "description": "Zomato Drone Trials vs Blinkit Dark Store Expansion (Different Events)",
+    "articleA": {
+      "id": "zomato_01",
+      "title": "Zomato gets DGCA approval for beyond visual line of sight drone delivery trials",
+      "category": "Startups",
+      "summary": "Zomato secures regulatory nod to pilot medical and food delivery drones in designated air corridors.",
+      "publishedAt": "2026-09-05T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "blinkit_01",
+      "title": "Blinkit to add 500 new dark stores across Tier-2 cities in FY27",
+      "category": "Startups",
+      "summary": "Zomato-owned quick commerce unit Blinkit reveals aggressive warehousing expansion roadmap.",
+      "publishedAt": "2026-09-12T00:00:00.000Z"
+    },
+    "expectedDecision": "CREATE_NEW"
+  },
+  {
+    "id": "pair_29_reliance_solar_vs_reliance_jio_5g",
+    "type": "HARD_NEGATIVE_SAME_ENTITY",
+    "description": "Reliance Jamnagar Giga Complex vs Jio 5G Cloud Gaming (Different Events)",
+    "articleA": {
+      "id": "ril_solar_01",
+      "title": "Reliance begins manufacturing solar PV modules at Jamnagar Dhirubhai Ambani Giga Complex",
+      "category": "Energy",
+      "summary": "Reliance New Energy operationalises first phase of its 10GW solar panel facility in Gujarat.",
+      "publishedAt": "2026-09-03T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "jio_cloud_01",
+      "title": "Jio launches cloud gaming service with server clusters hosted across 10 data centres",
+      "category": "Technology",
+      "summary": "Reliance Jio introduces edge gaming network for 5G smartphone subscribers.",
+      "publishedAt": "2026-09-15T00:00:00.000Z"
+    },
+    "expectedDecision": "CREATE_NEW"
+  },
+  {
+    "id": "pair_30_ola_cells_vs_ola_krutrim",
+    "type": "HARD_NEGATIVE_SAME_ENTITY",
+    "description": "Ola Cell Gigafactory vs Krutrim AI Cloud Architecture (Different Events)",
+    "articleA": {
+      "id": "ola_cell_01",
+      "title": "Ola Electric begins commercial production of 4680 battery cells at Krishnagiri Gigafactory",
+      "category": "EV",
+      "summary": "Ola Electric starts commercial output of indigenous battery cells for its S1 scooter fleet.",
+      "publishedAt": "2026-09-01T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "ola_krutrim_01",
+      "title": "Krutrim Cloud announces silicon partnership for custom AI inference chips",
+      "category": "AI & ML",
+      "summary": "Krutrim partners with global foundries to design dedicated edge AI processing units.",
+      "publishedAt": "2026-09-18T00:00:00.000Z"
+    },
+    "expectedDecision": "CREATE_NEW"
+  },
+  {
+    "id": "pair_31_ather_delivery_milestone",
+    "type": "POSITIVE_MERGE",
+    "description": "Ather Konarc Launch vs First Customer Deliveries",
+    "articleA": {
+      "id": "ath_launch_01",
+      "title": "Ather Energy launches Konarc electric scooter starting at ₹99,999",
+      "category": "EV",
+      "summary": "Ather Energy unveils its mass-market Konarc electric scooter targeting mainstream adoption.",
+      "publishedAt": "2026-08-30T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "ath_deliv_01",
+      "title": "Ather begins Phase 1 customer deliveries of Konarc EV scooter from Hosur plant",
+      "category": "EV",
+      "summary": "Ather commences dispatches of Konarc scooters to showrooms in Bengaluru and Chennai.",
+      "publishedAt": "2026-09-10T00:00:00.000Z"
+    },
+    "expectedDecision": "AUTO_ATTACH"
+  },
+  {
+    "id": "pair_32_fuel_cycle_hyderabad",
+    "type": "POSITIVE_MERGE",
+    "description": "Fuel Cycle Navi Mumbai GCC vs Hyderabad Expansion",
+    "articleA": {
+      "id": "fc_gcc_01",
+      "title": "Fuel Cycle opens Navi Mumbai GCC for AI, engineering and product development",
+      "category": "AI & ML",
+      "summary": "Fuel Cycle opens new technology center in Navi Mumbai to lead AI engineering.",
+      "publishedAt": "2026-09-24T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "fc_hyd_01",
+      "title": "Fuel Cycle plans expansion to Hyderabad and raises engineering headcount target to 120",
+      "category": "AI & ML",
+      "summary": "Fuel Cycle announces second tech hub in Hyderabad scaling engineering workforce to 120.",
+      "publishedAt": "2026-09-29T00:00:00.000Z"
+    },
+    "expectedDecision": "AUTO_ATTACH"
+  },
+  {
+    "id": "pair_33_matel_factory_inauguration",
+    "type": "POSITIVE_MERGE",
+    "description": "Matel Motion Series B Funding vs Expanded Pune Plant Opening",
+    "articleA": {
+      "id": "mat_fund_01",
+      "title": "EV powertrain maker Matel Motion raises ₹130 Cr Series B to expand Pune plant",
+      "category": "EV",
+      "summary": "Matel Motion secures ₹130 crore growth capital to triple EV motor manufacturing capacity in Pune.",
+      "publishedAt": "2026-08-15T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "mat_plant_01",
+      "title": "Matel Motion inaugurates expanded 50,000 sq ft powertrain manufacturing plant in Pune",
+      "category": "EV",
+      "summary": "Matel Motion cuts ribbon on new Pune facility funded by recent Series B round.",
+      "publishedAt": "2026-09-20T00:00:00.000Z"
+    },
+    "expectedDecision": "AUTO_ATTACH"
+  },
+  {
+    "id": "pair_34_tata_dholera_cleanroom",
+    "type": "POSITIVE_MERGE",
+    "description": "Tata Dholera Groundbreaking vs Cleanroom Shell Completion",
+    "articleA": {
+      "id": "tata_fab_01",
+      "title": "Tata Electronics breaks ground on ₹91,000 Cr Dholera mega semiconductor fab",
+      "category": "Semiconductors",
+      "summary": "Tata begins civil construction on 28nm/40nm semiconductor manufacturing foundry in Gujarat.",
+      "publishedAt": "2026-08-12T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "tata_shell_01",
+      "title": "Tata Semiconductor completes primary structural shell for Dholera cleanroom",
+      "category": "Semiconductors",
+      "summary": "Tata Electronics completes heavy building structure for Fab 1 cleanroom in Dholera.",
+      "publishedAt": "2026-09-25T00:00:00.000Z"
+    },
+    "expectedDecision": "AUTO_ATTACH"
+  },
+  {
+    "id": "pair_35_phonepe_indus_billing",
+    "type": "POSITIVE_MERGE",
+    "description": "PhonePe Indus 1M Milestone vs Zero-Commission SDK Launch",
+    "articleA": {
+      "id": "indus_dau_01",
+      "title": "PhonePe Indus Appstore reaches 1 million daily active users milestone",
+      "category": "Tech",
+      "summary": "Indus Appstore reaches 1M DAU with 250,000 applications listed on platform.",
+      "publishedAt": "2026-08-20T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "indus_sdk_01",
+      "title": "PhonePe Indus Appstore rolls out zero-commission in-app payment SDK for Indian developers",
+      "category": "Tech",
+      "summary": "PhonePe deploys developer SDK eliminating 30 percent store commission fees on Indus.",
+      "publishedAt": "2026-09-15T00:00:00.000Z"
+    },
+    "expectedDecision": "AUTO_ATTACH"
+  },
+  {
+    "id": "pair_36_npci_123pay_volume",
+    "type": "POSITIVE_MERGE",
+    "description": "UPI 123Pay 12 Languages Rollout vs 10M Volume Milestone",
+    "articleA": {
+      "id": "np_123_01",
+      "title": "NPCI launches UPI 123Pay in 12 regional Indian languages for feature phones",
+      "category": "Fintech",
+      "summary": "NPCI expands IVR payment service across 12 scheduled Indian languages for rural users.",
+      "publishedAt": "2026-08-10T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "np_123_02",
+      "title": "UPI 123Pay transactions cross 10 million monthly volume milestone",
+      "category": "Fintech",
+      "summary": "NPCI monthly volume on UPI 123Pay feature phone channel crosses 10 million operations.",
+      "publishedAt": "2026-09-19T00:00:00.000Z"
+    },
+    "expectedDecision": "AUTO_ATTACH"
+  },
+  {
+    "id": "pair_37_sarvam_weights",
+    "type": "POSITIVE_MERGE",
+    "description": "Sarvam-1 Model Announcement vs Open Weights Drop",
+    "articleA": {
+      "id": "sarv_mod_01",
+      "title": "Sarvam AI launches Sarvam-1 Indic 2B LLM optimized for 10 Indian languages",
+      "category": "AI & ML",
+      "summary": "Sarvam AI introduces 2-billion parameter foundation model trained on Indic linguistic corpus.",
+      "publishedAt": "2026-08-22T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "sarv_wgt_01",
+      "title": "Sarvam AI releases open weights and HuggingFace checkpoints for Indic voice models",
+      "category": "AI & ML",
+      "summary": "Sarvam AI publishes downloadable model checkpoints and open weights on HuggingFace.",
+      "publishedAt": "2026-09-22T00:00:00.000Z"
+    },
+    "expectedDecision": "AUTO_ATTACH"
+  },
+  {
+    "id": "pair_38_skyroot_clearance",
+    "type": "POSITIVE_MERGE",
+    "description": "Skyroot Kalam-1200 Test vs IN-SPACe Orbital Clearance",
+    "articleA": {
+      "id": "sky_kal_01",
+      "title": "Skyroot Aerospace completes Kalam-1200 stage test for Vikram-1 launch vehicle",
+      "category": "Space",
+      "summary": "Skyroot fires Kalam-1200 solid rocket stage for 85 seconds in Nagpur testing facility.",
+      "publishedAt": "2026-08-28T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "sky_clr_01",
+      "title": "Skyroot secures IN-SPACe clearance for maiden Vikram-1 orbital mission from Sriharikota",
+      "category": "Space",
+      "summary": "IN-SPACe grants technical launch permit to Skyroot for orbital rocket flight.",
+      "publishedAt": "2026-09-26T00:00:00.000Z"
+    },
+    "expectedDecision": "AUTO_ATTACH"
+  },
+  {
+    "id": "pair_39_ola_krutrim_cloud",
+    "type": "POSITIVE_MERGE",
+    "description": "Krutrim Silicon Roadmap vs 50MW Cloud Facility Launch",
+    "articleA": {
+      "id": "krut_rdm_01",
+      "title": "Ola Krutrim unveils roadmap for Bodhi AI silicon architecture and sovereign data centers",
+      "category": "AI & ML",
+      "summary": "Bhavish Aggarwal presents Bodhi processor architecture and high-density compute roadmap.",
+      "publishedAt": "2026-08-15T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "krut_fac_01",
+      "title": "Ola Krutrim launches 50 MW sovereign AI cloud facility in Tamil Nadu",
+      "category": "AI & ML",
+      "summary": "Krutrim commissions 50 megawatt high-density AI data center for enterprise workloads.",
+      "publishedAt": "2026-09-27T00:00:00.000Z"
+    },
+    "expectedDecision": "AUTO_ATTACH"
+  },
+  {
+    "id": "pair_40_cdac_param_benchmarks",
+    "type": "POSITIVE_MERGE",
+    "description": "PARAM Rudra Inauguration vs 838 TFLOPS Benchmark Validation",
+    "articleA": {
+      "id": "cdac_inaug_01",
+      "title": "PM Modi inaugurates three PARAM Rudra supercomputers across Pune, Delhi and Kolkata",
+      "category": "Supercomputing",
+      "summary": "Three indigenous PARAM Rudra systems dedicated to national scientific research.",
+      "publishedAt": "2026-09-26T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "cdac_bench_01",
+      "title": "PARAM Rudra high-performance compute clusters achieve 838 TFLOPS in national trials",
+      "category": "Supercomputing",
+      "summary": "C-DAC certifies sustained compute performance of 838 TFLOPS across PARAM Rudra clusters.",
+      "publishedAt": "2026-09-28T00:00:00.000Z"
+    },
+    "expectedDecision": "AUTO_ATTACH"
+  },
+  {
+    "id": "pair_41_blinkit_dark_stores_revision",
+    "type": "POSITIVE_MERGE",
+    "description": "Blinkit Tier-2 Expansion vs 2,000 Stores Target Revision",
+    "articleA": {
+      "id": "bl_t2_01",
+      "title": "Blinkit expands to 100 new dark stores in 12 Tier-2 Indian cities",
+      "category": "Startups",
+      "summary": "Blinkit opens 100 micro-warehouses bringing 10-minute delivery to 12 tier-2 cities.",
+      "publishedAt": "2026-08-18T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "bl_t2_02",
+      "title": "Blinkit announces goal of 2,000 dark stores by December 2026",
+      "category": "Startups",
+      "summary": "Zomato management sets aggressive target of 2,000 operational dark stores nationwide.",
+      "publishedAt": "2026-09-21T00:00:00.000Z"
+    },
+    "expectedDecision": "AUTO_ATTACH"
+  },
+  {
+    "id": "pair_42_payzen_funding_correction",
+    "type": "POSITIVE_MERGE",
+    "description": "PayZen Initial Funding Claim vs Official Correction",
+    "articleA": {
+      "id": "pz_rep_01",
+      "title": "PayZen reportedly raises $100M in Series C round from Tiger Global",
+      "category": "Fintech",
+      "summary": "Early reports indicate PayZen closed $100M Series C financing.",
+      "publishedAt": "2026-09-01T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "pz_cor_01",
+      "title": "CORRECTION: PayZen clarifies Series C funding round closed at $65M, not $100M",
+      "category": "Fintech",
+      "summary": "PayZen issues statement clarifying that the funding round concluded at $65M.",
+      "publishedAt": "2026-09-03T00:00:00.000Z"
+    },
+    "expectedDecision": "AUTO_ATTACH"
+  },
+  {
+    "id": "pair_43_brics_ai_summit",
+    "type": "POSITIVE_MERGE",
+    "description": "China BRICS AI Zone Proposal vs BRICS New Delhi Declaration",
+    "articleA": {
+      "id": "br_prop_01",
+      "title": "China proposes BRICS AI Open Source Zone for LLM cooperation",
+      "category": "AI & ML",
+      "summary": "China proposes collaborative open-source AI platform at New Delhi BRICS summit.",
+      "publishedAt": "2026-09-17T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "br_decl_01",
+      "title": "BRICS New Delhi Declaration pushes wider AI access and digital infrastructure",
+      "category": "AI & ML",
+      "summary": "BRICS summit formally adopts New Delhi Declaration endorsing open and trustworthy AI frameworks.",
+      "publishedAt": "2026-09-18T00:00:00.000Z"
+    },
+    "expectedDecision": "AUTO_ATTACH"
+  },
+  {
+    "id": "pair_44_vigyanlabs_dc_deployments",
+    "type": "POSITIVE_MERGE",
+    "description": "Vigyanlabs FEMTO Launch vs 3 Datacenter Installations",
+    "articleA": {
+      "id": "vl_fem_01",
+      "title": "Mysuru-based Vigyanlabs launches sovereign AI platform FEMTO with waterless cooling",
+      "category": "AI & ML",
+      "summary": "Vigyanlabs launches FEMTO sovereign AI appliance with waterless cooling.",
+      "publishedAt": "2026-09-07T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "vl_fem_02",
+      "title": "Vigyanlabs deploys FEMTO across 3 commercial Tier-1 datacenters",
+      "category": "AI & ML",
+      "summary": "Vigyanlabs completes commercial deployment of FEMTO across 3 Indian tier-1 datacenters.",
+      "publishedAt": "2026-09-28T00:00:00.000Z"
+    },
+    "expectedDecision": "AUTO_ATTACH"
+  },
+  {
+    "id": "pair_45_deepseek_v3_release",
+    "type": "POSITIVE_MERGE",
+    "description": "DeepSeek V3 Open Weights vs Benchmark Results",
+    "articleA": {
+      "id": "ds_wgt_01",
+      "title": "DeepSeek releases DeepSeek-V3 671B Mixture-of-Experts model under open license",
+      "category": "AI & ML",
+      "summary": "DeepSeek open-sources its 671B parameter MoE architecture with FP8 native training.",
+      "publishedAt": "2026-12-26T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "ds_bnc_01",
+      "title": "DeepSeek-V3 matches frontier models on coding benchmarks at fraction of compute cost",
+      "category": "AI & ML",
+      "summary": "Independent benchmarks confirm DeepSeek-V3 performance rivaling closed proprietary models.",
+      "publishedAt": "2026-12-28T00:00:00.000Z"
+    },
+    "expectedDecision": "AUTO_ATTACH"
+  },
+  {
+    "id": "pair_46_isro_gaganyaan_vs_semicryo",
+    "type": "HARD_NEGATIVE_SAME_ENTITY",
+    "description": "ISRO Gaganyaan Crew Module Test vs ISRO Semi-Cryogenic Engine Test",
+    "articleA": {
+      "id": "isro_gag_01",
+      "title": "ISRO completes pad abort test for Gaganyaan astronaut crew module",
+      "category": "Space",
+      "summary": "ISRO validates emergency escape thrusters for human spaceflight module.",
+      "publishedAt": "2026-09-02T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "isro_cryo_01",
+      "title": "ISRO hot-tests 200-tonne semi-cryogenic engine power head at Mahendragiri",
+      "category": "Space",
+      "summary": "ISRO operates semi-cryogenic PHTA turbomachinery for heavy-lift rocket stage.",
+      "publishedAt": "2026-09-06T00:00:00.000Z"
+    },
+    "expectedDecision": "CREATE_NEW"
+  },
+  {
+    "id": "pair_47_tata_ev_vs_tata_fab",
+    "type": "HARD_NEGATIVE_SAME_ENTITY",
+    "description": "Tata Motors EV Sales vs Tata Electronics Semiconductor Fab",
+    "articleA": {
+      "id": "tata_ev_01",
+      "title": "Tata Motors reports 65,000 electric vehicle sales in record festive quarter",
+      "category": "EV",
+      "summary": "Tata Motors maintains 70 percent market share in passenger electric cars.",
+      "publishedAt": "2026-09-10T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "tata_fab_02",
+      "title": "Tata Electronics completes primary structural shell for Dholera cleanroom",
+      "category": "Semiconductors",
+      "summary": "Tata completes heavy building enclosure for Dholera semiconductor fab.",
+      "publishedAt": "2026-09-25T00:00:00.000Z"
+    },
+    "expectedDecision": "CREATE_NEW"
+  },
+  {
+    "id": "pair_48_phonepe_upi_vs_indus",
+    "type": "HARD_NEGATIVE_SAME_ENTITY",
+    "description": "PhonePe UPI Market Share vs PhonePe Indus Appstore",
+    "articleA": {
+      "id": "ph_upi_01",
+      "title": "PhonePe processes 48 percent of all consumer UPI transactions in August",
+      "category": "Fintech",
+      "summary": "PhonePe records 7 billion monthly UPI transactions retaining top payments position.",
+      "publishedAt": "2026-09-02T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "ph_indus_01",
+      "title": "PhonePe Indus Appstore reaches 1 million daily active users milestone",
+      "category": "Tech",
+      "summary": "Indus Appstore reports 1M DAU as alternative Android app distribution platform.",
+      "publishedAt": "2026-08-20T00:00:00.000Z"
+    },
+    "expectedDecision": "CREATE_NEW"
+  },
+  {
+    "id": "pair_49_skyroot_vs_agnikul",
+    "type": "HARD_NEGATIVE_SAME_DOMAIN",
+    "description": "Skyroot Vikram-1 vs Agnikul Agnibaan SOrTeD Launch",
+    "articleA": {
+      "id": "sky_mis_01",
+      "title": "Skyroot secures IN-SPACe clearance for maiden Vikram-1 orbital mission from Sriharikota",
+      "category": "Space",
+      "summary": "Skyroot receives technical permit for its commercial orbital rocket launch.",
+      "publishedAt": "2026-09-26T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "agni_mis_01",
+      "title": "Agnikul Cosmos prepares suborbital test of 3D-printed Agnibaan rocket engine",
+      "category": "Space",
+      "summary": "Chennai-based spacetech startup Agnikul readies 3D-printed single-piece engine for flight.",
+      "publishedAt": "2026-09-20T00:00:00.000Z"
+    },
+    "expectedDecision": "CREATE_NEW"
+  },
+  {
+    "id": "pair_50_ather_grid_vs_ather_konarc",
+    "type": "HARD_NEGATIVE_SAME_ENTITY",
+    "description": "Ather Fast-Charging Grid vs Ather Konarc Scooter Launch",
+    "articleA": {
+      "id": "ath_grd_01",
+      "title": "Ather Grid adds 500 fast-charging stations along national highways",
+      "category": "EV",
+      "summary": "Ather expands public charging network across 50 intercity highway corridors.",
+      "publishedAt": "2026-08-05T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "ath_knr_01",
+      "title": "Ather's Biggest Attempt Yet to Make EVs Mainstream: ₹99,999 Konarc",
+      "category": "EV",
+      "summary": "Ather Energy unveils mass-market family electric scooter starting at Rs 99,999.",
+      "publishedAt": "2026-08-30T00:00:00.000Z"
+    },
+    "expectedDecision": "CREATE_NEW"
+  },
+  {
+    "id": "pair_51_sarvam_indic_vs_krutrim_indic",
+    "type": "HARD_NEGATIVE_SAME_DOMAIN",
+    "description": "Sarvam AI Indic-2B vs Ola Krutrim Cloud Datacenter",
+    "articleA": {
+      "id": "sarv_llm_01",
+      "title": "Sarvam AI launches Sarvam-1 Indic 2B LLM optimized for 10 Indian languages",
+      "category": "AI & ML",
+      "summary": "Sarvam AI releases compact 2B foundation model for multilingual Indian NLP.",
+      "publishedAt": "2026-08-22T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "krut_dat_01",
+      "title": "Ola Krutrim launches 50 MW sovereign AI cloud facility in Tamil Nadu",
+      "category": "AI & ML",
+      "summary": "Krutrim commissions high-power computing infrastructure for commercial cloud.",
+      "publishedAt": "2026-09-27T00:00:00.000Z"
+    },
+    "expectedDecision": "CREATE_NEW"
+  },
+  {
+    "id": "pair_52_cdac_param_vs_cdac_cyber",
+    "type": "HARD_NEGATIVE_SAME_ENTITY",
+    "description": "C-DAC PARAM Rudra vs C-DAC National Cybersecurity Grid",
+    "articleA": {
+      "id": "cdac_rud_01",
+      "title": "PM Modi inaugurates three PARAM Rudra supercomputers across Pune, Delhi and Kolkata",
+      "category": "Supercomputing",
+      "summary": "C-DAC installs high-performance supercomputing clusters for academic research.",
+      "publishedAt": "2026-09-26T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "cdac_cyb_01",
+      "title": "C-DAC deploys quantum-safe encryption protocol across national banking networks",
+      "category": "Cybersecurity",
+      "summary": "C-DAC rolls out post-quantum cryptographic primitives to protect financial institutions.",
+      "publishedAt": "2026-09-15T00:00:00.000Z"
+    },
+    "expectedDecision": "CREATE_NEW"
+  },
+  {
+    "id": "pair_53_blinkit_vs_zepto_cafe",
+    "type": "HARD_NEGATIVE_SAME_DOMAIN",
+    "description": "Blinkit Dark Store Network vs Zepto Cafe Expansion",
+    "articleA": {
+      "id": "bl_dark_01",
+      "title": "Blinkit expands to 100 new dark stores in 12 Tier-2 Indian cities",
+      "category": "Startups",
+      "summary": "Blinkit opens 100 micro-fulfillment centers for 10-minute grocery deliveries.",
+      "publishedAt": "2026-08-18T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "zep_cafe_01",
+      "title": "Zepto Cafe expands quick-serve hot beverages and snacks to 150 locations",
+      "category": "Startups",
+      "summary": "Zepto rolls out quick-commerce cafe counters across top metro clusters.",
+      "publishedAt": "2026-09-08T00:00:00.000Z"
+    },
+    "expectedDecision": "CREATE_NEW"
+  },
+  {
+    "id": "pair_54_reliance_solar_vs_telecom_tariff",
+    "type": "HARD_NEGATIVE_SAME_ENTITY",
+    "description": "Reliance Jamnagar Giga Complex vs Jio Telecom Tariff Revisions",
+    "articleA": {
+      "id": "ril_giga_01",
+      "title": "Reliance begins manufacturing solar PV modules at Jamnagar Dhirubhai Ambani Giga Complex",
+      "category": "Energy",
+      "summary": "Reliance New Energy operationalises 10GW solar panel plant in Gujarat.",
+      "publishedAt": "2026-09-03T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "jio_tar_01",
+      "title": "Reliance Jio introduces revised 5G prepaid plans with bundled OTT subscriptions",
+      "category": "Telecom",
+      "summary": "Jio restructures entry-level unlimited data tiers for mobile subscribers.",
+      "publishedAt": "2026-08-20T00:00:00.000Z"
+    },
+    "expectedDecision": "CREATE_NEW"
+  },
+  {
+    "id": "pair_55_zomato_awards_vs_swiggy_ipo",
+    "type": "HARD_NEGATIVE_SAME_DOMAIN",
+    "description": "Zomato Restaurant Awards vs Swiggy IPO Regulatory Filing",
+    "articleA": {
+      "id": "zom_awd_01",
+      "title": "Zomato announces annual restaurant awards recognizing top culinary partners",
+      "category": "Food",
+      "summary": "Zomato hosts culinary awards gala in Delhi celebrating top restaurant partners.",
+      "publishedAt": "2026-09-05T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "swig_ipo_01",
+      "title": "Swiggy files updated prospectus with SEBI for $1.2B domestic public listing",
+      "category": "Startups",
+      "summary": "Swiggy files regulatory papers detailing financial metrics ahead of stock market debut.",
+      "publishedAt": "2026-09-14T00:00:00.000Z"
+    },
+    "expectedDecision": "CREATE_NEW"
+  },
+  {
+    "id": "pair_56_openai_gpt5_vs_gemini2",
+    "type": "HARD_NEGATIVE_SAME_DOMAIN",
+    "description": "OpenAI Reasoning Model vs Google Gemini 2.0 Flash Release",
+    "articleA": {
+      "id": "oai_o1_01",
+      "title": "OpenAI releases o1 reasoning model with chain-of-thought mathematical capability",
+      "category": "AI & ML",
+      "summary": "OpenAI introduces o1 series designed to spend more time thinking before answering.",
+      "publishedAt": "2026-09-12T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "goog_gem_01",
+      "title": "Google announces Gemini 2.0 Flash with real-time streaming audio and vision APIs",
+      "category": "AI & ML",
+      "summary": "Google releases multimodal Gemini 2.0 Flash architecture for developers.",
+      "publishedAt": "2026-12-11T00:00:00.000Z"
+    },
+    "expectedDecision": "CREATE_NEW"
+  },
+  {
+    "id": "pair_57_npci_credit_vs_123pay",
+    "type": "HARD_NEGATIVE_SAME_ENTITY",
+    "description": "NPCI Credit Lines on UPI vs NPCI 123Pay Feature Phone Rollout",
+    "articleA": {
+      "id": "np_crd_01",
+      "title": "NPCI expands pre-sanctioned credit lines on UPI to 15 commercial banks",
+      "category": "Fintech",
+      "summary": "NPCI enables seamless digital credit line drawdowns over standard UPI handles.",
+      "publishedAt": "2026-08-18T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "np_123_03",
+      "title": "NPCI launches UPI 123Pay in 12 regional Indian languages for feature phones",
+      "category": "Fintech",
+      "summary": "NPCI rolls out IVR payment prompts in 12 languages for non-smartphone users.",
+      "publishedAt": "2026-08-10T00:00:00.000Z"
+    },
+    "expectedDecision": "CREATE_NEW"
+  },
+  {
+    "id": "pair_58_vigyanlabs_femto_vs_carbon",
+    "type": "HARD_NEGATIVE_SAME_ENTITY",
+    "description": "Vigyanlabs FEMTO Hardware Box vs Vigyanlabs Carbon Accounting Software",
+    "articleA": {
+      "id": "vl_fem_03",
+      "title": "Mysuru-based Vigyanlabs launches sovereign AI platform FEMTO with waterless cooling",
+      "category": "AI & ML",
+      "summary": "Vigyanlabs launches FEMTO sovereign GPU compute box for datacenters.",
+      "publishedAt": "2026-09-07T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "vl_crb_01",
+      "title": "Vigyanlabs partners with global IT services firm to audit enterprise datacenter carbon emissions",
+      "category": "Sustainability",
+      "summary": "Vigyanlabs provides energy auditing SaaS software to measure IT sustainability metrics.",
+      "publishedAt": "2026-08-25T00:00:00.000Z"
+    },
+    "expectedDecision": "CREATE_NEW"
+  },
+  {
+    "id": "pair_59_matel_ev_vs_bharat_forge",
+    "type": "HARD_NEGATIVE_SAME_DOMAIN",
+    "description": "Matel Motion EV Powertrains vs Bharat Forge Defence Forging Plant",
+    "articleA": {
+      "id": "mat_mot_01",
+      "title": "EV powertrain maker Matel Motion raises ₹130 Cr Series B to expand Pune plant",
+      "category": "EV",
+      "summary": "Matel Motion raises growth capital to build magnetless commercial vehicle EV motors.",
+      "publishedAt": "2026-08-15T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "bf_forg_01",
+      "title": "Bharat Forge secures ₹450 Cr export contract for artillery shell forgings",
+      "category": "Defence",
+      "summary": "Pune-based Bharat Forge receives international defence component order.",
+      "publishedAt": "2026-09-12T00:00:00.000Z"
+    },
+    "expectedDecision": "CREATE_NEW"
+  },
+  {
+    "id": "pair_60_fuel_cycle_vs_mu_sigma",
+    "type": "HARD_NEGATIVE_SAME_DOMAIN",
+    "description": "Fuel Cycle Navi Mumbai GCC vs Mu Sigma Big Data Analytics Platform",
+    "articleA": {
+      "id": "fc_gcc_03",
+      "title": "Fuel Cycle opens Navi Mumbai GCC for AI, engineering and product development",
+      "category": "AI & ML",
+      "summary": "Fuel Cycle opens global capability center in Navi Mumbai for consumer insights AI.",
+      "publishedAt": "2026-09-24T00:00:00.000Z"
+    },
+    "articleB": {
+      "id": "mu_sig_01",
+      "title": "Mu Sigma appoints new chief technology officer to lead enterprise AI transformation",
+      "category": "Technology",
+      "summary": "Decision sciences firm Mu Sigma hires industry veteran for big data engineering.",
+      "publishedAt": "2026-09-05T00:00:00.000Z"
+    },
+    "expectedDecision": "CREATE_NEW"
+  }
+]

@@ -1,0 +1,1574 @@
+{
+  "scenarios": [
+    {
+      "id": "SUPPRESS_UNCHANGED_1",
+      "description": "Story 1 consumed (progress 0.95) with NO material updates -> must be suppressed",
+      "candidate": {
+        "id": "cand_supp_1",
+        "type": "story",
+        "storyId": "story_supp_1",
+        "articleId": "art_supp_1",
+        "title": "Old Story 1",
+        "summary": "Summary of old story 1",
+        "category": "Technology",
+        "publishedAt": "2026-09-29T10:00:00.000Z",
+        "editorialImportance": 0.8,
+        "entityIds": [
+          "ent_tech_01"
+        ],
+        "conceptIds": [],
+        "topicTags": [
+          "tech"
+        ],
+        "readTimeMinutes": 2,
+        "materialChangesCount": 0,
+        "changesCount": 1
+      },
+      "userContext": {
+        "userId": "user_test_1",
+        "followedEntityIds": [],
+        "followedTopics": [],
+        "readingHistory": {
+          "art_supp_1": {
+            "progress": 0.95,
+            "lastReadAt": "2026-09-29T12:00:00.000Z"
+          }
+        },
+        "storyReadHistory": {
+          "story_supp_1": {
+            "lastReadArticleId": "art_supp_1",
+            "lastReadAt": "2026-09-29T12:00:00.000Z",
+            "maxProgress": 0.95
+          }
+        },
+        "knowledgeFamiliarity": {},
+        "activeTrailIds": [],
+        "completedTrailIds": []
+      },
+      "expectedSuppressed": true
+    },
+    {
+      "id": "SUPPRESS_UNCHANGED_2",
+      "description": "Story 2 consumed (progress 0.95) with NO material updates -> must be suppressed",
+      "candidate": {
+        "id": "cand_supp_2",
+        "type": "story",
+        "storyId": "story_supp_2",
+        "articleId": "art_supp_2",
+        "title": "Old Story 2",
+        "summary": "Summary of old story 2",
+        "category": "Technology",
+        "publishedAt": "2026-09-29T10:00:00.000Z",
+        "editorialImportance": 0.8,
+        "entityIds": [
+          "ent_tech_01"
+        ],
+        "conceptIds": [],
+        "topicTags": [
+          "tech"
+        ],
+        "readTimeMinutes": 2,
+        "materialChangesCount": 0,
+        "changesCount": 1
+      },
+      "userContext": {
+        "userId": "user_test_2",
+        "followedEntityIds": [],
+        "followedTopics": [],
+        "readingHistory": {
+          "art_supp_2": {
+            "progress": 0.95,
+            "lastReadAt": "2026-09-29T12:00:00.000Z"
+          }
+        },
+        "storyReadHistory": {
+          "story_supp_2": {
+            "lastReadArticleId": "art_supp_2",
+            "lastReadAt": "2026-09-29T12:00:00.000Z",
+            "maxProgress": 0.95
+          }
+        },
+        "knowledgeFamiliarity": {},
+        "activeTrailIds": [],
+        "completedTrailIds": []
+      },
+      "expectedSuppressed": true
+    },
+    {
+      "id": "SUPPRESS_UNCHANGED_3",
+      "description": "Story 3 consumed (progress 0.95) with NO material updates -> must be suppressed",
+      "candidate": {
+        "id": "cand_supp_3",
+        "type": "story",
+        "storyId": "story_supp_3",
+        "articleId": "art_supp_3",
+        "title": "Old Story 3",
+        "summary": "Summary of old story 3",
+        "category": "Technology",
+        "publishedAt": "2026-09-29T10:00:00.000Z",
+        "editorialImportance": 0.8,
+        "entityIds": [
+          "ent_tech_01"
+        ],
+        "conceptIds": [],
+        "topicTags": [
+          "tech"
+        ],
+        "readTimeMinutes": 2,
+        "materialChangesCount": 0,
+        "changesCount": 1
+      },
+      "userContext": {
+        "userId": "user_test_3",
+        "followedEntityIds": [],
+        "followedTopics": [],
+        "readingHistory": {
+          "art_supp_3": {
+            "progress": 0.95,
+            "lastReadAt": "2026-09-29T12:00:00.000Z"
+          }
+        },
+        "storyReadHistory": {
+          "story_supp_3": {
+            "lastReadArticleId": "art_supp_3",
+            "lastReadAt": "2026-09-29T12:00:00.000Z",
+            "maxProgress": 0.95
+          }
+        },
+        "knowledgeFamiliarity": {},
+        "activeTrailIds": [],
+        "completedTrailIds": []
+      },
+      "expectedSuppressed": true
+    },
+    {
+      "id": "SUPPRESS_UNCHANGED_4",
+      "description": "Story 4 consumed (progress 0.95) with NO material updates -> must be suppressed",
+      "candidate": {
+        "id": "cand_supp_4",
+        "type": "story",
+        "storyId": "story_supp_4",
+        "articleId": "art_supp_4",
+        "title": "Old Story 4",
+        "summary": "Summary of old story 4",
+        "category": "Technology",
+        "publishedAt": "2026-09-29T10:00:00.000Z",
+        "editorialImportance": 0.8,
+        "entityIds": [
+          "ent_tech_01"
+        ],
+        "conceptIds": [],
+        "topicTags": [
+          "tech"
+        ],
+        "readTimeMinutes": 2,
+        "materialChangesCount": 0,
+        "changesCount": 1
+      },
+      "userContext": {
+        "userId": "user_test_4",
+        "followedEntityIds": [],
+        "followedTopics": [],
+        "readingHistory": {
+          "art_supp_4": {
+            "progress": 0.95,
+            "lastReadAt": "2026-09-29T12:00:00.000Z"
+          }
+        },
+        "storyReadHistory": {
+          "story_supp_4": {
+            "lastReadArticleId": "art_supp_4",
+            "lastReadAt": "2026-09-29T12:00:00.000Z",
+            "maxProgress": 0.95
+          }
+        },
+        "knowledgeFamiliarity": {},
+        "activeTrailIds": [],
+        "completedTrailIds": []
+      },
+      "expectedSuppressed": true
+    },
+    {
+      "id": "SUPPRESS_UNCHANGED_5",
+      "description": "Story 5 consumed (progress 0.95) with NO material updates -> must be suppressed",
+      "candidate": {
+        "id": "cand_supp_5",
+        "type": "story",
+        "storyId": "story_supp_5",
+        "articleId": "art_supp_5",
+        "title": "Old Story 5",
+        "summary": "Summary of old story 5",
+        "category": "Technology",
+        "publishedAt": "2026-09-29T10:00:00.000Z",
+        "editorialImportance": 0.8,
+        "entityIds": [
+          "ent_tech_01"
+        ],
+        "conceptIds": [],
+        "topicTags": [
+          "tech"
+        ],
+        "readTimeMinutes": 2,
+        "materialChangesCount": 0,
+        "changesCount": 1
+      },
+      "userContext": {
+        "userId": "user_test_5",
+        "followedEntityIds": [],
+        "followedTopics": [],
+        "readingHistory": {
+          "art_supp_5": {
+            "progress": 0.95,
+            "lastReadAt": "2026-09-29T12:00:00.000Z"
+          }
+        },
+        "storyReadHistory": {
+          "story_supp_5": {
+            "lastReadArticleId": "art_supp_5",
+            "lastReadAt": "2026-09-29T12:00:00.000Z",
+            "maxProgress": 0.95
+          }
+        },
+        "knowledgeFamiliarity": {},
+        "activeTrailIds": [],
+        "completedTrailIds": []
+      },
+      "expectedSuppressed": true
+    },
+    {
+      "id": "INCLUDE_MATERIAL_DELTA_6",
+      "description": "Story 6 consumed (progress 0.95) with 2 material deltas -> must NOT be suppressed (must be story_update)",
+      "candidate": {
+        "id": "cand_delta_6",
+        "type": "story",
+        "storyId": "story_delta_6",
+        "articleId": "art_delta_6",
+        "title": "Developing Story 6 Major Pivot",
+        "summary": "New material facts about story 6",
+        "category": "Finance",
+        "publishedAt": "2026-09-30T06:00:00.000Z",
+        "editorialImportance": 0.85,
+        "entityIds": [
+          "ent_fin_01"
+        ],
+        "conceptIds": [],
+        "topicTags": [
+          "finance"
+        ],
+        "readTimeMinutes": 2,
+        "materialChangesCount": 2,
+        "changesCount": 2,
+        "deltas": [
+          {
+            "changeType": "value_changed",
+            "summary": "Revenue increased by $500M"
+          },
+          {
+            "changeType": "status_changed",
+            "summary": "Merger regulatory approval granted"
+          }
+        ]
+      },
+      "userContext": {
+        "userId": "user_test_6",
+        "followedEntityIds": [],
+        "followedTopics": [],
+        "readingHistory": {
+          "art_delta_6": {
+            "progress": 0.95,
+            "lastReadAt": "2026-09-29T12:00:00.000Z"
+          }
+        },
+        "storyReadHistory": {
+          "story_delta_6": {
+            "lastReadArticleId": "art_delta_6",
+            "lastReadAt": "2026-09-29T12:00:00.000Z",
+            "maxProgress": 0.95
+          }
+        },
+        "knowledgeFamiliarity": {},
+        "activeTrailIds": [],
+        "completedTrailIds": []
+      },
+      "expectedSuppressed": false,
+      "expectedReasonCode": "continuing",
+      "expectedType": "story_update"
+    },
+    {
+      "id": "INCLUDE_MATERIAL_DELTA_7",
+      "description": "Story 7 consumed (progress 0.95) with 2 material deltas -> must NOT be suppressed (must be story_update)",
+      "candidate": {
+        "id": "cand_delta_7",
+        "type": "story",
+        "storyId": "story_delta_7",
+        "articleId": "art_delta_7",
+        "title": "Developing Story 7 Major Pivot",
+        "summary": "New material facts about story 7",
+        "category": "Finance",
+        "publishedAt": "2026-09-30T06:00:00.000Z",
+        "editorialImportance": 0.85,
+        "entityIds": [
+          "ent_fin_01"
+        ],
+        "conceptIds": [],
+        "topicTags": [
+          "finance"
+        ],
+        "readTimeMinutes": 2,
+        "materialChangesCount": 2,
+        "changesCount": 2,
+        "deltas": [
+          {
+            "changeType": "value_changed",
+            "summary": "Revenue increased by $500M"
+          },
+          {
+            "changeType": "status_changed",
+            "summary": "Merger regulatory approval granted"
+          }
+        ]
+      },
+      "userContext": {
+        "userId": "user_test_7",
+        "followedEntityIds": [],
+        "followedTopics": [],
+        "readingHistory": {
+          "art_delta_7": {
+            "progress": 0.95,
+            "lastReadAt": "2026-09-29T12:00:00.000Z"
+          }
+        },
+        "storyReadHistory": {
+          "story_delta_7": {
+            "lastReadArticleId": "art_delta_7",
+            "lastReadAt": "2026-09-29T12:00:00.000Z",
+            "maxProgress": 0.95
+          }
+        },
+        "knowledgeFamiliarity": {},
+        "activeTrailIds": [],
+        "completedTrailIds": []
+      },
+      "expectedSuppressed": false,
+      "expectedReasonCode": "continuing",
+      "expectedType": "story_update"
+    },
+    {
+      "id": "INCLUDE_MATERIAL_DELTA_8",
+      "description": "Story 8 consumed (progress 0.95) with 2 material deltas -> must NOT be suppressed (must be story_update)",
+      "candidate": {
+        "id": "cand_delta_8",
+        "type": "story",
+        "storyId": "story_delta_8",
+        "articleId": "art_delta_8",
+        "title": "Developing Story 8 Major Pivot",
+        "summary": "New material facts about story 8",
+        "category": "Finance",
+        "publishedAt": "2026-09-30T06:00:00.000Z",
+        "editorialImportance": 0.85,
+        "entityIds": [
+          "ent_fin_01"
+        ],
+        "conceptIds": [],
+        "topicTags": [
+          "finance"
+        ],
+        "readTimeMinutes": 2,
+        "materialChangesCount": 2,
+        "changesCount": 2,
+        "deltas": [
+          {
+            "changeType": "value_changed",
+            "summary": "Revenue increased by $500M"
+          },
+          {
+            "changeType": "status_changed",
+            "summary": "Merger regulatory approval granted"
+          }
+        ]
+      },
+      "userContext": {
+        "userId": "user_test_8",
+        "followedEntityIds": [],
+        "followedTopics": [],
+        "readingHistory": {
+          "art_delta_8": {
+            "progress": 0.95,
+            "lastReadAt": "2026-09-29T12:00:00.000Z"
+          }
+        },
+        "storyReadHistory": {
+          "story_delta_8": {
+            "lastReadArticleId": "art_delta_8",
+            "lastReadAt": "2026-09-29T12:00:00.000Z",
+            "maxProgress": 0.95
+          }
+        },
+        "knowledgeFamiliarity": {},
+        "activeTrailIds": [],
+        "completedTrailIds": []
+      },
+      "expectedSuppressed": false,
+      "expectedReasonCode": "continuing",
+      "expectedType": "story_update"
+    },
+    {
+      "id": "INCLUDE_MATERIAL_DELTA_9",
+      "description": "Story 9 consumed (progress 0.95) with 2 material deltas -> must NOT be suppressed (must be story_update)",
+      "candidate": {
+        "id": "cand_delta_9",
+        "type": "story",
+        "storyId": "story_delta_9",
+        "articleId": "art_delta_9",
+        "title": "Developing Story 9 Major Pivot",
+        "summary": "New material facts about story 9",
+        "category": "Finance",
+        "publishedAt": "2026-09-30T06:00:00.000Z",
+        "editorialImportance": 0.85,
+        "entityIds": [
+          "ent_fin_01"
+        ],
+        "conceptIds": [],
+        "topicTags": [
+          "finance"
+        ],
+        "readTimeMinutes": 2,
+        "materialChangesCount": 2,
+        "changesCount": 2,
+        "deltas": [
+          {
+            "changeType": "value_changed",
+            "summary": "Revenue increased by $500M"
+          },
+          {
+            "changeType": "status_changed",
+            "summary": "Merger regulatory approval granted"
+          }
+        ]
+      },
+      "userContext": {
+        "userId": "user_test_9",
+        "followedEntityIds": [],
+        "followedTopics": [],
+        "readingHistory": {
+          "art_delta_9": {
+            "progress": 0.95,
+            "lastReadAt": "2026-09-29T12:00:00.000Z"
+          }
+        },
+        "storyReadHistory": {
+          "story_delta_9": {
+            "lastReadArticleId": "art_delta_9",
+            "lastReadAt": "2026-09-29T12:00:00.000Z",
+            "maxProgress": 0.95
+          }
+        },
+        "knowledgeFamiliarity": {},
+        "activeTrailIds": [],
+        "completedTrailIds": []
+      },
+      "expectedSuppressed": false,
+      "expectedReasonCode": "continuing",
+      "expectedType": "story_update"
+    },
+    {
+      "id": "INCLUDE_MATERIAL_DELTA_10",
+      "description": "Story 10 consumed (progress 0.95) with 2 material deltas -> must NOT be suppressed (must be story_update)",
+      "candidate": {
+        "id": "cand_delta_10",
+        "type": "story",
+        "storyId": "story_delta_10",
+        "articleId": "art_delta_10",
+        "title": "Developing Story 10 Major Pivot",
+        "summary": "New material facts about story 10",
+        "category": "Finance",
+        "publishedAt": "2026-09-30T06:00:00.000Z",
+        "editorialImportance": 0.85,
+        "entityIds": [
+          "ent_fin_01"
+        ],
+        "conceptIds": [],
+        "topicTags": [
+          "finance"
+        ],
+        "readTimeMinutes": 2,
+        "materialChangesCount": 2,
+        "changesCount": 2,
+        "deltas": [
+          {
+            "changeType": "value_changed",
+            "summary": "Revenue increased by $500M"
+          },
+          {
+            "changeType": "status_changed",
+            "summary": "Merger regulatory approval granted"
+          }
+        ]
+      },
+      "userContext": {
+        "userId": "user_test_10",
+        "followedEntityIds": [],
+        "followedTopics": [],
+        "readingHistory": {
+          "art_delta_10": {
+            "progress": 0.95,
+            "lastReadAt": "2026-09-29T12:00:00.000Z"
+          }
+        },
+        "storyReadHistory": {
+          "story_delta_10": {
+            "lastReadArticleId": "art_delta_10",
+            "lastReadAt": "2026-09-29T12:00:00.000Z",
+            "maxProgress": 0.95
+          }
+        },
+        "knowledgeFamiliarity": {},
+        "activeTrailIds": [],
+        "completedTrailIds": []
+      },
+      "expectedSuppressed": false,
+      "expectedReasonCode": "continuing",
+      "expectedType": "story_update"
+    },
+    {
+      "id": "DEDUP_STORY_THREAD_11",
+      "description": "Multiple candidates with same storyId story_thread_11 -> only 1 selected in brief",
+      "candidates": [
+        {
+          "id": "cand_11_art1",
+          "type": "story",
+          "storyId": "story_thread_11",
+          "articleId": "art_11_1",
+          "title": "Thread 11 Post 1",
+          "summary": "Early post",
+          "category": "Economy",
+          "publishedAt": "2026-09-30T01:00:00.000Z",
+          "editorialImportance": 0.6,
+          "entityIds": [],
+          "conceptIds": [],
+          "topicTags": [],
+          "readTimeMinutes": 2,
+          "materialChangesCount": 0
+        },
+        {
+          "id": "cand_11_art2",
+          "type": "story",
+          "storyId": "story_thread_11",
+          "articleId": "art_11_2",
+          "title": "Thread 11 Post 2 Major Update",
+          "summary": "Latest post",
+          "category": "Economy",
+          "publishedAt": "2026-09-30T05:00:00.000Z",
+          "editorialImportance": 0.9,
+          "entityIds": [],
+          "conceptIds": [],
+          "topicTags": [],
+          "readTimeMinutes": 2,
+          "materialChangesCount": 1
+        }
+      ],
+      "expectedSelectedCountForStory": 1
+    },
+    {
+      "id": "DEDUP_STORY_THREAD_12",
+      "description": "Multiple candidates with same storyId story_thread_12 -> only 1 selected in brief",
+      "candidates": [
+        {
+          "id": "cand_12_art1",
+          "type": "story",
+          "storyId": "story_thread_12",
+          "articleId": "art_12_1",
+          "title": "Thread 12 Post 1",
+          "summary": "Early post",
+          "category": "Economy",
+          "publishedAt": "2026-09-30T01:00:00.000Z",
+          "editorialImportance": 0.6,
+          "entityIds": [],
+          "conceptIds": [],
+          "topicTags": [],
+          "readTimeMinutes": 2,
+          "materialChangesCount": 0
+        },
+        {
+          "id": "cand_12_art2",
+          "type": "story",
+          "storyId": "story_thread_12",
+          "articleId": "art_12_2",
+          "title": "Thread 12 Post 2 Major Update",
+          "summary": "Latest post",
+          "category": "Economy",
+          "publishedAt": "2026-09-30T05:00:00.000Z",
+          "editorialImportance": 0.9,
+          "entityIds": [],
+          "conceptIds": [],
+          "topicTags": [],
+          "readTimeMinutes": 2,
+          "materialChangesCount": 1
+        }
+      ],
+      "expectedSelectedCountForStory": 1
+    },
+    {
+      "id": "DEDUP_STORY_THREAD_13",
+      "description": "Multiple candidates with same storyId story_thread_13 -> only 1 selected in brief",
+      "candidates": [
+        {
+          "id": "cand_13_art1",
+          "type": "story",
+          "storyId": "story_thread_13",
+          "articleId": "art_13_1",
+          "title": "Thread 13 Post 1",
+          "summary": "Early post",
+          "category": "Economy",
+          "publishedAt": "2026-09-30T01:00:00.000Z",
+          "editorialImportance": 0.6,
+          "entityIds": [],
+          "conceptIds": [],
+          "topicTags": [],
+          "readTimeMinutes": 2,
+          "materialChangesCount": 0
+        },
+        {
+          "id": "cand_13_art2",
+          "type": "story",
+          "storyId": "story_thread_13",
+          "articleId": "art_13_2",
+          "title": "Thread 13 Post 2 Major Update",
+          "summary": "Latest post",
+          "category": "Economy",
+          "publishedAt": "2026-09-30T05:00:00.000Z",
+          "editorialImportance": 0.9,
+          "entityIds": [],
+          "conceptIds": [],
+          "topicTags": [],
+          "readTimeMinutes": 2,
+          "materialChangesCount": 1
+        }
+      ],
+      "expectedSelectedCountForStory": 1
+    },
+    {
+      "id": "DEDUP_STORY_THREAD_14",
+      "description": "Multiple candidates with same storyId story_thread_14 -> only 1 selected in brief",
+      "candidates": [
+        {
+          "id": "cand_14_art1",
+          "type": "story",
+          "storyId": "story_thread_14",
+          "articleId": "art_14_1",
+          "title": "Thread 14 Post 1",
+          "summary": "Early post",
+          "category": "Economy",
+          "publishedAt": "2026-09-30T01:00:00.000Z",
+          "editorialImportance": 0.6,
+          "entityIds": [],
+          "conceptIds": [],
+          "topicTags": [],
+          "readTimeMinutes": 2,
+          "materialChangesCount": 0
+        },
+        {
+          "id": "cand_14_art2",
+          "type": "story",
+          "storyId": "story_thread_14",
+          "articleId": "art_14_2",
+          "title": "Thread 14 Post 2 Major Update",
+          "summary": "Latest post",
+          "category": "Economy",
+          "publishedAt": "2026-09-30T05:00:00.000Z",
+          "editorialImportance": 0.9,
+          "entityIds": [],
+          "conceptIds": [],
+          "topicTags": [],
+          "readTimeMinutes": 2,
+          "materialChangesCount": 1
+        }
+      ],
+      "expectedSelectedCountForStory": 1
+    },
+    {
+      "id": "DEDUP_STORY_THREAD_15",
+      "description": "Multiple candidates with same storyId story_thread_15 -> only 1 selected in brief",
+      "candidates": [
+        {
+          "id": "cand_15_art1",
+          "type": "story",
+          "storyId": "story_thread_15",
+          "articleId": "art_15_1",
+          "title": "Thread 15 Post 1",
+          "summary": "Early post",
+          "category": "Economy",
+          "publishedAt": "2026-09-30T01:00:00.000Z",
+          "editorialImportance": 0.6,
+          "entityIds": [],
+          "conceptIds": [],
+          "topicTags": [],
+          "readTimeMinutes": 2,
+          "materialChangesCount": 0
+        },
+        {
+          "id": "cand_15_art2",
+          "type": "story",
+          "storyId": "story_thread_15",
+          "articleId": "art_15_2",
+          "title": "Thread 15 Post 2 Major Update",
+          "summary": "Latest post",
+          "category": "Economy",
+          "publishedAt": "2026-09-30T05:00:00.000Z",
+          "editorialImportance": 0.9,
+          "entityIds": [],
+          "conceptIds": [],
+          "topicTags": [],
+          "readTimeMinutes": 2,
+          "materialChangesCount": 1
+        }
+      ],
+      "expectedSelectedCountForStory": 1
+    },
+    {
+      "id": "DEDUP_STORY_THREAD_16",
+      "description": "Multiple candidates with same storyId story_thread_16 -> only 1 selected in brief",
+      "candidates": [
+        {
+          "id": "cand_16_art1",
+          "type": "story",
+          "storyId": "story_thread_16",
+          "articleId": "art_16_1",
+          "title": "Thread 16 Post 1",
+          "summary": "Early post",
+          "category": "Economy",
+          "publishedAt": "2026-09-30T01:00:00.000Z",
+          "editorialImportance": 0.6,
+          "entityIds": [],
+          "conceptIds": [],
+          "topicTags": [],
+          "readTimeMinutes": 2,
+          "materialChangesCount": 0
+        },
+        {
+          "id": "cand_16_art2",
+          "type": "story",
+          "storyId": "story_thread_16",
+          "articleId": "art_16_2",
+          "title": "Thread 16 Post 2 Major Update",
+          "summary": "Latest post",
+          "category": "Economy",
+          "publishedAt": "2026-09-30T05:00:00.000Z",
+          "editorialImportance": 0.9,
+          "entityIds": [],
+          "conceptIds": [],
+          "topicTags": [],
+          "readTimeMinutes": 2,
+          "materialChangesCount": 1
+        }
+      ],
+      "expectedSelectedCountForStory": 1
+    },
+    {
+      "id": "DEDUP_STORY_THREAD_17",
+      "description": "Multiple candidates with same storyId story_thread_17 -> only 1 selected in brief",
+      "candidates": [
+        {
+          "id": "cand_17_art1",
+          "type": "story",
+          "storyId": "story_thread_17",
+          "articleId": "art_17_1",
+          "title": "Thread 17 Post 1",
+          "summary": "Early post",
+          "category": "Economy",
+          "publishedAt": "2026-09-30T01:00:00.000Z",
+          "editorialImportance": 0.6,
+          "entityIds": [],
+          "conceptIds": [],
+          "topicTags": [],
+          "readTimeMinutes": 2,
+          "materialChangesCount": 0
+        },
+        {
+          "id": "cand_17_art2",
+          "type": "story",
+          "storyId": "story_thread_17",
+          "articleId": "art_17_2",
+          "title": "Thread 17 Post 2 Major Update",
+          "summary": "Latest post",
+          "category": "Economy",
+          "publishedAt": "2026-09-30T05:00:00.000Z",
+          "editorialImportance": 0.9,
+          "entityIds": [],
+          "conceptIds": [],
+          "topicTags": [],
+          "readTimeMinutes": 2,
+          "materialChangesCount": 1
+        }
+      ],
+      "expectedSelectedCountForStory": 1
+    },
+    {
+      "id": "DEDUP_STORY_THREAD_18",
+      "description": "Multiple candidates with same storyId story_thread_18 -> only 1 selected in brief",
+      "candidates": [
+        {
+          "id": "cand_18_art1",
+          "type": "story",
+          "storyId": "story_thread_18",
+          "articleId": "art_18_1",
+          "title": "Thread 18 Post 1",
+          "summary": "Early post",
+          "category": "Economy",
+          "publishedAt": "2026-09-30T01:00:00.000Z",
+          "editorialImportance": 0.6,
+          "entityIds": [],
+          "conceptIds": [],
+          "topicTags": [],
+          "readTimeMinutes": 2,
+          "materialChangesCount": 0
+        },
+        {
+          "id": "cand_18_art2",
+          "type": "story",
+          "storyId": "story_thread_18",
+          "articleId": "art_18_2",
+          "title": "Thread 18 Post 2 Major Update",
+          "summary": "Latest post",
+          "category": "Economy",
+          "publishedAt": "2026-09-30T05:00:00.000Z",
+          "editorialImportance": 0.9,
+          "entityIds": [],
+          "conceptIds": [],
+          "topicTags": [],
+          "readTimeMinutes": 2,
+          "materialChangesCount": 1
+        }
+      ],
+      "expectedSelectedCountForStory": 1
+    },
+    {
+      "id": "DEDUP_STORY_THREAD_19",
+      "description": "Multiple candidates with same storyId story_thread_19 -> only 1 selected in brief",
+      "candidates": [
+        {
+          "id": "cand_19_art1",
+          "type": "story",
+          "storyId": "story_thread_19",
+          "articleId": "art_19_1",
+          "title": "Thread 19 Post 1",
+          "summary": "Early post",
+          "category": "Economy",
+          "publishedAt": "2026-09-30T01:00:00.000Z",
+          "editorialImportance": 0.6,
+          "entityIds": [],
+          "conceptIds": [],
+          "topicTags": [],
+          "readTimeMinutes": 2,
+          "materialChangesCount": 0
+        },
+        {
+          "id": "cand_19_art2",
+          "type": "story",
+          "storyId": "story_thread_19",
+          "articleId": "art_19_2",
+          "title": "Thread 19 Post 2 Major Update",
+          "summary": "Latest post",
+          "category": "Economy",
+          "publishedAt": "2026-09-30T05:00:00.000Z",
+          "editorialImportance": 0.9,
+          "entityIds": [],
+          "conceptIds": [],
+          "topicTags": [],
+          "readTimeMinutes": 2,
+          "materialChangesCount": 1
+        }
+      ],
+      "expectedSelectedCountForStory": 1
+    },
+    {
+      "id": "DEDUP_STORY_THREAD_20",
+      "description": "Multiple candidates with same storyId story_thread_20 -> only 1 selected in brief",
+      "candidates": [
+        {
+          "id": "cand_20_art1",
+          "type": "story",
+          "storyId": "story_thread_20",
+          "articleId": "art_20_1",
+          "title": "Thread 20 Post 1",
+          "summary": "Early post",
+          "category": "Economy",
+          "publishedAt": "2026-09-30T01:00:00.000Z",
+          "editorialImportance": 0.6,
+          "entityIds": [],
+          "conceptIds": [],
+          "topicTags": [],
+          "readTimeMinutes": 2,
+          "materialChangesCount": 0
+        },
+        {
+          "id": "cand_20_art2",
+          "type": "story",
+          "storyId": "story_thread_20",
+          "articleId": "art_20_2",
+          "title": "Thread 20 Post 2 Major Update",
+          "summary": "Latest post",
+          "category": "Economy",
+          "publishedAt": "2026-09-30T05:00:00.000Z",
+          "editorialImportance": 0.9,
+          "entityIds": [],
+          "conceptIds": [],
+          "topicTags": [],
+          "readTimeMinutes": 2,
+          "materialChangesCount": 1
+        }
+      ],
+      "expectedSelectedCountForStory": 1
+    },
+    {
+      "id": "FOLLOW_PRIORITY_21",
+      "description": "Candidate matching followed entity ent_target_21 receives followed reason code",
+      "candidate": {
+        "id": "cand_follow_21",
+        "type": "article",
+        "articleId": "art_follow_21",
+        "title": "Followed Entity Development 21",
+        "summary": "Breaking news for entity ent_target_21",
+        "category": "Science",
+        "publishedAt": "2026-09-30T07:00:00.000Z",
+        "editorialImportance": 0.7,
+        "entityIds": [
+          "ent_target_21"
+        ],
+        "conceptIds": [],
+        "topicTags": [
+          "science"
+        ],
+        "readTimeMinutes": 2,
+        "materialChangesCount": 0
+      },
+      "userContext": {
+        "userId": "user_test_21",
+        "followedEntityIds": [
+          "ent_target_21"
+        ],
+        "followedTopics": [],
+        "readingHistory": {},
+        "storyReadHistory": {},
+        "knowledgeFamiliarity": {},
+        "activeTrailIds": [],
+        "completedTrailIds": []
+      },
+      "expectedReasonCode": "followed"
+    },
+    {
+      "id": "FOLLOW_PRIORITY_22",
+      "description": "Candidate matching followed entity ent_target_22 receives followed reason code",
+      "candidate": {
+        "id": "cand_follow_22",
+        "type": "article",
+        "articleId": "art_follow_22",
+        "title": "Followed Entity Development 22",
+        "summary": "Breaking news for entity ent_target_22",
+        "category": "Science",
+        "publishedAt": "2026-09-30T07:00:00.000Z",
+        "editorialImportance": 0.7,
+        "entityIds": [
+          "ent_target_22"
+        ],
+        "conceptIds": [],
+        "topicTags": [
+          "science"
+        ],
+        "readTimeMinutes": 2,
+        "materialChangesCount": 0
+      },
+      "userContext": {
+        "userId": "user_test_22",
+        "followedEntityIds": [
+          "ent_target_22"
+        ],
+        "followedTopics": [],
+        "readingHistory": {},
+        "storyReadHistory": {},
+        "knowledgeFamiliarity": {},
+        "activeTrailIds": [],
+        "completedTrailIds": []
+      },
+      "expectedReasonCode": "followed"
+    },
+    {
+      "id": "FOLLOW_PRIORITY_23",
+      "description": "Candidate matching followed entity ent_target_23 receives followed reason code",
+      "candidate": {
+        "id": "cand_follow_23",
+        "type": "article",
+        "articleId": "art_follow_23",
+        "title": "Followed Entity Development 23",
+        "summary": "Breaking news for entity ent_target_23",
+        "category": "Science",
+        "publishedAt": "2026-09-30T07:00:00.000Z",
+        "editorialImportance": 0.7,
+        "entityIds": [
+          "ent_target_23"
+        ],
+        "conceptIds": [],
+        "topicTags": [
+          "science"
+        ],
+        "readTimeMinutes": 2,
+        "materialChangesCount": 0
+      },
+      "userContext": {
+        "userId": "user_test_23",
+        "followedEntityIds": [
+          "ent_target_23"
+        ],
+        "followedTopics": [],
+        "readingHistory": {},
+        "storyReadHistory": {},
+        "knowledgeFamiliarity": {},
+        "activeTrailIds": [],
+        "completedTrailIds": []
+      },
+      "expectedReasonCode": "followed"
+    },
+    {
+      "id": "FOLLOW_PRIORITY_24",
+      "description": "Candidate matching followed entity ent_target_24 receives followed reason code",
+      "candidate": {
+        "id": "cand_follow_24",
+        "type": "article",
+        "articleId": "art_follow_24",
+        "title": "Followed Entity Development 24",
+        "summary": "Breaking news for entity ent_target_24",
+        "category": "Science",
+        "publishedAt": "2026-09-30T07:00:00.000Z",
+        "editorialImportance": 0.7,
+        "entityIds": [
+          "ent_target_24"
+        ],
+        "conceptIds": [],
+        "topicTags": [
+          "science"
+        ],
+        "readTimeMinutes": 2,
+        "materialChangesCount": 0
+      },
+      "userContext": {
+        "userId": "user_test_24",
+        "followedEntityIds": [
+          "ent_target_24"
+        ],
+        "followedTopics": [],
+        "readingHistory": {},
+        "storyReadHistory": {},
+        "knowledgeFamiliarity": {},
+        "activeTrailIds": [],
+        "completedTrailIds": []
+      },
+      "expectedReasonCode": "followed"
+    },
+    {
+      "id": "FOLLOW_PRIORITY_25",
+      "description": "Candidate matching followed entity ent_target_25 receives followed reason code",
+      "candidate": {
+        "id": "cand_follow_25",
+        "type": "article",
+        "articleId": "art_follow_25",
+        "title": "Followed Entity Development 25",
+        "summary": "Breaking news for entity ent_target_25",
+        "category": "Science",
+        "publishedAt": "2026-09-30T07:00:00.000Z",
+        "editorialImportance": 0.7,
+        "entityIds": [
+          "ent_target_25"
+        ],
+        "conceptIds": [],
+        "topicTags": [
+          "science"
+        ],
+        "readTimeMinutes": 2,
+        "materialChangesCount": 0
+      },
+      "userContext": {
+        "userId": "user_test_25",
+        "followedEntityIds": [
+          "ent_target_25"
+        ],
+        "followedTopics": [],
+        "readingHistory": {},
+        "storyReadHistory": {},
+        "knowledgeFamiliarity": {},
+        "activeTrailIds": [],
+        "completedTrailIds": []
+      },
+      "expectedReasonCode": "followed"
+    },
+    {
+      "id": "CONTINUING_STORY_26",
+      "description": "In-progress story with new facts -> prioritized with compact_delta explanation mode",
+      "candidate": {
+        "id": "cand_cont_26",
+        "type": "story",
+        "storyId": "story_cont_26",
+        "articleId": "art_cont_26",
+        "title": "Continuing Mission Update 26",
+        "summary": "Mission phase 2 started",
+        "category": "Aerospace",
+        "publishedAt": "2026-09-30T06:30:00.000Z",
+        "editorialImportance": 0.75,
+        "entityIds": [],
+        "conceptIds": [],
+        "topicTags": [
+          "aerospace"
+        ],
+        "readTimeMinutes": 2,
+        "materialChangesCount": 1,
+        "deltas": [
+          {
+            "changeType": "new_fact",
+            "summary": "Second stage separation confirmed"
+          }
+        ]
+      },
+      "userContext": {
+        "userId": "user_test_26",
+        "followedEntityIds": [],
+        "followedTopics": [],
+        "readingHistory": {},
+        "storyReadHistory": {
+          "story_cont_26": {
+            "lastReadArticleId": "art_prev_26",
+            "lastReadAt": "2026-09-29T20:00:00.000Z",
+            "maxProgress": 0.6
+          }
+        },
+        "knowledgeFamiliarity": {},
+        "activeTrailIds": [],
+        "completedTrailIds": []
+      },
+      "expectedReasonCode": "continuing",
+      "expectedExplanationMode": "compact_delta"
+    },
+    {
+      "id": "CONTINUING_STORY_27",
+      "description": "In-progress story with new facts -> prioritized with compact_delta explanation mode",
+      "candidate": {
+        "id": "cand_cont_27",
+        "type": "story",
+        "storyId": "story_cont_27",
+        "articleId": "art_cont_27",
+        "title": "Continuing Mission Update 27",
+        "summary": "Mission phase 2 started",
+        "category": "Aerospace",
+        "publishedAt": "2026-09-30T06:30:00.000Z",
+        "editorialImportance": 0.75,
+        "entityIds": [],
+        "conceptIds": [],
+        "topicTags": [
+          "aerospace"
+        ],
+        "readTimeMinutes": 2,
+        "materialChangesCount": 1,
+        "deltas": [
+          {
+            "changeType": "new_fact",
+            "summary": "Second stage separation confirmed"
+          }
+        ]
+      },
+      "userContext": {
+        "userId": "user_test_27",
+        "followedEntityIds": [],
+        "followedTopics": [],
+        "readingHistory": {},
+        "storyReadHistory": {
+          "story_cont_27": {
+            "lastReadArticleId": "art_prev_27",
+            "lastReadAt": "2026-09-29T20:00:00.000Z",
+            "maxProgress": 0.6
+          }
+        },
+        "knowledgeFamiliarity": {},
+        "activeTrailIds": [],
+        "completedTrailIds": []
+      },
+      "expectedReasonCode": "continuing",
+      "expectedExplanationMode": "compact_delta"
+    },
+    {
+      "id": "CONTINUING_STORY_28",
+      "description": "In-progress story with new facts -> prioritized with compact_delta explanation mode",
+      "candidate": {
+        "id": "cand_cont_28",
+        "type": "story",
+        "storyId": "story_cont_28",
+        "articleId": "art_cont_28",
+        "title": "Continuing Mission Update 28",
+        "summary": "Mission phase 2 started",
+        "category": "Aerospace",
+        "publishedAt": "2026-09-30T06:30:00.000Z",
+        "editorialImportance": 0.75,
+        "entityIds": [],
+        "conceptIds": [],
+        "topicTags": [
+          "aerospace"
+        ],
+        "readTimeMinutes": 2,
+        "materialChangesCount": 1,
+        "deltas": [
+          {
+            "changeType": "new_fact",
+            "summary": "Second stage separation confirmed"
+          }
+        ]
+      },
+      "userContext": {
+        "userId": "user_test_28",
+        "followedEntityIds": [],
+        "followedTopics": [],
+        "readingHistory": {},
+        "storyReadHistory": {
+          "story_cont_28": {
+            "lastReadArticleId": "art_prev_28",
+            "lastReadAt": "2026-09-29T20:00:00.000Z",
+            "maxProgress": 0.6
+          }
+        },
+        "knowledgeFamiliarity": {},
+        "activeTrailIds": [],
+        "completedTrailIds": []
+      },
+      "expectedReasonCode": "continuing",
+      "expectedExplanationMode": "compact_delta"
+    },
+    {
+      "id": "CONTINUING_STORY_29",
+      "description": "In-progress story with new facts -> prioritized with compact_delta explanation mode",
+      "candidate": {
+        "id": "cand_cont_29",
+        "type": "story",
+        "storyId": "story_cont_29",
+        "articleId": "art_cont_29",
+        "title": "Continuing Mission Update 29",
+        "summary": "Mission phase 2 started",
+        "category": "Aerospace",
+        "publishedAt": "2026-09-30T06:30:00.000Z",
+        "editorialImportance": 0.75,
+        "entityIds": [],
+        "conceptIds": [],
+        "topicTags": [
+          "aerospace"
+        ],
+        "readTimeMinutes": 2,
+        "materialChangesCount": 1,
+        "deltas": [
+          {
+            "changeType": "new_fact",
+            "summary": "Second stage separation confirmed"
+          }
+        ]
+      },
+      "userContext": {
+        "userId": "user_test_29",
+        "followedEntityIds": [],
+        "followedTopics": [],
+        "readingHistory": {},
+        "storyReadHistory": {
+          "story_cont_29": {
+            "lastReadArticleId": "art_prev_29",
+            "lastReadAt": "2026-09-29T20:00:00.000Z",
+            "maxProgress": 0.6
+          }
+        },
+        "knowledgeFamiliarity": {},
+        "activeTrailIds": [],
+        "completedTrailIds": []
+      },
+      "expectedReasonCode": "continuing",
+      "expectedExplanationMode": "compact_delta"
+    },
+    {
+      "id": "CONTINUING_STORY_30",
+      "description": "In-progress story with new facts -> prioritized with compact_delta explanation mode",
+      "candidate": {
+        "id": "cand_cont_30",
+        "type": "story",
+        "storyId": "story_cont_30",
+        "articleId": "art_cont_30",
+        "title": "Continuing Mission Update 30",
+        "summary": "Mission phase 2 started",
+        "category": "Aerospace",
+        "publishedAt": "2026-09-30T06:30:00.000Z",
+        "editorialImportance": 0.75,
+        "entityIds": [],
+        "conceptIds": [],
+        "topicTags": [
+          "aerospace"
+        ],
+        "readTimeMinutes": 2,
+        "materialChangesCount": 1,
+        "deltas": [
+          {
+            "changeType": "new_fact",
+            "summary": "Second stage separation confirmed"
+          }
+        ]
+      },
+      "userContext": {
+        "userId": "user_test_30",
+        "followedEntityIds": [],
+        "followedTopics": [],
+        "readingHistory": {},
+        "storyReadHistory": {
+          "story_cont_30": {
+            "lastReadArticleId": "art_prev_30",
+            "lastReadAt": "2026-09-29T20:00:00.000Z",
+            "maxProgress": 0.6
+          }
+        },
+        "knowledgeFamiliarity": {},
+        "activeTrailIds": [],
+        "completedTrailIds": []
+      },
+      "expectedReasonCode": "continuing",
+      "expectedExplanationMode": "compact_delta"
+    },
+    {
+      "id": "KNOWLEDGE_GAP_31",
+      "description": "Story introducing unseen concepts -> assigned primer explanation mode",
+      "candidate": {
+        "id": "cand_know_31",
+        "type": "article",
+        "articleId": "art_know_31",
+        "title": "Quantum Teleportation Breakthrough 31",
+        "summary": "Researchers demo entanglement transfer",
+        "category": "Physics",
+        "publishedAt": "2026-09-30T07:15:00.000Z",
+        "editorialImportance": 0.8,
+        "entityIds": [],
+        "conceptIds": [
+          "con_quantum_31"
+        ],
+        "topicTags": [
+          "quantum"
+        ],
+        "readTimeMinutes": 3,
+        "materialChangesCount": 0
+      },
+      "userContext": {
+        "userId": "user_test_31",
+        "followedEntityIds": [],
+        "followedTopics": [],
+        "readingHistory": {},
+        "storyReadHistory": {},
+        "knowledgeFamiliarity": {
+          "con_quantum_31": "unseen"
+        },
+        "activeTrailIds": [],
+        "completedTrailIds": []
+      },
+      "expectedExplanationMode": "primer"
+    },
+    {
+      "id": "KNOWLEDGE_GAP_32",
+      "description": "Story introducing unseen concepts -> assigned primer explanation mode",
+      "candidate": {
+        "id": "cand_know_32",
+        "type": "article",
+        "articleId": "art_know_32",
+        "title": "Quantum Teleportation Breakthrough 32",
+        "summary": "Researchers demo entanglement transfer",
+        "category": "Physics",
+        "publishedAt": "2026-09-30T07:15:00.000Z",
+        "editorialImportance": 0.8,
+        "entityIds": [],
+        "conceptIds": [
+          "con_quantum_32"
+        ],
+        "topicTags": [
+          "quantum"
+        ],
+        "readTimeMinutes": 3,
+        "materialChangesCount": 0
+      },
+      "userContext": {
+        "userId": "user_test_32",
+        "followedEntityIds": [],
+        "followedTopics": [],
+        "readingHistory": {},
+        "storyReadHistory": {},
+        "knowledgeFamiliarity": {
+          "con_quantum_32": "unseen"
+        },
+        "activeTrailIds": [],
+        "completedTrailIds": []
+      },
+      "expectedExplanationMode": "primer"
+    },
+    {
+      "id": "KNOWLEDGE_GAP_33",
+      "description": "Story introducing unseen concepts -> assigned primer explanation mode",
+      "candidate": {
+        "id": "cand_know_33",
+        "type": "article",
+        "articleId": "art_know_33",
+        "title": "Quantum Teleportation Breakthrough 33",
+        "summary": "Researchers demo entanglement transfer",
+        "category": "Physics",
+        "publishedAt": "2026-09-30T07:15:00.000Z",
+        "editorialImportance": 0.8,
+        "entityIds": [],
+        "conceptIds": [
+          "con_quantum_33"
+        ],
+        "topicTags": [
+          "quantum"
+        ],
+        "readTimeMinutes": 3,
+        "materialChangesCount": 0
+      },
+      "userContext": {
+        "userId": "user_test_33",
+        "followedEntityIds": [],
+        "followedTopics": [],
+        "readingHistory": {},
+        "storyReadHistory": {},
+        "knowledgeFamiliarity": {
+          "con_quantum_33": "unseen"
+        },
+        "activeTrailIds": [],
+        "completedTrailIds": []
+      },
+      "expectedExplanationMode": "primer"
+    },
+    {
+      "id": "KNOWLEDGE_GAP_34",
+      "description": "Story introducing unseen concepts -> assigned primer explanation mode",
+      "candidate": {
+        "id": "cand_know_34",
+        "type": "article",
+        "articleId": "art_know_34",
+        "title": "Quantum Teleportation Breakthrough 34",
+        "summary": "Researchers demo entanglement transfer",
+        "category": "Physics",
+        "publishedAt": "2026-09-30T07:15:00.000Z",
+        "editorialImportance": 0.8,
+        "entityIds": [],
+        "conceptIds": [
+          "con_quantum_34"
+        ],
+        "topicTags": [
+          "quantum"
+        ],
+        "readTimeMinutes": 3,
+        "materialChangesCount": 0
+      },
+      "userContext": {
+        "userId": "user_test_34",
+        "followedEntityIds": [],
+        "followedTopics": [],
+        "readingHistory": {},
+        "storyReadHistory": {},
+        "knowledgeFamiliarity": {
+          "con_quantum_34": "unseen"
+        },
+        "activeTrailIds": [],
+        "completedTrailIds": []
+      },
+      "expectedExplanationMode": "primer"
+    },
+    {
+      "id": "KNOWLEDGE_GAP_35",
+      "description": "Story introducing unseen concepts -> assigned primer explanation mode",
+      "candidate": {
+        "id": "cand_know_35",
+        "type": "article",
+        "articleId": "art_know_35",
+        "title": "Quantum Teleportation Breakthrough 35",
+        "summary": "Researchers demo entanglement transfer",
+        "category": "Physics",
+        "publishedAt": "2026-09-30T07:15:00.000Z",
+        "editorialImportance": 0.8,
+        "entityIds": [],
+        "conceptIds": [
+          "con_quantum_35"
+        ],
+        "topicTags": [
+          "quantum"
+        ],
+        "readTimeMinutes": 3,
+        "materialChangesCount": 0
+      },
+      "userContext": {
+        "userId": "user_test_35",
+        "followedEntityIds": [],
+        "followedTopics": [],
+        "readingHistory": {},
+        "storyReadHistory": {},
+        "knowledgeFamiliarity": {
+          "con_quantum_35": "unseen"
+        },
+        "activeTrailIds": [],
+        "completedTrailIds": []
+      },
+      "expectedExplanationMode": "primer"
+    },
+    {
+      "id": "OUTSIDE_BUBBLE_36",
+      "description": "Outside bubble candidate selected when pool has diverse non-followed topics",
+      "poolSize": 10,
+      "expectedOutsideBubbleSelected": true
+    },
+    {
+      "id": "OUTSIDE_BUBBLE_37",
+      "description": "Outside bubble candidate selected when pool has diverse non-followed topics",
+      "poolSize": 10,
+      "expectedOutsideBubbleSelected": true
+    },
+    {
+      "id": "OUTSIDE_BUBBLE_38",
+      "description": "Outside bubble candidate selected when pool has diverse non-followed topics",
+      "poolSize": 10,
+      "expectedOutsideBubbleSelected": true
+    },
+    {
+      "id": "OUTSIDE_BUBBLE_39",
+      "description": "Outside bubble candidate selected when pool has diverse non-followed topics",
+      "poolSize": 10,
+      "expectedOutsideBubbleSelected": true
+    },
+    {
+      "id": "OUTSIDE_BUBBLE_40",
+      "description": "Outside bubble candidate selected when pool has diverse non-followed topics",
+      "poolSize": 10,
+      "expectedOutsideBubbleSelected": true
+    },
+    {
+      "id": "FINITE_CONSTRAINTS_41",
+      "description": "Brief must contain between 5 and 8 items with estimated time between 5 and 15 minutes",
+      "minExpectedItems": 5,
+      "maxExpectedItems": 8
+    },
+    {
+      "id": "FINITE_CONSTRAINTS_42",
+      "description": "Brief must contain between 5 and 8 items with estimated time between 5 and 15 minutes",
+      "minExpectedItems": 5,
+      "maxExpectedItems": 8
+    },
+    {
+      "id": "FINITE_CONSTRAINTS_43",
+      "description": "Brief must contain between 5 and 8 items with estimated time between 5 and 15 minutes",
+      "minExpectedItems": 5,
+      "maxExpectedItems": 8
+    },
+    {
+      "id": "FINITE_CONSTRAINTS_44",
+      "description": "Brief must contain between 5 and 8 items with estimated time between 5 and 15 minutes",
+      "minExpectedItems": 5,
+      "maxExpectedItems": 8
+    },
+    {
+      "id": "FINITE_CONSTRAINTS_45",
+      "description": "Brief must contain between 5 and 8 items with estimated time between 5 and 15 minutes",
+      "minExpectedItems": 5,
+      "maxExpectedItems": 8
+    }
+  ]
+}

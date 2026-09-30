@@ -1,0 +1,527 @@
+[
+  {
+    "id": "ksb_01",
+    "description": "Initial unseen concept receives primary article completed signal -> promotes to exposed",
+    "initialState": null,
+    "signals": [
+      { "type": "ARTICLE_COMPLETED", "conceptId": "con_semi_cryogenic_engine", "conceptCentrality": "primary", "occurredAt": "2026-09-01T10:00:00.000Z" }
+    ],
+    "expectedState": "exposed",
+    "expectedConfidenceMin": 0.60,
+    "expectedExplicit": null,
+    "isNegativeTest": false
+  },
+  {
+    "id": "ksb_02",
+    "description": "Initial unseen concept receives supporting article completed signal -> promotes to exposed with moderate confidence",
+    "initialState": null,
+    "signals": [
+      { "type": "ARTICLE_COMPLETED", "conceptId": "con_cryogenic_engine", "conceptCentrality": "supporting", "occurredAt": "2026-09-01T10:00:00.000Z" }
+    ],
+    "expectedState": "exposed",
+    "expectedConfidenceMin": 0.50,
+    "expectedExplicit": null,
+    "isNegativeTest": false
+  },
+  {
+    "id": "ksb_03",
+    "description": "Incidental concept in completed article must NOT promote state (remains unseen)",
+    "initialState": null,
+    "signals": [
+      { "type": "ARTICLE_COMPLETED", "conceptId": "con_semi_cryogenic_engine", "conceptCentrality": "incidental", "occurredAt": "2026-09-01T10:00:00.000Z" }
+    ],
+    "expectedState": "unseen",
+    "expectedConfidenceMin": 0.0,
+    "expectedExplicit": null,
+    "isNegativeTest": true
+  },
+  {
+    "id": "ksb_04",
+    "description": "Concept opened from summary card promotes unseen to exposed",
+    "initialState": null,
+    "signals": [
+      { "type": "CONCEPT_OPENED", "conceptId": "con_repo_rate", "occurredAt": "2026-09-01T10:00:00.000Z" }
+    ],
+    "expectedState": "exposed",
+    "expectedConfidenceMin": 0.50,
+    "expectedExplicit": null,
+    "isNegativeTest": false
+  },
+  {
+    "id": "ksb_05",
+    "description": "Explanation requested from Medha indicates curiosity, does NOT promote to understood",
+    "initialState": null,
+    "signals": [
+      { "type": "EXPLANATION_REQUESTED", "conceptId": "con_transformer_model", "occurredAt": "2026-09-01T10:00:00.000Z" }
+    ],
+    "expectedState": "exposed",
+    "expectedConfidenceMin": 0.50,
+    "expectedExplicit": null,
+    "isNegativeTest": true
+  },
+  {
+    "id": "ksb_06",
+    "description": "Multiple explanation requests remain exposed, never falsely overpromoted to understood",
+    "initialState": null,
+    "signals": [
+      { "type": "EXPLANATION_REQUESTED", "conceptId": "con_transformer_model", "occurredAt": "2026-09-01T10:00:00.000Z" },
+      { "type": "EXPLANATION_REQUESTED", "conceptId": "con_transformer_model", "occurredAt": "2026-09-02T10:00:00.000Z" },
+      { "type": "CONCEPT_OPENED", "conceptId": "con_transformer_model", "occurredAt": "2026-09-03T10:00:00.000Z" }
+    ],
+    "expectedState": "exposed",
+    "expectedConfidenceMin": 0.50,
+    "expectedExplicit": null,
+    "isNegativeTest": true
+  },
+  {
+    "id": "ksb_07",
+    "description": "Exposed concept with 2 primary completed articles promotes to familiar",
+    "initialState": {
+      "conceptId": "con_repo_rate",
+      "state": "exposed",
+      "confidence": 0.60,
+      "evidenceCount": 1,
+      "evidenceSummary": { "articlesCompleted": 1, "explanationsOpened": 0, "trailsCompleted": 0, "explicitSignals": 0 },
+      "updatedAt": "2026-09-01T00:00:00.000Z"
+    },
+    "signals": [
+      { "type": "ARTICLE_COMPLETED", "conceptId": "con_repo_rate", "conceptCentrality": "primary", "occurredAt": "2026-09-02T10:00:00.000Z" }
+    ],
+    "expectedState": "familiar",
+    "expectedConfidenceMin": 0.70,
+    "expectedExplicit": null,
+    "isNegativeTest": false
+  },
+  {
+    "id": "ksb_08",
+    "description": "Exposed concept with supporting article requires 3 articles total before familiar",
+    "initialState": {
+      "conceptId": "con_inflation_targeting",
+      "state": "exposed",
+      "confidence": 0.50,
+      "evidenceCount": 1,
+      "evidenceSummary": { "articlesCompleted": 1, "explanationsOpened": 0, "trailsCompleted": 0, "explicitSignals": 0 },
+      "updatedAt": "2026-09-01T00:00:00.000Z"
+    },
+    "signals": [
+      { "type": "ARTICLE_COMPLETED", "conceptId": "con_inflation_targeting", "conceptCentrality": "supporting", "occurredAt": "2026-09-02T10:00:00.000Z" }
+    ],
+    "expectedState": "exposed",
+    "expectedConfidenceMin": 0.55,
+    "expectedExplicit": null,
+    "isNegativeTest": false
+  },
+  {
+    "id": "ksb_09",
+    "description": "Exposed concept reaches 3rd completed article -> promotes to familiar",
+    "initialState": {
+      "conceptId": "con_inflation_targeting",
+      "state": "exposed",
+      "confidence": 0.55,
+      "evidenceCount": 2,
+      "evidenceSummary": { "articlesCompleted": 2, "explanationsOpened": 0, "trailsCompleted": 0, "explicitSignals": 0 },
+      "updatedAt": "2026-09-02T00:00:00.000Z"
+    },
+    "signals": [
+      { "type": "ARTICLE_COMPLETED", "conceptId": "con_inflation_targeting", "conceptCentrality": "supporting", "occurredAt": "2026-09-03T10:00:00.000Z" }
+    ],
+    "expectedState": "familiar",
+    "expectedConfidenceMin": 0.70,
+    "expectedExplicit": null,
+    "isNegativeTest": false
+  },
+  {
+    "id": "ksb_10",
+    "description": "Familiar concept completing another article reinforces confidence without premature jump to understood",
+    "initialState": {
+      "conceptId": "con_sovereign_ai",
+      "state": "familiar",
+      "confidence": 0.70,
+      "evidenceCount": 3,
+      "evidenceSummary": { "articlesCompleted": 3, "explanationsOpened": 0, "trailsCompleted": 0, "explicitSignals": 0 },
+      "updatedAt": "2026-09-03T00:00:00.000Z"
+    },
+    "signals": [
+      { "type": "ARTICLE_COMPLETED", "conceptId": "con_sovereign_ai", "conceptCentrality": "primary", "occurredAt": "2026-09-04T10:00:00.000Z" }
+    ],
+    "expectedState": "familiar",
+    "expectedConfidenceMin": 0.75,
+    "expectedExplicit": null,
+    "isNegativeTest": true
+  },
+  {
+    "id": "ksb_11",
+    "description": "Knowledge Trail step completed promotes unseen directly to familiar",
+    "initialState": null,
+    "signals": [
+      { "type": "TRAIL_STEP_COMPLETED", "conceptId": "con_semiconductor_fab", "sourceTrailId": "trail_semiconductor_manufacturing", "occurredAt": "2026-09-01T10:00:00.000Z" }
+    ],
+    "expectedState": "familiar",
+    "expectedConfidenceMin": 0.75,
+    "expectedExplicit": null,
+    "isNegativeTest": false
+  },
+  {
+    "id": "ksb_12",
+    "description": "Knowledge Trail step completed promotes exposed concept to familiar",
+    "initialState": {
+      "conceptId": "con_cleanroom",
+      "state": "exposed",
+      "confidence": 0.50,
+      "evidenceCount": 1,
+      "evidenceSummary": { "articlesCompleted": 1, "explanationsOpened": 0, "trailsCompleted": 0, "explicitSignals": 0 },
+      "updatedAt": "2026-09-01T00:00:00.000Z"
+    },
+    "signals": [
+      { "type": "TRAIL_STEP_COMPLETED", "conceptId": "con_cleanroom", "sourceTrailId": "trail_semiconductor_manufacturing", "occurredAt": "2026-09-02T10:00:00.000Z" }
+    ],
+    "expectedState": "familiar",
+    "expectedConfidenceMin": 0.75,
+    "expectedExplicit": null,
+    "isNegativeTest": false
+  },
+  {
+    "id": "ksb_13",
+    "description": "Full Knowledge Trail completion promotes familiar concept to understood",
+    "initialState": {
+      "conceptId": "con_atmp_osat",
+      "state": "familiar",
+      "confidence": 0.75,
+      "evidenceCount": 3,
+      "evidenceSummary": { "articlesCompleted": 1, "explanationsOpened": 1, "trailsCompleted": 0, "explicitSignals": 0 },
+      "updatedAt": "2026-09-02T00:00:00.000Z"
+    },
+    "signals": [
+      { "type": "TRAIL_COMPLETED", "conceptId": "con_atmp_osat", "sourceTrailId": "trail_semiconductor_manufacturing", "occurredAt": "2026-09-03T10:00:00.000Z" }
+    ],
+    "expectedState": "understood",
+    "expectedConfidenceMin": 0.85,
+    "expectedExplicit": null,
+    "isNegativeTest": false
+  },
+  {
+    "id": "ksb_14",
+    "description": "Full Knowledge Trail completion promotes exposed concept to familiar with high confidence",
+    "initialState": {
+      "conceptId": "con_fast_charging",
+      "state": "exposed",
+      "confidence": 0.50,
+      "evidenceCount": 1,
+      "evidenceSummary": { "articlesCompleted": 1, "explanationsOpened": 0, "trailsCompleted": 0, "explicitSignals": 0 },
+      "updatedAt": "2026-09-01T00:00:00.000Z"
+    },
+    "signals": [
+      { "type": "TRAIL_COMPLETED", "conceptId": "con_fast_charging", "sourceTrailId": "trail_ev_mobility", "occurredAt": "2026-09-03T10:00:00.000Z" }
+    ],
+    "expectedState": "familiar",
+    "expectedConfidenceMin": 0.80,
+    "expectedExplicit": null,
+    "isNegativeTest": false
+  },
+  {
+    "id": "ksb_15",
+    "description": "Explicit user override 'I know this' immediately promotes unseen to understood with 0.95 confidence",
+    "initialState": null,
+    "signals": [
+      { "type": "USER_KNOWS_CONCEPT", "conceptId": "con_upi", "occurredAt": "2026-09-01T10:00:00.000Z" }
+    ],
+    "expectedState": "understood",
+    "expectedConfidenceMin": 0.95,
+    "expectedExplicit": "know_this",
+    "isNegativeTest": false
+  },
+  {
+    "id": "ksb_16",
+    "description": "Explicit user override 'I know this' overrides exposed state immediately",
+    "initialState": {
+      "conceptId": "con_ipo",
+      "state": "exposed",
+      "confidence": 0.50,
+      "evidenceCount": 1,
+      "evidenceSummary": { "articlesCompleted": 1, "explanationsOpened": 0, "trailsCompleted": 0, "explicitSignals": 0 },
+      "updatedAt": "2026-09-01T00:00:00.000Z"
+    },
+    "signals": [
+      { "type": "USER_KNOWS_CONCEPT", "conceptId": "con_ipo", "occurredAt": "2026-09-02T10:00:00.000Z" }
+    ],
+    "expectedState": "understood",
+    "expectedConfidenceMin": 0.95,
+    "expectedExplicit": "know_this",
+    "isNegativeTest": false
+  },
+  {
+    "id": "ksb_17",
+    "description": "Explicit user request 'Explain from basics' demotes understood state to familiar and learning",
+    "initialState": {
+      "conceptId": "con_large_language_model",
+      "state": "understood",
+      "confidence": 0.95,
+      "evidenceCount": 5,
+      "explicitUserState": "know_this",
+      "evidenceSummary": { "articlesCompleted": 3, "explanationsOpened": 1, "trailsCompleted": 1, "explicitSignals": 1 },
+      "updatedAt": "2026-09-01T00:00:00.000Z"
+    },
+    "signals": [
+      { "type": "USER_REQUESTS_BASICS", "conceptId": "con_large_language_model", "occurredAt": "2026-09-02T10:00:00.000Z" }
+    ],
+    "expectedState": "familiar",
+    "expectedConfidenceMin": 0.85,
+    "expectedExplicit": "learning",
+    "isNegativeTest": false
+  },
+  {
+    "id": "ksb_18",
+    "description": "Explicit user request 'Explain from basics' on familiar concept demotes to exposed",
+    "initialState": {
+      "conceptId": "con_agentic_ai",
+      "state": "familiar",
+      "confidence": 0.70,
+      "evidenceCount": 2,
+      "evidenceSummary": { "articlesCompleted": 2, "explanationsOpened": 0, "trailsCompleted": 0, "explicitSignals": 0 },
+      "updatedAt": "2026-09-01T00:00:00.000Z"
+    },
+    "signals": [
+      { "type": "USER_REQUESTS_BASICS", "conceptId": "con_agentic_ai", "occurredAt": "2026-09-02T10:00:00.000Z" }
+    ],
+    "expectedState": "exposed",
+    "expectedConfidenceMin": 0.85,
+    "expectedExplicit": "learning",
+    "isNegativeTest": false
+  },
+  {
+    "id": "ksb_19",
+    "description": "Reset concept clears all evidence and restores unseen state",
+    "initialState": {
+      "conceptId": "con_waterless_cooling",
+      "state": "understood",
+      "confidence": 0.95,
+      "evidenceCount": 8,
+      "explicitUserState": "know_this",
+      "evidenceSummary": { "articlesCompleted": 5, "explanationsOpened": 2, "trailsCompleted": 1, "explicitSignals": 1 },
+      "updatedAt": "2026-09-01T00:00:00.000Z"
+    },
+    "signals": [
+      { "type": "RESET_CONCEPT", "conceptId": "con_waterless_cooling", "occurredAt": "2026-09-02T10:00:00.000Z" }
+    ],
+    "expectedState": "unseen",
+    "expectedConfidenceMin": 0.0,
+    "expectedExplicit": null,
+    "isNegativeTest": false
+  },
+  {
+    "id": "ksb_20",
+    "description": "Sequential journey: unseen -> article 1 (exposed) -> article 2 (familiar) -> trail finished (understood)",
+    "initialState": null,
+    "signals": [
+      { "type": "ARTICLE_COMPLETED", "conceptId": "con_gcc", "conceptCentrality": "primary", "occurredAt": "2026-09-01T10:00:00.000Z" },
+      { "type": "ARTICLE_COMPLETED", "conceptId": "con_gcc", "conceptCentrality": "primary", "occurredAt": "2026-09-02T10:00:00.000Z" },
+      { "type": "TRAIL_COMPLETED", "conceptId": "con_gcc", "sourceTrailId": "trail_gcc_evolution", "occurredAt": "2026-09-03T10:00:00.000Z" }
+    ],
+    "expectedState": "understood",
+    "expectedConfidenceMin": 0.85,
+    "expectedExplicit": null,
+    "isNegativeTest": false
+  },
+  {
+    "id": "ksb_21",
+    "description": "Sequential journey: unseen -> opened explanation -> 2 incidental articles -> remains exposed",
+    "initialState": null,
+    "signals": [
+      { "type": "CONCEPT_OPENED", "conceptId": "con_powertrain", "occurredAt": "2026-09-01T10:00:00.000Z" },
+      { "type": "ARTICLE_COMPLETED", "conceptId": "con_powertrain", "conceptCentrality": "incidental", "occurredAt": "2026-09-02T10:00:00.000Z" },
+      { "type": "ARTICLE_COMPLETED", "conceptId": "con_powertrain", "conceptCentrality": "incidental", "occurredAt": "2026-09-03T10:00:00.000Z" }
+    ],
+    "expectedState": "exposed",
+    "expectedConfidenceMin": 0.50,
+    "expectedExplicit": null,
+    "isNegativeTest": true
+  },
+  {
+    "id": "ksb_22",
+    "description": "User with explicit know_this retains understood state even when reading supporting articles",
+    "initialState": {
+      "conceptId": "con_supercomputer",
+      "state": "understood",
+      "confidence": 0.95,
+      "evidenceCount": 1,
+      "explicitUserState": "know_this",
+      "evidenceSummary": { "articlesCompleted": 0, "explanationsOpened": 0, "trailsCompleted": 0, "explicitSignals": 1 },
+      "updatedAt": "2026-09-01T00:00:00.000Z"
+    },
+    "signals": [
+      { "type": "ARTICLE_COMPLETED", "conceptId": "con_supercomputer", "conceptCentrality": "supporting", "occurredAt": "2026-09-02T10:00:00.000Z" }
+    ],
+    "expectedState": "understood",
+    "expectedConfidenceMin": 0.95,
+    "expectedExplicit": "know_this",
+    "isNegativeTest": false
+  },
+  {
+    "id": "ksb_23",
+    "description": "Trail step completed on concept that is already familiar maintains familiar with higher confidence",
+    "initialState": {
+      "conceptId": "con_venture_capital",
+      "state": "familiar",
+      "confidence": 0.70,
+      "evidenceCount": 2,
+      "evidenceSummary": { "articlesCompleted": 2, "explanationsOpened": 0, "trailsCompleted": 0, "explicitSignals": 0 },
+      "updatedAt": "2026-09-01T00:00:00.000Z"
+    },
+    "signals": [
+      { "type": "TRAIL_STEP_COMPLETED", "conceptId": "con_venture_capital", "sourceTrailId": "trail_startup_capital", "occurredAt": "2026-09-02T10:00:00.000Z" }
+    ],
+    "expectedState": "familiar",
+    "expectedConfidenceMin": 0.75,
+    "expectedExplicit": null,
+    "isNegativeTest": false
+  },
+  {
+    "id": "ksb_24",
+    "description": "Trail step completed on understood concept preserves understood state",
+    "initialState": {
+      "conceptId": "con_it_services",
+      "state": "understood",
+      "confidence": 0.85,
+      "evidenceCount": 4,
+      "evidenceSummary": { "articlesCompleted": 2, "explanationsOpened": 1, "trailsCompleted": 1, "explicitSignals": 0 },
+      "updatedAt": "2026-09-01T00:00:00.000Z"
+    },
+    "signals": [
+      { "type": "TRAIL_STEP_COMPLETED", "conceptId": "con_it_services", "sourceTrailId": "trail_gcc_evolution", "occurredAt": "2026-09-02T10:00:00.000Z" }
+    ],
+    "expectedState": "understood",
+    "expectedConfidenceMin": 0.85,
+    "expectedExplicit": null,
+    "isNegativeTest": false
+  },
+  {
+    "id": "ksb_25",
+    "description": "User requests basics on exposed concept preserves learning explicit state",
+    "initialState": {
+      "conceptId": "con_thrust",
+      "state": "exposed",
+      "confidence": 0.50,
+      "evidenceCount": 1,
+      "evidenceSummary": { "articlesCompleted": 1, "explanationsOpened": 0, "trailsCompleted": 0, "explicitSignals": 0 },
+      "updatedAt": "2026-09-01T00:00:00.000Z"
+    },
+    "signals": [
+      { "type": "USER_REQUESTS_BASICS", "conceptId": "con_thrust", "occurredAt": "2026-09-02T10:00:00.000Z" }
+    ],
+    "expectedState": "exposed",
+    "expectedConfidenceMin": 0.85,
+    "expectedExplicit": "learning",
+    "isNegativeTest": false
+  },
+  {
+    "id": "ksb_26",
+    "description": "User requests basics on unseen concept creates exposed learning state",
+    "initialState": null,
+    "signals": [
+      { "type": "USER_REQUESTS_BASICS", "conceptId": "con_launch_vehicle", "occurredAt": "2026-09-01T10:00:00.000Z" }
+    ],
+    "expectedState": "exposed",
+    "expectedConfidenceMin": 0.85,
+    "expectedExplicit": "learning",
+    "isNegativeTest": false
+  },
+  {
+    "id": "ksb_27",
+    "description": "Single primary article followed by user clicking 'I know this' immediately grants understood",
+    "initialState": null,
+    "signals": [
+      { "type": "ARTICLE_COMPLETED", "conceptId": "con_payload_capacity", "conceptCentrality": "primary", "occurredAt": "2026-09-01T10:00:00.000Z" },
+      { "type": "USER_KNOWS_CONCEPT", "conceptId": "con_payload_capacity", "occurredAt": "2026-09-01T10:05:00.000Z" }
+    ],
+    "expectedState": "understood",
+    "expectedConfidenceMin": 0.95,
+    "expectedExplicit": "know_this",
+    "isNegativeTest": false
+  },
+  {
+    "id": "ksb_28",
+    "description": "Multiple incidental mentions across 5 articles never promote from unseen",
+    "initialState": null,
+    "signals": [
+      { "type": "ARTICLE_COMPLETED", "conceptId": "con_fiscal_deficit", "conceptCentrality": "incidental", "occurredAt": "2026-09-01T10:00:00.000Z" },
+      { "type": "ARTICLE_COMPLETED", "conceptId": "con_fiscal_deficit", "conceptCentrality": "incidental", "occurredAt": "2026-09-02T10:00:00.000Z" },
+      { "type": "ARTICLE_COMPLETED", "conceptId": "con_fiscal_deficit", "conceptCentrality": "incidental", "occurredAt": "2026-09-03T10:00:00.000Z" },
+      { "type": "ARTICLE_COMPLETED", "conceptId": "con_fiscal_deficit", "conceptCentrality": "incidental", "occurredAt": "2026-09-04T10:00:00.000Z" },
+      { "type": "ARTICLE_COMPLETED", "conceptId": "con_fiscal_deficit", "conceptCentrality": "incidental", "occurredAt": "2026-09-05T10:00:00.000Z" }
+    ],
+    "expectedState": "unseen",
+    "expectedConfidenceMin": 0.0,
+    "expectedExplicit": null,
+    "isNegativeTest": true
+  },
+  {
+    "id": "ksb_29",
+    "description": "Concept opened + 1 primary article completed -> familiar",
+    "initialState": null,
+    "signals": [
+      { "type": "CONCEPT_OPENED", "conceptId": "con_interest_rate", "occurredAt": "2026-09-01T10:00:00.000Z" },
+      { "type": "ARTICLE_COMPLETED", "conceptId": "con_interest_rate", "conceptCentrality": "primary", "occurredAt": "2026-09-02T10:00:00.000Z" },
+      { "type": "ARTICLE_COMPLETED", "conceptId": "con_interest_rate", "conceptCentrality": "primary", "occurredAt": "2026-09-03T10:00:00.000Z" }
+    ],
+    "expectedState": "familiar",
+    "expectedConfidenceMin": 0.70,
+    "expectedExplicit": null,
+    "isNegativeTest": false
+  },
+  {
+    "id": "ksb_30",
+    "description": "User resets concept then completes trail step -> promotes cleanly to familiar",
+    "initialState": {
+      "conceptId": "con_monetary_policy",
+      "state": "understood",
+      "confidence": 0.95,
+      "evidenceCount": 6,
+      "explicitUserState": "know_this",
+      "evidenceSummary": { "articlesCompleted": 4, "explanationsOpened": 1, "trailsCompleted": 1, "explicitSignals": 1 },
+      "updatedAt": "2026-09-01T00:00:00.000Z"
+    },
+    "signals": [
+      { "type": "RESET_CONCEPT", "conceptId": "con_monetary_policy", "occurredAt": "2026-09-02T10:00:00.000Z" },
+      { "type": "TRAIL_STEP_COMPLETED", "conceptId": "con_monetary_policy", "sourceTrailId": "trail_monetary_policy", "occurredAt": "2026-09-03T10:00:00.000Z" }
+    ],
+    "expectedState": "familiar",
+    "expectedConfidenceMin": 0.75,
+    "expectedExplicit": null,
+    "isNegativeTest": false
+  },
+  {
+    "id": "ksb_31",
+    "description": "Rapid multiple clicks on explanation modal do not cause false promotion beyond exposed",
+    "initialState": null,
+    "signals": [
+      { "type": "CONCEPT_OPENED", "conceptId": "con_rocket_propulsion", "occurredAt": "2026-09-01T10:00:00.000Z" },
+      { "type": "CONCEPT_OPENED", "conceptId": "con_rocket_propulsion", "occurredAt": "2026-09-01T10:00:02.000Z" },
+      { "type": "CONCEPT_OPENED", "conceptId": "con_rocket_propulsion", "occurredAt": "2026-09-01T10:00:04.000Z" }
+    ],
+    "expectedState": "exposed",
+    "expectedConfidenceMin": 0.50,
+    "expectedExplicit": null,
+    "isNegativeTest": true
+  },
+  {
+    "id": "ksb_32",
+    "description": "Full lifecycle: learning request overrides previous understood and allows gradual re-familiarization",
+    "initialState": {
+      "conceptId": "con_repo_rate",
+      "state": "understood",
+      "confidence": 0.95,
+      "evidenceCount": 5,
+      "explicitUserState": "know_this",
+      "evidenceSummary": { "articlesCompleted": 3, "explanationsOpened": 1, "trailsCompleted": 1, "explicitSignals": 1 },
+      "updatedAt": "2026-09-01T00:00:00.000Z"
+    },
+    "signals": [
+      { "type": "USER_REQUESTS_BASICS", "conceptId": "con_repo_rate", "occurredAt": "2026-09-02T10:00:00.000Z" },
+      { "type": "ARTICLE_COMPLETED", "conceptId": "con_repo_rate", "conceptCentrality": "primary", "occurredAt": "2026-09-03T10:00:00.000Z" }
+    ],
+    "expectedState": "familiar",
+    "expectedConfidenceMin": 0.70,
+    "expectedExplicit": "learning",
+    "isNegativeTest": false
+  }
+]

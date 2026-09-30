@@ -1,0 +1,1283 @@
+[
+  {
+    "id": "db_01_fuel_cycle_workforce",
+    "description": "Workforce target increases from 50 to 120 employees",
+    "previousArticle": {
+      "id": "art_fc_01",
+      "title": "Fuel Cycle opens Navi Mumbai GCC with 50 engineers",
+      "quick_brief": {
+        "headline": "Fuel Cycle opens Navi Mumbai GCC",
+        "quick_summary": "Fuel Cycle opens Navi Mumbai Global Capability Centre with 50 employees.",
+        "category": "AI & ML",
+        "three_things_to_know": ["Navi Mumbai GCC opened", "Initial 50 employees hired", "AI engineering hub"]
+      },
+      "full_article": {
+        "what_happened": "Fuel Cycle opened its Navi Mumbai GCC with an initial team of 50 employees.",
+        "key_stats": [{ "label": "Planned Workforce", "value": "50 employees" }]
+      },
+      "publishedAt": "2026-09-24T00:00:00.000Z"
+    },
+    "currentArticle": {
+      "id": "art_fc_02",
+      "title": "Fuel Cycle increases planned workforce to 120",
+      "quick_brief": {
+        "headline": "Fuel Cycle expands hiring to 120",
+        "quick_summary": "Fuel Cycle expands planned workforce to 120 employees by end of year.",
+        "category": "AI & ML",
+        "three_things_to_know": ["Planned workforce increased to 120", "Hiring by November"]
+      },
+      "full_article": {
+        "what_happened": "Fuel Cycle confirmed plans to scale its engineering footprint to 120 employees.",
+        "key_stats": [{ "label": "Planned Workforce", "value": "120 employees" }]
+      },
+      "publishedAt": "2026-09-29T00:00:00.000Z"
+    },
+    "expectedChanges": [
+      {
+        "type": "value_changed",
+        "subject": "Planned Workforce",
+        "previousValue": 50,
+        "newValue": 120,
+        "userFacing": true
+      }
+    ]
+  },
+  {
+    "id": "db_02_matel_funding",
+    "description": "Series B ₹130 Cr funding closed",
+    "previousArticle": {
+      "id": "art_matel_01",
+      "title": "Matel Motion explores growth capital for EV motor manufacturing in Pune",
+      "quick_brief": {
+        "headline": "Matel Motion seeks funding",
+        "quick_summary": "Pune EV motor maker Matel Motion in preliminary talks for expansion.",
+        "category": "Startups",
+        "three_things_to_know": ["Exploring capital options", "Pune facility", "EV motors"]
+      },
+      "full_article": {
+        "what_happened": "Matel Motion initiated preliminary discussions to fund its Pune assembly expansion.",
+        "key_stats": []
+      },
+      "publishedAt": "2026-08-15T00:00:00.000Z"
+    },
+    "currentArticle": {
+      "id": "art_matel_02",
+      "title": "Matel Motion raises ₹130 crore in Series B round",
+      "quick_brief": {
+        "headline": "Matel Motion raises ₹130 Cr",
+        "quick_summary": "Matel Motion closes ₹130 crore Series B round led by clean-tech investors.",
+        "category": "Startups",
+        "three_things_to_know": ["Closed ₹130 crore funding", "Pune assembly scaling"]
+      },
+      "full_article": {
+        "what_happened": "Matel Motion secured ₹130 crore in fresh Series B financing.",
+        "key_stats": [{ "label": "Investment / Capital", "value": "₹130 crore" }]
+      },
+      "publishedAt": "2026-09-10T00:00:00.000Z"
+    },
+    "expectedChanges": [
+      {
+        "type": "new_fact",
+        "subject": "Investment / Capital",
+        "newValue": "₹130 crore",
+        "userFacing": true
+      }
+    ]
+  },
+  {
+    "id": "db_03_isro_identical_reporting",
+    "description": "ISRO second article repeats 200-tonne full thrust and 35s test duration",
+    "previousArticle": {
+      "id": "art_isro_01",
+      "title": "ISRO Just Ran Its New Semi-Cryogenic Rocket Engine at Full Thrust for the First Time",
+      "quick_brief": {
+        "headline": "ISRO runs semi-cryogenic powerhead at 200 tonnes",
+        "quick_summary": "ISRO successfully ran the powerhead at 100% thrust reaching 200 tonnes for 5 seconds in a 35-second test.",
+        "category": "Space",
+        "three_things_to_know": [
+          "Powerhead reached 200 tonnes full thrust for first time",
+          "Test lasted approximately 35 seconds with 5 seconds at full thrust and was the 9th PHTA test"
+        ]
+      },
+      "full_article": {
+        "what_happened": "The run lasted approximately 35 seconds with five seconds at 200 tonnes full thrust at Mahendragiri.",
+        "key_stats": []
+      },
+      "publishedAt": "2026-09-05T00:00:00.000Z"
+    },
+    "currentArticle": {
+      "id": "art_isro_02",
+      "title": "ISRO tests semi-cryogenic engine power head at full 200-tonne thrust",
+      "quick_brief": {
+        "headline": "ISRO tests semi-cryogenic engine power head at full 200-tonne thrust",
+        "quick_summary": "ISRO hot-tested its semi-cryogenic Engine Power Head reaching 200-tonne thrust.",
+        "category": "Space",
+        "three_things_to_know": [
+          "Power head reached full 200-tonne thrust for five seconds during a 35-second test",
+          "Ninth PHTA hot-test and first at 100 percent thrust"
+        ]
+      },
+      "full_article": {
+        "what_happened": "The power head operated at the full 200-tonne thrust level for five seconds during a 35-second test.",
+        "key_stats": [
+          { "label": "full thrust level", "value": "200-tonne" },
+          { "label": "duration at full thrust", "value": "5 seconds" },
+          { "label": "total test duration", "value": "35 seconds" },
+          { "label": "test in PHTA hot-test series", "value": "9th" }
+        ]
+      },
+      "publishedAt": "2026-09-17T00:00:00.000Z"
+    },
+    "expectedChanges": [
+      {
+        "type": "additional_detail",
+        "subject": "full thrust level",
+        "userFacing": false
+      }
+    ]
+  },
+  {
+    "id": "db_04_ather_status_transition",
+    "description": "Ather Konarc transitions from In Testing to Launched",
+    "previousArticle": {
+      "id": "art_at_01",
+      "title": "Ather tests new mass-market electric scooter prototype under codename Konarc",
+      "quick_brief": {
+        "headline": "Ather testing new EV prototype",
+        "quick_summary": "Ather engineers conduct validation trials of new family electric scooter prototype.",
+        "category": "EV",
+        "three_things_to_know": ["Testing in Bengaluru", "Prototype trials underway"]
+      },
+      "full_article": {
+        "what_happened": "Ather completed high-altitude testing and trials for its new budget scooter platform.",
+        "key_stats": [{ "label": "Operational Status", "value": "In Testing" }]
+      },
+      "publishedAt": "2026-07-20T00:00:00.000Z"
+    },
+    "currentArticle": {
+      "id": "art_at_02",
+      "title": "Ather officially launches Konarc electric scooter starting at ₹99,999",
+      "quick_brief": {
+        "headline": "Ather launches Konarc at ₹99,999",
+        "quick_summary": "Ather Energy commercially rolls out Konarc across India.",
+        "category": "EV",
+        "three_things_to_know": ["Launched at ₹99,999", "Bookings open immediately"]
+      },
+      "full_article": {
+        "what_happened": "Ather officially launched the Konarc model for mass delivery.",
+        "key_stats": [{ "label": "Operational Status", "value": "Launched" }]
+      },
+      "publishedAt": "2026-08-30T00:00:00.000Z"
+    },
+    "expectedChanges": [
+      {
+        "type": "status_changed",
+        "subject": "Operational Status",
+        "previousValue": "In Testing",
+        "newValue": "Launched",
+        "userFacing": true
+      }
+    ]
+  },
+  {
+    "id": "db_05_blinkit_dark_stores_scale",
+    "description": "Blinkit active dark stores expand from 100 to 250",
+    "previousArticle": {
+      "id": "art_bl_01",
+      "title": "Blinkit expands with 100 dark stores across North India",
+      "quick_brief": {
+        "headline": "Blinkit operates 100 dark stores",
+        "quick_summary": "Blinkit reaches milestone of 100 operational dark stores.",
+        "category": "Startups",
+        "three_things_to_know": ["100 dark stores live", "10-minute delivery"]
+      },
+      "full_article": {
+        "what_happened": "Blinkit confirmed it is operating 100 dark stores.",
+        "key_stats": [{ "label": "Active Stores", "value": 100 }]
+      },
+      "publishedAt": "2026-08-10T00:00:00.000Z"
+    },
+    "currentArticle": {
+      "id": "art_bl_02",
+      "title": "Blinkit expands dark store network to 250 locations",
+      "quick_brief": {
+        "headline": "Blinkit scales to 250 dark stores",
+        "quick_summary": "Blinkit adds 150 new dark stores bringing active total to 250.",
+        "category": "Startups",
+        "three_things_to_know": ["250 dark stores active", "Tier-2 expansion"]
+      },
+      "full_article": {
+        "what_happened": "Blinkit expanded rapidly to 250 operational micro-warehouses.",
+        "key_stats": [{ "label": "Active Stores", "value": 250 }]
+      },
+      "publishedAt": "2026-09-20T00:00:00.000Z"
+    },
+    "expectedChanges": [
+      {
+        "type": "value_changed",
+        "subject": "Active Stores",
+        "previousValue": 100,
+        "newValue": 250,
+        "userFacing": true
+      }
+    ]
+  },
+  {
+    "id": "db_06_phonepe_dau_growth",
+    "description": "PhonePe Indus DAU grows from 1M to 3M",
+    "previousArticle": {
+      "id": "art_ph_01",
+      "title": "PhonePe Indus Appstore reaches 1M daily active users",
+      "quick_brief": {
+        "headline": "Indus crosses 1M DAU",
+        "quick_summary": "Indus Appstore reports 1 million daily active users.",
+        "category": "Tech",
+        "three_things_to_know": ["1M DAU reached", "250k apps listed"]
+      },
+      "full_article": {
+        "what_happened": "Indus crossed 1M DAU in initial rollout.",
+        "key_stats": [{ "label": "Daily Users", "value": "1M DAU" }]
+      },
+      "publishedAt": "2026-08-20T00:00:00.000Z"
+    },
+    "currentArticle": {
+      "id": "art_ph_02",
+      "title": "PhonePe Indus Appstore surges to 3M daily active users",
+      "quick_brief": {
+        "headline": "Indus crosses 3M DAU",
+        "quick_summary": "Indus Appstore DAU triples to 3 million users following festive campaigns.",
+        "category": "Tech",
+        "three_things_to_know": ["3M DAU achieved", "500k apps listed"]
+      },
+      "full_article": {
+        "what_happened": "Indus confirmed daily active users reached 3 million.",
+        "key_stats": [{ "label": "Daily Users", "value": "3M DAU" }]
+      },
+      "publishedAt": "2026-09-25T00:00:00.000Z"
+    },
+    "expectedChanges": [
+      {
+        "type": "value_changed",
+        "subject": "Daily Users",
+        "previousValue": "1M DAU",
+        "newValue": "3M DAU",
+        "userFacing": true
+      }
+    ]
+  },
+  {
+    "id": "db_07_skyroot_regulatory_approval",
+    "description": "Skyroot status changes from Pending Approval to Cleared",
+    "previousArticle": {
+      "id": "art_sk_01",
+      "title": "Skyroot awaits regulatory nod from IN-SPACe for Vikram-1 maiden flight",
+      "quick_brief": {
+        "headline": "Skyroot applies for orbital launch permit",
+        "quick_summary": "Skyroot submits safety documentation awaiting regulatory clearance.",
+        "category": "Space",
+        "three_things_to_know": ["Applied to IN-SPACe", "Vikram-1 readiness"]
+      },
+      "full_article": {
+        "what_happened": "Skyroot submitted application seeking clearance for Sriharikota launch.",
+        "key_stats": [{ "label": "Regulatory Approval", "value": "Pending" }]
+      },
+      "publishedAt": "2026-08-25T00:00:00.000Z"
+    },
+    "currentArticle": {
+      "id": "art_sk_02",
+      "title": "IN-SPACe formally grants launch clearance to Skyroot for Vikram-1 mission",
+      "quick_brief": {
+        "headline": "Skyroot cleared for orbital flight",
+        "quick_summary": "IN-SPACe grants technical launch authorization for orbital mission.",
+        "category": "Space",
+        "three_things_to_know": ["Launch clearance approved", "Scheduled for Q4"]
+      },
+      "full_article": {
+        "what_happened": "Regulators officially approved Skyroot's orbital mission manifest.",
+        "key_stats": [{ "label": "Regulatory Approval", "value": "Approved" }]
+      },
+      "publishedAt": "2026-09-26T00:00:00.000Z"
+    },
+    "expectedChanges": [
+      {
+        "type": "status_changed",
+        "subject": "Regulatory Approval",
+        "previousValue": "Pending",
+        "newValue": "Approved",
+        "userFacing": true
+      }
+    ]
+  },
+  {
+    "id": "db_08_tata_dholera_fab_cost",
+    "description": "Tata fab budget confirmed at ₹91,000 Cr",
+    "previousArticle": {
+      "id": "art_ta_01",
+      "title": "Tata Electronics plans semiconductor fabrication facility in Gujarat",
+      "quick_brief": {
+        "headline": "Tata plans chip foundry",
+        "quick_summary": "Tata explores semiconductor investment in Dholera.",
+        "category": "Semiconductors",
+        "three_things_to_know": ["Exploring Dholera site", "28nm chip fab"]
+      },
+      "full_article": {
+        "what_happened": "Tata announced preliminary plans for a domestic semiconductor fab.",
+        "key_stats": []
+      },
+      "publishedAt": "2026-07-10T00:00:00.000Z"
+    },
+    "currentArticle": {
+      "id": "art_ta_02",
+      "title": "Tata Electronics commits ₹91,000 Cr investment in Dholera mega fab",
+      "quick_brief": {
+        "headline": "Tata commits ₹91,000 Cr for fab",
+        "quick_summary": "Tata Electronics confirms ₹91,000 crore capital expenditure for Dholera foundry.",
+        "category": "Semiconductors",
+        "three_things_to_know": ["₹91,000 Cr investment committed", "Dholera site ground-breaking"]
+      },
+      "full_article": {
+        "what_happened": "Tata Electronics officially sanctioned ₹91,000 crore for foundry construction.",
+        "key_stats": [{ "label": "Investment / Capital", "value": "₹91,000 crore" }]
+      },
+      "publishedAt": "2026-08-12T00:00:00.000Z"
+    },
+    "expectedChanges": [
+      {
+        "type": "new_fact",
+        "subject": "Investment / Capital",
+        "newValue": "₹91,000 crore",
+        "userFacing": true
+      }
+    ]
+  },
+  {
+    "id": "db_09_sarvam_weights_release",
+    "description": "Sarvam model status shifts from Private Beta to Open Source",
+    "previousArticle": {
+      "id": "art_sa_01",
+      "title": "Sarvam AI previews Sarvam-1 Indic LLM in private developer beta",
+      "quick_brief": {
+        "headline": "Sarvam-1 enters private beta",
+        "quick_summary": "Sarvam AI demonstrates 2B parameter Indic language model to select enterprise partners.",
+        "category": "AI & ML",
+        "three_things_to_know": ["Private beta access", "2B parameters", "10 languages"]
+      },
+      "full_article": {
+        "what_happened": "Sarvam showcased private beta inference for select organizations.",
+        "key_stats": [{ "label": "Distribution Status", "value": "Private Beta" }]
+      },
+      "publishedAt": "2026-08-22T00:00:00.000Z"
+    },
+    "currentArticle": {
+      "id": "art_sa_02",
+      "title": "Sarvam AI publishes open weights and code for Sarvam-1 on HuggingFace",
+      "quick_brief": {
+        "headline": "Sarvam-1 weights open-sourced",
+        "quick_summary": "Sarvam AI makes full 2B model weights publicly downloadable under open license.",
+        "category": "AI & ML",
+        "three_things_to_know": ["Open source weights live", "HuggingFace checkpoints available"]
+      },
+      "full_article": {
+        "what_happened": "Sarvam released model checkpoints publicly under Apache 2.0.",
+        "key_stats": [{ "label": "Distribution Status", "value": "Open Source" }]
+      },
+      "publishedAt": "2026-09-22T00:00:00.000Z"
+    },
+    "expectedChanges": [
+      {
+        "type": "status_changed",
+        "subject": "Distribution Status",
+        "previousValue": "Private Beta",
+        "newValue": "Open Source",
+        "userFacing": true
+      }
+    ]
+  },
+  {
+    "id": "db_10_krutrim_cloud_capacity",
+    "description": "Krutrim sovereign datacenter capacity scales to 50 MW",
+    "previousArticle": {
+      "id": "art_kr_01",
+      "title": "Ola Krutrim outlines roadmap for sovereign AI cloud infrastructure",
+      "quick_brief": {
+        "headline": "Krutrim plans AI cloud datacenter",
+        "quick_summary": "Krutrim announces plans to build domestic high-density AI data center.",
+        "category": "AI & ML",
+        "three_things_to_know": ["Sovereign cloud plan", "Custom Bodhi silicon"]
+      },
+      "full_article": {
+        "what_happened": "Krutrim outlined intent to deploy dedicated data center capacity.",
+        "key_stats": []
+      },
+      "publishedAt": "2026-08-15T00:00:00.000Z"
+    },
+    "currentArticle": {
+      "id": "art_kr_02",
+      "title": "Ola Krutrim commissions 50 MW sovereign AI cloud datacenter in Tamil Nadu",
+      "quick_brief": {
+        "headline": "Krutrim commissions 50 MW facility",
+        "quick_summary": "Krutrim turns on 50 MW AI datacenter facility for commercial workloads.",
+        "category": "AI & ML",
+        "three_things_to_know": ["50 MW energized", "Tamil Nadu facility live"]
+      },
+      "full_article": {
+        "what_happened": "Krutrim energized 50 MW of high-density AI computing capacity.",
+        "key_stats": [{ "label": "Power Capacity", "value": "50 MW" }]
+      },
+      "publishedAt": "2026-09-27T00:00:00.000Z"
+    },
+    "expectedChanges": [
+      {
+        "type": "new_fact",
+        "subject": "Power Capacity",
+        "newValue": "50 MW",
+        "userFacing": true
+      }
+    ]
+  },
+  {
+    "id": "db_11_ather_price_increase",
+    "description": "Ather Konarc base price increases from ₹99,999 to ₹1,19,999",
+    "previousArticle": {
+      "id": "art_at_p1",
+      "title": "Ather launches Konarc at ₹99,999 introductory pricing",
+      "quick_brief": {
+        "headline": "Ather launches at ₹99,999",
+        "quick_summary": "Ather offers Konarc at introductory price of ₹99,999.",
+        "category": "EV",
+        "three_things_to_know": ["₹99,999 price point", "Introductory offer"]
+      },
+      "full_article": {
+        "what_happened": "Ather announced starting price of ₹99,999 for the first 10,000 customers.",
+        "key_stats": [{ "label": "Starting Price", "value": "₹99,999" }]
+      },
+      "publishedAt": "2026-08-30T00:00:00.000Z"
+    },
+    "currentArticle": {
+      "id": "art_at_p2",
+      "title": "Ather adjusts Konarc post-introductory price to ₹1,19,999",
+      "quick_brief": {
+        "headline": "Ather adjusts Konarc price",
+        "quick_summary": "Ather Konarc base model pricing transitions to standard ₹1,19,999 MSRP.",
+        "category": "EV",
+        "three_things_to_know": ["Price updated to ₹1,19,999", "Post-introductory phase"]
+      },
+      "full_article": {
+        "what_happened": "Ather announced regular retail pricing of ₹1,19,999 following introductory sellout.",
+        "key_stats": [{ "label": "Starting Price", "value": "₹1,19,999" }]
+      },
+      "publishedAt": "2026-10-15T00:00:00.000Z"
+    },
+    "expectedChanges": [
+      {
+        "type": "value_changed",
+        "subject": "Starting Price",
+        "previousValue": "₹99,999",
+        "newValue": "₹1,19,999",
+        "userFacing": true
+      }
+    ]
+  },
+  {
+    "id": "db_12_fuel_cycle_location_added",
+    "description": "Fuel Cycle adds Hyderabad as expansion location",
+    "previousArticle": {
+      "id": "art_fc_loc1",
+      "title": "Fuel Cycle establishes Navi Mumbai tech center",
+      "quick_brief": {
+        "headline": "Navi Mumbai tech center live",
+        "quick_summary": "Fuel Cycle sets up single development site in Navi Mumbai.",
+        "category": "AI & ML",
+        "three_things_to_know": ["Navi Mumbai site", "50 engineers"]
+      },
+      "full_article": {
+        "what_happened": "Fuel Cycle focused exclusively on establishing its Navi Mumbai center.",
+        "key_stats": [{ "label": "Primary Facility Location", "value": "Navi Mumbai" }]
+      },
+      "publishedAt": "2026-09-24T00:00:00.000Z"
+    },
+    "currentArticle": {
+      "id": "art_fc_loc2",
+      "title": "Fuel Cycle announces second engineering hub in Hyderabad",
+      "quick_brief": {
+        "headline": "Fuel Cycle expands to Hyderabad",
+        "quick_summary": "Fuel Cycle announces plan to open Hyderabad office.",
+        "category": "AI & ML",
+        "three_things_to_know": ["Hyderabad hub announced", "AI platform team expansion"]
+      },
+      "full_article": {
+        "what_happened": "Fuel Cycle formally selected Hyderabad for its second software engineering campus.",
+        "key_stats": [{ "label": "Primary Facility Location", "value": "Hyderabad" }]
+      },
+      "publishedAt": "2026-09-29T00:00:00.000Z"
+    },
+    "expectedChanges": [
+      {
+        "type": "location_added",
+        "subject": "Primary Facility Location",
+        "newValue": "Hyderabad",
+        "userFacing": true
+      }
+    ]
+  },
+  {
+    "id": "db_13_vigyanlabs_additional_detail",
+    "description": "Vigyanlabs waterless cooling technical details repeated from prior article",
+    "previousArticle": {
+      "id": "art_vl_dt1",
+      "title": "Vigyanlabs launches FEMTO sovereign AI appliance with waterless cooling",
+      "quick_brief": {
+        "headline": "Vigyanlabs unveils FEMTO",
+        "quick_summary": "FEMTO features direct-to-chip waterless cooling technology.",
+        "category": "AI & ML",
+        "three_things_to_know": ["Waterless cooling system", "Sovereign AI hardware"]
+      },
+      "full_article": {
+        "what_happened": "Vigyanlabs designed FEMTO with waterless direct cooling to eliminate datacenter water consumption.",
+        "key_stats": []
+      },
+      "publishedAt": "2026-09-07T00:00:00.000Z"
+    },
+    "currentArticle": {
+      "id": "art_vl_dt2",
+      "title": "Inside Vigyanlabs FEMTO: Architecture and Energy Efficiency Breakdown",
+      "quick_brief": {
+        "headline": "FEMTO architecture teardown",
+        "quick_summary": "Deep dive into FEMTO waterless cooling efficiency benchmarks.",
+        "category": "AI & ML",
+        "three_things_to_know": ["Waterless cooling details", "PUE rating 1.15"]
+      },
+      "full_article": {
+        "what_happened": "The FEMTO appliance uses patented waterless cooling circuits across all GPU trays.",
+        "key_stats": [{ "label": "Cooling Architecture", "value": "Waterless Direct" }]
+      },
+      "publishedAt": "2026-09-14T00:00:00.000Z"
+    },
+    "expectedChanges": [
+      {
+        "type": "additional_detail",
+        "subject": "Cooling Architecture",
+        "userFacing": false
+      }
+    ]
+  },
+  {
+    "id": "db_14_payzen_funding_correction",
+    "description": "PayZen clarifies Series C was $65M not $100M",
+    "previousArticle": {
+      "id": "art_pz_c1",
+      "title": "PayZen raises $100M in Series C round",
+      "quick_brief": {
+        "headline": "PayZen secures $100M",
+        "quick_summary": "Fintech startup PayZen reportedly raises $100 million.",
+        "category": "Fintech",
+        "three_things_to_know": ["$100M round", "Series C expansion"]
+      },
+      "full_article": {
+        "what_happened": "Initial reports indicated PayZen closed $100M.",
+        "key_stats": [{ "label": "Investment / Capital", "value": "$100M" }]
+      },
+      "publishedAt": "2026-09-01T00:00:00.000Z"
+    },
+    "currentArticle": {
+      "id": "art_pz_c2",
+      "title": "CORRECTION: PayZen confirms Series C closed at $65M",
+      "quick_brief": {
+        "headline": "CORRECTION: PayZen raised $65M",
+        "quick_summary": "PayZen issues statement clarifying actual closed funding is $65 million.",
+        "category": "Fintech",
+        "three_things_to_know": ["$65M confirmed", "Correcting earlier $100M reports"]
+      },
+      "full_article": {
+        "what_happened": "PayZen clarified that total Series C proceeds reached $65M.",
+        "key_stats": [{ "label": "Investment / Capital", "value": "$65M" }]
+      },
+      "publishedAt": "2026-09-03T00:00:00.000Z"
+    },
+    "expectedChanges": [
+      {
+        "type": "value_changed",
+        "subject": "Investment / Capital",
+        "previousValue": "$100M",
+        "newValue": "$65M",
+        "userFacing": true
+      }
+    ]
+  },
+  {
+    "id": "db_15_param_supercomputer_cost",
+    "description": "PARAM Rudra project budget ₹130 Cr confirmed",
+    "previousArticle": {
+      "id": "art_pr_01",
+      "title": "National Supercomputing Mission prepares deployment of three PARAM Rudra systems",
+      "quick_brief": {
+        "headline": "NSM prepares PARAM Rudra systems",
+        "quick_summary": "C-DAC readies three supercomputing nodes for deployment.",
+        "category": "Supercomputing",
+        "three_things_to_know": ["Three supercomputers planned", "Pune, Delhi, Kolkata deployment"]
+      },
+      "full_article": {
+        "what_happened": "NSM coordinated deployment of indigenous supercomputing infrastructure.",
+        "key_stats": []
+      },
+      "publishedAt": "2026-09-20T00:00:00.000Z"
+    },
+    "currentArticle": {
+      "id": "art_pr_02",
+      "title": "PM inaugurates three PARAM Rudra supercomputers built at ₹130 Cr cost",
+      "quick_brief": {
+        "headline": "PARAM Rudra inaugurated at ₹130 Cr",
+        "quick_summary": "PM dedicates three PARAM Rudra supercomputers built at ₹130 crore cost.",
+        "category": "Supercomputing",
+        "three_things_to_know": ["₹130 Cr project cost", "Dedicated to the nation"]
+      },
+      "full_article": {
+        "what_happened": "The government confirmed total NSM allocation of ₹130 crore for the three systems.",
+        "key_stats": [{ "label": "Investment / Capital", "value": "₹130 crore" }]
+      },
+      "publishedAt": "2026-09-26T00:00:00.000Z"
+    },
+    "expectedChanges": [
+      {
+        "type": "new_fact",
+        "subject": "Investment / Capital",
+        "newValue": "₹130 crore",
+        "userFacing": true
+      }
+    ]
+  },
+  {
+    "id": "db_16_param_compute_throughput",
+    "description": "PARAM Rudra achieves 838 TFLOPS compute throughput",
+    "previousArticle": {
+      "id": "art_pr_02",
+      "title": "PM inaugurates three PARAM Rudra supercomputers built at ₹130 Cr cost",
+      "quick_brief": {
+        "headline": "PARAM Rudra inaugurated",
+        "quick_summary": "Three supercomputers dedicated to scientific research.",
+        "category": "Supercomputing",
+        "three_things_to_know": ["₹130 Cr project", "Installed at national labs"]
+      },
+      "full_article": {
+        "what_happened": "The three systems were powered on for academic benchmarking.",
+        "key_stats": [{ "label": "Investment / Capital", "value": "₹130 crore" }]
+      },
+      "publishedAt": "2026-09-26T00:00:00.000Z"
+    },
+    "currentArticle": {
+      "id": "art_pr_03",
+      "title": "PARAM Rudra high-performance compute clusters achieve 838 TFLOPS in trials",
+      "quick_brief": {
+        "headline": "PARAM Rudra hits 838 TFLOPS",
+        "quick_summary": "C-DAC validates sustained throughput of 838 TFLOPS across test workloads.",
+        "category": "Supercomputing",
+        "three_things_to_know": ["838 TFLOPS verified", "High performance Linpack test passed"]
+      },
+      "full_article": {
+        "what_happened": "Engineers validated peak sustained compute power of 838 TFLOPS.",
+        "key_stats": [{ "label": "Peak Performance", "value": "838 TFLOPS" }]
+      },
+      "publishedAt": "2026-09-28T00:00:00.000Z"
+    },
+    "expectedChanges": [
+      {
+        "type": "new_fact",
+        "subject": "Peak Performance",
+        "newValue": "838 TFLOPS",
+        "userFacing": true
+      }
+    ]
+  },
+  {
+    "id": "db_17_npci_volume_doubling",
+    "description": "UPI 123Pay monthly volume increases from 5M to 10M",
+    "previousArticle": {
+      "id": "art_np_v1",
+      "title": "UPI 123Pay handles 5 million monthly transactions",
+      "quick_brief": {
+        "headline": "UPI 123Pay reaches 5M volume",
+        "quick_summary": "Feature phone payment volume hits 5 million monthly transactions.",
+        "category": "Fintech",
+        "three_things_to_know": ["5M monthly volume", "Feature phone adoption"]
+      },
+      "full_article": {
+        "what_happened": "NPCI recorded 5 million monthly transactions on UPI 123Pay.",
+        "key_stats": [{ "label": "Monthly Volume", "value": 5000000 }]
+      },
+      "publishedAt": "2026-08-15T00:00:00.000Z"
+    },
+    "currentArticle": {
+      "id": "art_np_v2",
+      "title": "UPI 123Pay transactions cross 10 million monthly volume milestone",
+      "quick_brief": {
+        "headline": "UPI 123Pay doubles to 10M volume",
+        "quick_summary": "NPCI announces monthly transaction volume doubled to 10 million.",
+        "category": "Fintech",
+        "three_things_to_know": ["10M monthly volume", "100% growth"]
+      },
+      "full_article": {
+        "what_happened": "UPI 123Pay transaction processing reached 10 million operations per month.",
+        "key_stats": [{ "label": "Monthly Volume", "value": 10000000 }]
+      },
+      "publishedAt": "2026-09-19T00:00:00.000Z"
+    },
+    "expectedChanges": [
+      {
+        "type": "value_changed",
+        "subject": "Monthly Volume",
+        "previousValue": 5000000,
+        "newValue": 10000000,
+        "userFacing": true
+      }
+    ]
+  },
+  {
+    "id": "db_18_npci_languages_expanded",
+    "description": "UPI 123Pay languages supported expand from 6 to 12",
+    "previousArticle": {
+      "id": "art_np_l1",
+      "title": "NPCI introduces UPI 123Pay in 6 regional languages",
+      "quick_brief": {
+        "headline": "UPI 123Pay live in 6 languages",
+        "quick_summary": "Feature phone payments supported in 6 Indian languages.",
+        "category": "Fintech",
+        "three_things_to_know": ["6 languages supported", "Hindi and English included"]
+      },
+      "full_article": {
+        "what_happened": "NPCI launched initial support for 6 regional languages on IVR.",
+        "key_stats": [{ "label": "Languages Supported", "value": 6 }]
+      },
+      "publishedAt": "2026-07-01T00:00:00.000Z"
+    },
+    "currentArticle": {
+      "id": "art_np_l2",
+      "title": "NPCI expands UPI 123Pay to 12 scheduled Indian languages",
+      "quick_brief": {
+        "headline": "UPI 123Pay expands to 12 languages",
+        "quick_summary": "NPCI adds 6 new regional languages bringing total to 12.",
+        "category": "Fintech",
+        "three_things_to_know": ["12 languages total", "Broader rural penetration"]
+      },
+      "full_article": {
+        "what_happened": "NPCI extended IVR voice prompts across 12 scheduled Indian languages.",
+        "key_stats": [{ "label": "Languages Supported", "value": 12 }]
+      },
+      "publishedAt": "2026-08-10T00:00:00.000Z"
+    },
+    "expectedChanges": [
+      {
+        "type": "value_changed",
+        "subject": "Languages Supported",
+        "previousValue": 6,
+        "newValue": 12,
+        "userFacing": true
+      }
+    ]
+  },
+  {
+    "id": "db_19_brics_ai_initiative",
+    "description": "China proposes BRICS AI Open Source Zone initiative",
+    "previousArticle": {
+      "id": "art_br_01",
+      "title": "India plans BRICS push for deep-tech cooperation in New Delhi",
+      "quick_brief": {
+        "headline": "India outlines BRICS tech goals",
+        "quick_summary": "India proposes general deep tech alignment for summit.",
+        "category": "AI & ML",
+        "three_things_to_know": ["New Delhi summit agenda", "Semiconductor focus"]
+      },
+      "full_article": {
+        "what_happened": "India shared agenda items for technology working groups.",
+        "key_stats": []
+      },
+      "publishedAt": "2026-09-07T00:00:00.000Z"
+    },
+    "currentArticle": {
+      "id": "art_br_02",
+      "title": "China proposes BRICS AI Open Source Zone for LLM training and data sharing",
+      "quick_brief": {
+        "headline": "China proposes AI Open Source Zone",
+        "quick_summary": "New initiative presented for open source AI infrastructure among members.",
+        "category": "AI & ML",
+        "three_things_to_know": ["AI Open Source Zone proposed", "Joint LLM training"]
+      },
+      "full_article": {
+        "what_happened": "China officially tabled a proposal to establish a multilateral AI Open Source Zone.",
+        "key_stats": [{ "label": "Initiative Name", "value": "AI Open Source Zone" }]
+      },
+      "publishedAt": "2026-09-17T00:00:00.000Z"
+    },
+    "expectedChanges": [
+      {
+        "type": "new_fact",
+        "subject": "Initiative Name",
+        "newValue": "AI Open Source Zone",
+        "userFacing": true
+      }
+    ]
+  },
+  {
+    "id": "db_20_ather_delivery_cities",
+    "description": "Ather delivery footprint expands from 2 to 5 cities",
+    "previousArticle": {
+      "id": "art_at_c1",
+      "title": "Ather begins Konarc deliveries in Bengaluru and Chennai",
+      "quick_brief": {
+        "headline": "Deliveries begin in 2 cities",
+        "quick_summary": "Initial customer deliveries underway in Bengaluru and Chennai.",
+        "category": "EV",
+        "three_things_to_know": ["2 cities active", "Hosur plant dispatches"]
+      },
+      "full_article": {
+        "what_happened": "Ather commenced dispatches to dealerships in Bengaluru and Chennai.",
+        "key_stats": [{ "label": "Active Delivery Cities", "value": 2 }]
+      },
+      "publishedAt": "2026-10-01T00:00:00.000Z"
+    },
+    "currentArticle": {
+      "id": "art_at_c2",
+      "title": "Ather expands Konarc deliveries to 5 major metro cities",
+      "quick_brief": {
+        "headline": "Konarc deliveries reach 5 cities",
+        "quick_summary": "Ather adds Pune, Hyderabad and Mumbai to active delivery network.",
+        "category": "EV",
+        "three_things_to_know": ["5 cities operational", "Phase 1 rollout complete"]
+      },
+      "full_article": {
+        "what_happened": "Ather scaled deliveries to include Pune, Hyderabad and Mumbai, bringing total to 5 cities.",
+        "key_stats": [{ "label": "Active Delivery Cities", "value": 5 }]
+      },
+      "publishedAt": "2026-10-10T00:00:00.000Z"
+    },
+    "expectedChanges": [
+      {
+        "type": "value_changed",
+        "subject": "Active Delivery Cities",
+        "previousValue": 2,
+        "newValue": 5,
+        "userFacing": true
+      }
+    ]
+  },
+  {
+    "id": "db_21_blinkit_target_revision",
+    "description": "Blinkit revises long-term dark store target from 1,000 to 2,000 stores",
+    "previousArticle": {
+      "id": "art_bl_t1",
+      "title": "Blinkit targets 1,000 dark stores across India by 2026",
+      "quick_brief": {
+        "headline": "Blinkit targets 1,000 dark stores",
+        "quick_summary": "Zomato management sets target of 1,000 dark stores.",
+        "category": "Startups",
+        "three_things_to_know": ["1,000 store goal", "Quick commerce scaling"]
+      },
+      "full_article": {
+        "what_happened": "Blinkit previously targeted 1,000 stores nationwide.",
+        "key_stats": [{ "label": "Target Dark Stores", "value": 1000 }]
+      },
+      "publishedAt": "2026-06-15T00:00:00.000Z"
+    },
+    "currentArticle": {
+      "id": "art_bl_t2",
+      "title": "Blinkit doubles expansion plan targeting 2,000 dark stores",
+      "quick_brief": {
+        "headline": "Blinkit raises target to 2,000 stores",
+        "quick_summary": "Zomato doubles Blinkit target to 2,000 dark stores by end of 2026.",
+        "category": "Startups",
+        "three_things_to_know": ["Target increased to 2,000", "Doubling store footprint"]
+      },
+      "full_article": {
+        "what_happened": "Zomato management formally upgraded Blinkit's network expansion goal to 2,000 stores.",
+        "key_stats": [{ "label": "Target Dark Stores", "value": 2000 }]
+      },
+      "publishedAt": "2026-09-21T00:00:00.000Z"
+    },
+    "expectedChanges": [
+      {
+        "type": "value_changed",
+        "subject": "Target Dark Stores",
+        "previousValue": 1000,
+        "newValue": 2000,
+        "userFacing": true
+      }
+    ]
+  },
+  {
+    "id": "db_22_krutrim_silicon_roadmap",
+    "description": "Krutrim adds Bodhi custom silicon architecture roadmap",
+    "previousArticle": {
+      "id": "art_kr_s1",
+      "title": "Ola Krutrim launches cloud API access for Indic LLM models",
+      "quick_brief": {
+        "headline": "Krutrim cloud API launched",
+        "quick_summary": "Krutrim releases model APIs for developers.",
+        "category": "AI & ML",
+        "three_things_to_know": ["API access live", "Indic LLM endpoints"]
+      },
+      "full_article": {
+        "what_happened": "Krutrim opened its software platform for developer registrations.",
+        "key_stats": []
+      },
+      "publishedAt": "2026-05-10T00:00:00.000Z"
+    },
+    "currentArticle": {
+      "id": "art_kr_s2",
+      "title": "Ola Krutrim unveils Bodhi silicon architecture for indigenous AI processing",
+      "quick_brief": {
+        "headline": "Krutrim unveils Bodhi silicon",
+        "quick_summary": "Krutrim announces in-house custom AI processor roadmap.",
+        "category": "AI & ML",
+        "three_things_to_know": ["Bodhi chip roadmap", "Tape-out planned for 2026"]
+      },
+      "full_article": {
+        "what_happened": "Krutrim presented designs for its proprietary Bodhi AI accelerator chips.",
+        "key_stats": [{ "label": "Processor Architecture", "value": "Bodhi Silicon" }]
+      },
+      "publishedAt": "2026-08-15T00:00:00.000Z"
+    },
+    "expectedChanges": [
+      {
+        "type": "new_fact",
+        "subject": "Processor Architecture",
+        "newValue": "Bodhi Silicon",
+        "userFacing": true
+      }
+    ]
+  },
+  {
+    "id": "db_23_vigyanlabs_datacenter_deployments",
+    "description": "Vigyanlabs confirms 3 commercial tier-1 datacenter deployments",
+    "previousArticle": {
+      "id": "art_vl_dp1",
+      "title": "Vigyanlabs demonstrates FEMTO AI hardware at tech symposium",
+      "quick_brief": {
+        "headline": "Vigyanlabs demos FEMTO",
+        "quick_summary": "Symposium demonstration of sovereign AI system.",
+        "category": "AI & ML",
+        "three_things_to_know": ["Lab prototype demonstrated", "Efficiency trials"]
+      },
+      "full_article": {
+        "what_happened": "Vigyanlabs completed lab validation tests.",
+        "key_stats": []
+      },
+      "publishedAt": "2026-09-07T00:00:00.000Z"
+    },
+    "currentArticle": {
+      "id": "art_vl_dp2",
+      "title": "Vigyanlabs deploys FEMTO across 3 commercial Tier-1 datacenters",
+      "quick_brief": {
+        "headline": "FEMTO live in 3 datacenters",
+        "quick_summary": "Vigyanlabs installs FEMTO across Mumbai and Noida sites.",
+        "category": "AI & ML",
+        "three_things_to_know": ["3 datacenter installations", "Commercial deployment live"]
+      },
+      "full_article": {
+        "what_happened": "Vigyanlabs completed deployment into 3 operational commercial datacenters.",
+        "key_stats": [{ "label": "Active Datacenters", "value": 3 }]
+      },
+      "publishedAt": "2026-09-28T00:00:00.000Z"
+    },
+    "expectedChanges": [
+      {
+        "type": "new_fact",
+        "subject": "Active Datacenters",
+        "newValue": 3,
+        "userFacing": true
+      }
+    ]
+  },
+  {
+    "id": "db_24_matel_factory_scaling",
+    "description": "Matel Motion factory floor space triples from 20,000 to 50,000 sq ft",
+    "previousArticle": {
+      "id": "art_mt_f1",
+      "title": "Matel Motion operates 20,000 sq ft EV powertrain facility in Pune",
+      "quick_brief": {
+        "headline": "Matel operates 20,000 sq ft plant",
+        "quick_summary": "Matel produces electric vehicle motors in Pune facility.",
+        "category": "EV",
+        "three_things_to_know": ["20,000 sq ft factory", "Pune manufacturing"]
+      },
+      "full_article": {
+        "what_happened": "Matel Motion assembled powertrains in its 20,000 sq ft Pune unit.",
+        "key_stats": [{ "label": "Facility Floor Space", "value": "20,000 sq ft" }]
+      },
+      "publishedAt": "2026-08-15T00:00:00.000Z"
+    },
+    "currentArticle": {
+      "id": "art_mt_f2",
+      "title": "Matel Motion expands Pune manufacturing plant to 50,000 sq ft",
+      "quick_brief": {
+        "headline": "Matel expands to 50,000 sq ft",
+        "quick_summary": "Matel Motion triples production footprint in Pune.",
+        "category": "EV",
+        "three_things_to_know": ["50,000 sq ft expanded plant", "Tripled capacity"]
+      },
+      "full_article": {
+        "what_happened": "Matel Motion officially expanded its Pune facility to 50,000 sq ft.",
+        "key_stats": [{ "label": "Facility Floor Space", "value": "50,000 sq ft" }]
+      },
+      "publishedAt": "2026-09-20T00:00:00.000Z"
+    },
+    "expectedChanges": [
+      {
+        "type": "value_changed",
+        "subject": "Facility Floor Space",
+        "previousValue": "20,000 sq ft",
+        "newValue": "50,000 sq ft",
+        "userFacing": true
+      }
+    ]
+  },
+  {
+    "id": "db_25_payzen_participant_added",
+    "description": "Tiger Global joins as lead investor in PayZen round",
+    "previousArticle": {
+      "id": "art_pz_p1",
+      "title": "PayZen in discussions with undisclosed domestic funds for funding",
+      "quick_brief": {
+        "headline": "PayZen in funding talks",
+        "quick_summary": "PayZen explores financing round with domestic angel syndicate.",
+        "category": "Fintech",
+        "three_things_to_know": ["Angel syndicate", "Fintech financing"]
+      },
+      "full_article": {
+        "what_happened": "PayZen held exploratory discussions with early investors.",
+        "key_stats": []
+      },
+      "publishedAt": "2026-08-01T00:00:00.000Z"
+    },
+    "currentArticle": {
+      "id": "art_pz_p2",
+      "title": "Tiger Global leads PayZen Series C funding syndicate",
+      "quick_brief": {
+        "headline": "Tiger Global backs PayZen",
+        "quick_summary": "Tiger Global joins as lead institutional partner in Series C round.",
+        "category": "Fintech",
+        "three_things_to_know": ["Tiger Global lead investor", "Institutional backing"]
+      },
+      "full_article": {
+        "what_happened": "Tiger Global formally led the financing round alongside existing partners.",
+        "key_stats": [{ "label": "Lead Investor", "value": "Tiger Global" }]
+      },
+      "publishedAt": "2026-09-01T00:00:00.000Z"
+    },
+    "expectedChanges": [
+      {
+        "type": "new_fact",
+        "subject": "Lead Investor",
+        "newValue": "Tiger Global",
+        "userFacing": true
+      }
+    ]
+  },
+  {
+    "id": "db_26_fuel_cycle_scope_repeated",
+    "description": "Fuel Cycle AI engineering focus repeated from prior text",
+    "previousArticle": {
+      "id": "art_fc_sc1",
+      "title": "Fuel Cycle opens Navi Mumbai GCC for AI engineering and product development",
+      "quick_brief": {
+        "headline": "Navi Mumbai AI GCC opened",
+        "quick_summary": "Fuel Cycle sets up GCC dedicated to AI platform engineering and consumer insights.",
+        "category": "AI & ML",
+        "three_things_to_know": ["AI engineering focus", "Consumer insights platform"]
+      },
+      "full_article": {
+        "what_happened": "The facility will develop machine learning pipelines for predictive consumer intelligence.",
+        "key_stats": []
+      },
+      "publishedAt": "2026-09-24T00:00:00.000Z"
+    },
+    "currentArticle": {
+      "id": "art_fc_sc2",
+      "title": "How Fuel Cycle's Indian GCC Powers Global AI Insights",
+      "quick_brief": {
+        "headline": "Fuel Cycle GCC operations overview",
+        "quick_summary": "Overview of Fuel Cycle's ongoing AI platform development in Navi Mumbai.",
+        "category": "AI & ML",
+        "three_things_to_know": ["AI platform development", "Navi Mumbai team"]
+      },
+      "full_article": {
+        "what_happened": "Engineers at the Navi Mumbai GCC build core AI consumer insights technology.",
+        "key_stats": [{ "label": "Primary Focus", "value": "AI Platform Engineering" }]
+      },
+      "publishedAt": "2026-09-27T00:00:00.000Z"
+    },
+    "expectedChanges": [
+      {
+        "type": "additional_detail",
+        "subject": "Primary Focus",
+        "userFacing": false
+      }
+    ]
+  },
+  {
+    "id": "db_27_sarvam_languages_expanded",
+    "description": "Sarvam Indic language support expands from 5 to 10 languages",
+    "previousArticle": {
+      "id": "art_sa_l1",
+      "title": "Sarvam AI demonstrates model support across 5 Indian languages",
+      "quick_brief": {
+        "headline": "Sarvam supports 5 languages",
+        "quick_summary": "Initial prototype supports Hindi, Tamil, Telugu, Kannada, Bengali.",
+        "category": "AI & ML",
+        "three_things_to_know": ["5 languages supported", "Indic LLM"]
+      },
+      "full_article": {
+        "what_happened": "Sarvam validated model performance across 5 major scheduled languages.",
+        "key_stats": [{ "label": "Supported Languages", "value": 5 }]
+      },
+      "publishedAt": "2026-08-01T00:00:00.000Z"
+    },
+    "currentArticle": {
+      "id": "art_sa_l2",
+      "title": "Sarvam-1 foundation model broadens coverage to 10 Indian languages",
+      "quick_brief": {
+        "headline": "Sarvam-1 expands to 10 languages",
+        "quick_summary": "Sarvam AI doubles language coverage to 10 Indian languages in production release.",
+        "category": "AI & ML",
+        "three_things_to_know": ["10 languages supported", "Production checkpoint released"]
+      },
+      "full_article": {
+        "what_happened": "Sarvam AI expanded tokenizer and model weights across 10 Indian languages.",
+        "key_stats": [{ "label": "Supported Languages", "value": 10 }]
+      },
+      "publishedAt": "2026-08-22T00:00:00.000Z"
+    },
+    "expectedChanges": [
+      {
+        "type": "value_changed",
+        "subject": "Supported Languages",
+        "previousValue": 5,
+        "newValue": 10,
+        "userFacing": true
+      }
+    ]
+  },
+  {
+    "id": "db_28_isro_stage_intent_repeated",
+    "description": "ISRO intent to replace LVM3 core stage with SC120 repeated from prior text",
+    "previousArticle": {
+      "id": "art_is_st1",
+      "title": "ISRO Just Ran Its New Semi-Cryogenic Rocket Engine at Full Thrust for the First Time",
+      "quick_brief": {
+        "headline": "ISRO runs semi-cryo engine",
+        "quick_summary": "Engine is developed for SC120 stage intended to replace LVM3 L110 core stage.",
+        "category": "Space",
+        "three_things_to_know": ["SC120 stage development", "Upgrades LVM3 capacity"]
+      },
+      "full_article": {
+        "what_happened": "ISRO is developing the SC120 semi-cryogenic stage to replace LVM3's existing L110 liquid core stage.",
+        "key_stats": []
+      },
+      "publishedAt": "2026-09-05T00:00:00.000Z"
+    },
+    "currentArticle": {
+      "id": "art_is_st2",
+      "title": "Why India's Semi-Cryogenic Engine is Crucial for Future LVM3 Upgrades",
+      "quick_brief": {
+        "headline": "LVM3 propulsion upgrade analysis",
+        "quick_summary": "Detailed look at the planned SC120 stage intended to replace the L110 core.",
+        "category": "Space",
+        "three_things_to_know": ["SC120 stage analysis", "Replacing L110 core"]
+      },
+      "full_article": {
+        "what_happened": "The planned SC120 semi-cryogenic stage is intended to replace LVM3's current L110 core stage.",
+        "key_stats": [{ "label": "Target Rocket Stage", "value": "SC120 Semi-Cryogenic" }]
+      },
+      "publishedAt": "2026-09-12T00:00:00.000Z"
+    },
+    "expectedChanges": [
+      {
+        "type": "additional_detail",
+        "subject": "Target Rocket Stage",
+        "userFacing": false
+      }
+    ]
+  },
+  {
+    "id": "db_29_tata_fab_timeline_shifted",
+    "description": "Tata Dholera fab commercial production target shifts from 2026 to 2027",
+    "previousArticle": {
+      "id": "art_ta_d1",
+      "title": "Tata Electronics targets initial wafer production at Dholera fab by late 2026",
+      "quick_brief": {
+        "headline": "Tata targets 2026 wafer production",
+        "quick_summary": "Initial wafer pilot production slated for late 2026.",
+        "category": "Semiconductors",
+        "three_things_to_know": ["Target late 2026", "Pilot wafer fab"]
+      },
+      "full_article": {
+        "what_happened": "Tata announced preliminary target to start pilot wafer production in late 2026.",
+        "key_stats": [{ "label": "Production Target Date", "value": "2026" }]
+      },
+      "publishedAt": "2026-08-12T00:00:00.000Z"
+    },
+    "currentArticle": {
+      "id": "art_ta_d2",
+      "title": "Tata Semiconductor aligns commercial Dholera volume production to Q3 2027",
+      "quick_brief": {
+        "headline": "Tata aligns volume production to 2027",
+        "quick_summary": "Full commercial wafer output now scheduled for Q3 2027.",
+        "category": "Semiconductors",
+        "three_things_to_know": ["Q3 2027 commercial output", "Cleanroom tooling timeline"]
+      },
+      "full_article": {
+        "what_happened": "Tata Semiconductor management revised commercial high-volume production to Q3 2027.",
+        "key_stats": [{ "label": "Production Target Date", "value": "2027" }]
+      },
+      "publishedAt": "2026-09-25T00:00:00.000Z"
+    },
+    "expectedChanges": [
+      {
+        "type": "date_changed",
+        "subject": "Production Target Date",
+        "previousValue": "2026",
+        "newValue": "2027",
+        "userFacing": true
+      }
+    ]
+  },
+  {
+    "id": "db_30_skyroot_burn_duration_repeated",
+    "description": "Skyroot Kalam-1200 85-second burn duration repeated from prior text",
+    "previousArticle": {
+      "id": "art_sk_b1",
+      "title": "Skyroot Aerospace completes 85-second Kalam-1200 stage test in Nagpur",
+      "quick_brief": {
+        "headline": "Skyroot tests Kalam-1200",
+        "quick_summary": "Full-duration 85-second hot firing completed successfully.",
+        "category": "Space",
+        "three_things_to_know": ["85-second duration", "Kalam-1200 test article"]
+      },
+      "full_article": {
+        "what_happened": "Skyroot fired the Kalam-1200 motor for 85 seconds in Nagpur.",
+        "key_stats": []
+      },
+      "publishedAt": "2026-08-28T00:00:00.000Z"
+    },
+    "currentArticle": {
+      "id": "art_sk_b2",
+      "title": "Engineering Vikram-1: How Kalam-1200 Powers India's Private Space Race",
+      "quick_brief": {
+        "headline": "Vikram-1 propulsion deep-dive",
+        "quick_summary": "Analysis of Kalam-1200 carbon-composite stage and test results.",
+        "category": "Space",
+        "three_things_to_know": ["Kalam-1200 motor", "85s burn analysis"]
+      },
+      "full_article": {
+        "what_happened": "The Kalam-1200 stage demonstrated stable chamber pressures throughout its 85-second test firing.",
+        "key_stats": [{ "label": "Burn Duration", "value": "85 seconds" }]
+      },
+      "publishedAt": "2026-09-10T00:00:00.000Z"
+    },
+    "expectedChanges": [
+      {
+        "type": "additional_detail",
+        "subject": "Burn Duration",
+        "userFacing": false
+      }
+    ]
+  }
+]

@@ -1,0 +1,781 @@
+[
+  {
+    "id": "tb_01_ather_konarc",
+    "storyId": "st_ather_konarc",
+    "description": "Ather Konarc EV multi-article progression",
+    "articles": [
+      {
+        "id": "art_ather_01",
+        "title": "Ather's Biggest Attempt Yet to Make EVs Mainstream: ₹99,999 Konarc",
+        "quick_brief": {
+          "headline": "Ather unveils Konarc at ₹99,999",
+          "quick_summary": "Ather Energy unveils its mass-market Konarc electric scooter on August 30 starting at Rs 99,999 with 140km range.",
+          "category": "EV"
+        },
+        "full_article": {
+          "what_happened": "On August 30, Ather announced the Konarc electric scooter in Bengaluru, targeting mass adoption with initial deliveries slated for October.",
+          "key_stats": [{ "label": "Starting Price", "value": "₹99,999" }]
+        },
+        "publishedAt": "2026-08-30T10:00:00.000Z"
+      },
+      {
+        "id": "art_ather_02",
+        "title": "Ather begins Phase 1 deliveries of Konarc EV scooter across 5 cities",
+        "quick_brief": {
+          "headline": "Konarc deliveries begin in October",
+          "quick_summary": "Ather Energy flags off first customer deliveries of Konarc across Bengaluru, Pune, and Chennai on October 10.",
+          "category": "EV"
+        },
+        "full_article": {
+          "what_happened": "Ather officially commenced customer dispatches of Konarc scooters on October 10 from its Hosur factory.",
+          "key_stats": [{ "label": "Cities Covered", "value": "5 Cities" }]
+        },
+        "publishedAt": "2026-10-10T12:00:00.000Z"
+      }
+    ],
+    "expectedTimelineEvents": [
+      {
+        "titleKeyword": "Konarc",
+        "expectedPrecision": "exact_day",
+        "expectedType": "launch",
+        "expectedDate": "2026-08-30",
+        "sourceCount": 1
+      },
+      {
+        "titleKeyword": "deliveries",
+        "expectedPrecision": "exact_day",
+        "expectedType": "development",
+        "expectedDate": "2026-10-10",
+        "sourceCount": 1
+      }
+    ]
+  },
+  {
+    "id": "tb_02_fuel_cycle_gcc",
+    "storyId": "st_fuel_cycle_gcc",
+    "description": "Fuel Cycle GCC opening and subsequent team scaling",
+    "articles": [
+      {
+        "id": "art_fc_01",
+        "title": "Fuel Cycle opens Navi Mumbai GCC for AI, engineering and product development",
+        "quick_brief": {
+          "headline": "Fuel Cycle opens Navi Mumbai GCC",
+          "quick_summary": "Fuel Cycle opens Navi Mumbai Global Capability Centre on September 24 with initial 50 engineers.",
+          "category": "AI & ML"
+        },
+        "full_article": {
+          "what_happened": "On September 24, Fuel Cycle announced its first Indian GCC in Navi Mumbai to lead platform AI engineering.",
+          "key_stats": [{ "label": "Initial Team", "value": "50 engineers" }]
+        },
+        "publishedAt": "2026-09-24T08:00:00.000Z"
+      },
+      {
+        "id": "art_fc_02",
+        "title": "Fuel Cycle plans expansion to Hyderabad and increases workforce target to 120",
+        "quick_brief": {
+          "headline": "Fuel Cycle expands hiring to 120",
+          "quick_summary": "Fuel Cycle announces plan to expand to Hyderabad and hire up to 120 engineers by November 2026.",
+          "category": "AI & ML"
+        },
+        "full_article": {
+          "what_happened": "In a follow-up announcement, Fuel Cycle confirmed planned expansion to Hyderabad, raising total headcount target to 120.",
+          "key_stats": [{ "label": "Expanded Target", "value": "120 engineers" }]
+        },
+        "publishedAt": "2026-09-29T09:00:00.000Z"
+      }
+    ],
+    "expectedTimelineEvents": [
+      {
+        "titleKeyword": "Navi Mumbai",
+        "expectedPrecision": "exact_day",
+        "expectedType": "announcement",
+        "expectedDate": "2026-09-24",
+        "sourceCount": 1
+      },
+      {
+        "titleKeyword": "Hyderabad",
+        "expectedPrecision": "month",
+        "expectedType": "development",
+        "expectedDate": "2026-11-01",
+        "sourceCount": 1
+      }
+    ]
+  },
+  {
+    "id": "tb_03_isro_semicryo",
+    "storyId": "st_isro_semicryo",
+    "description": "ISRO Semi-Cryogenic engine powerhead testing milestones",
+    "articles": [
+      {
+        "id": "art_isro_01",
+        "title": "ISRO hot tests Semi-Cryogenic engine power head at Mahendragiri",
+        "quick_brief": {
+          "headline": "ISRO hot tests power head at full thrust",
+          "quick_summary": "ISRO successfully tested the semi-cryogenic engine power head at 100% thrust on September 5 at Mahendragiri.",
+          "category": "Space"
+        },
+        "full_article": {
+          "what_happened": "On September 5, ISRO completed the 9th hot test of its Semi-Cryogenic PHTA at Mahendragiri, sustaining 200 tonnes of thrust.",
+          "key_stats": [{ "label": "Thrust", "value": "200 tonnes" }]
+        },
+        "publishedAt": "2026-09-05T00:00:00.000Z"
+      },
+      {
+        "id": "art_isro_02",
+        "title": "ISRO tests semi-cryogenic engine power head at full 200-tonne thrust",
+        "quick_brief": {
+          "headline": "ISRO tests semi-cryogenic engine power head at full 200-tonne thrust",
+          "quick_summary": "ISRO hot-tested its semi-cryogenic Engine Power Head Test Article on September 5 at Mahendragiri.",
+          "category": "Space"
+        },
+        "full_article": {
+          "what_happened": "On September 5, ISRO completed its milestone test at Mahendragiri with 5 seconds at full 200-tonne thrust.",
+          "key_stats": [{ "label": "Full Thrust", "value": "200-tonne" }]
+        },
+        "publishedAt": "2026-09-17T00:00:00.000Z"
+      }
+    ],
+    "expectedTimelineEvents": [
+      {
+        "titleKeyword": "Semi-Cryogenic",
+        "expectedPrecision": "exact_day",
+        "expectedType": "development",
+        "expectedDate": "2026-09-05",
+        "sourceCount": 2
+      }
+    ]
+  },
+  {
+    "id": "tb_04_brics_ai",
+    "storyId": "st_brics_ai",
+    "description": "BRICS New Delhi AI Cooperation Framework milestones",
+    "articles": [
+      {
+        "id": "art_brics_01",
+        "title": "India plans BRICS push for cooperation in AI, quantum computing and semiconductors",
+        "quick_brief": {
+          "headline": "India proposes BRICS deep-tech push",
+          "quick_summary": "India announces plans on September 7 to propose high-level AI and semiconductor cooperation across BRICS members.",
+          "category": "AI & ML"
+        },
+        "full_article": {
+          "what_happened": "On September 7, Indian delegates outlined priorities for the upcoming New Delhi BRICS summit.",
+          "key_stats": [{ "label": "Focus Areas", "value": "AI, Quantum, Chips" }]
+        },
+        "publishedAt": "2026-09-07T00:00:00.000Z"
+      },
+      {
+        "id": "art_brics_02",
+        "title": "China proposes BRICS AI Open Source Zone for LLM cooperation",
+        "quick_brief": {
+          "headline": "China proposes AI Open Source Zone",
+          "quick_summary": "Chinese President announces proposal on September 17 for an open-source AI training zone for member states.",
+          "category": "AI & ML"
+        },
+        "full_article": {
+          "what_happened": "On September 17 at the BRICS New Delhi summit, China put forward plans for an AI open source research zone.",
+          "key_stats": [{ "label": "Initiative", "value": "AI Open Source Zone" }]
+        },
+        "publishedAt": "2026-09-17T11:00:00.000Z"
+      },
+      {
+        "id": "art_brics_03",
+        "title": "BRICS New Delhi Declaration pushes wider AI access and digital infrastructure",
+        "quick_brief": {
+          "headline": "BRICS New Delhi Declaration adopted",
+          "quick_summary": "BRICS nations formally sign the New Delhi Declaration on September 18 endorsing trustworthy AI frameworks.",
+          "category": "AI & ML"
+        },
+        "full_article": {
+          "what_happened": "On September 18, the leaders of BRICS member states signed the comprehensive New Delhi Declaration.",
+          "key_stats": [{ "label": "Declaration", "value": "Adopted unanimously" }]
+        },
+        "publishedAt": "2026-09-18T14:00:00.000Z"
+      }
+    ],
+    "expectedTimelineEvents": [
+      {
+        "titleKeyword": "India plans",
+        "expectedPrecision": "exact_day",
+        "expectedType": "announcement",
+        "expectedDate": "2026-09-07",
+        "sourceCount": 1
+      },
+      {
+        "titleKeyword": "China proposes",
+        "expectedPrecision": "exact_day",
+        "expectedType": "announcement",
+        "expectedDate": "2026-09-17",
+        "sourceCount": 1
+      },
+      {
+        "titleKeyword": "Declaration",
+        "expectedPrecision": "exact_day",
+        "expectedType": "announcement",
+        "expectedDate": "2026-09-18",
+        "sourceCount": 1
+      }
+    ]
+  },
+  {
+    "id": "tb_05_vigyanlabs_femto",
+    "storyId": "st_vigyanlabs_femto",
+    "description": "Vigyanlabs FEMTO Sovereign AI Platform development",
+    "articles": [
+      {
+        "id": "art_vl_01",
+        "title": "Mysuru-based Vigyanlabs launches sovereign AI platform FEMTO with waterless cooling",
+        "quick_brief": {
+          "headline": "Vigyanlabs launches FEMTO",
+          "quick_summary": "Vigyanlabs unveils its FEMTO sovereign AI infrastructure appliance on September 7 in Bengaluru.",
+          "category": "AI & ML"
+        },
+        "full_article": {
+          "what_happened": "On September 7, Vigyanlabs launched the FEMTO platform designed for energy-efficient data center computing.",
+          "key_stats": [{ "label": "Cooling", "value": "Waterless Direct" }]
+        },
+        "publishedAt": "2026-09-07T00:00:00.000Z"
+      },
+      {
+        "id": "art_vl_02",
+        "title": "Vigyanlabs deploys FEMTO AI infrastructure across 3 Indian tier-1 datacenters",
+        "quick_brief": {
+          "headline": "Vigyanlabs deploys FEMTO in datacenters",
+          "quick_summary": "Vigyanlabs completes first commercial deployment of FEMTO on September 28 across Mumbai and Noida datacenters.",
+          "category": "AI & ML"
+        },
+        "full_article": {
+          "what_happened": "On September 28, Vigyanlabs confirmed successful commercial deployment of FEMTO systems.",
+          "key_stats": [{ "label": "Deployments", "value": "3 Datacenters" }]
+        },
+        "publishedAt": "2026-09-28T00:00:00.000Z"
+      }
+    ],
+    "expectedTimelineEvents": [
+      {
+        "titleKeyword": "FEMTO",
+        "expectedPrecision": "exact_day",
+        "expectedType": "launch",
+        "expectedDate": "2026-09-07",
+        "sourceCount": 1
+      },
+      {
+        "titleKeyword": "deploys",
+        "expectedPrecision": "exact_day",
+        "expectedType": "launch",
+        "expectedDate": "2026-09-28",
+        "sourceCount": 1
+      }
+    ]
+  },
+  {
+    "id": "tb_06_matel_motion",
+    "storyId": "st_matel_motion",
+    "description": "Matel Motion powertrain investment and factory expansion",
+    "articles": [
+      {
+        "id": "art_matel_01",
+        "title": "EV powertrain maker Matel Motion raises ₹130 Cr Series B to expand Pune plant",
+        "quick_brief": {
+          "headline": "Matel Motion raises ₹130 Cr Series B",
+          "quick_summary": "Matel Motion closes ₹130 crore Series B funding round on August 15 led by prominent climate funds.",
+          "category": "EV"
+        },
+        "full_article": {
+          "what_happened": "On August 15, Matel Motion secured ₹130 Cr in Series B funding to scale its Pune manufacturing facility.",
+          "key_stats": [{ "label": "Funding", "value": "₹130 Cr" }]
+        },
+        "publishedAt": "2026-08-15T00:00:00.000Z"
+      },
+      {
+        "id": "art_matel_02",
+        "title": "Matel Motion inaugurates expanded 50,000 sq ft powertrain facility in Pune",
+        "quick_brief": {
+          "headline": "Matel Motion inaugurates Pune plant",
+          "quick_summary": "Matel Motion officially inaugurates its expanded 50,000 sq ft powertrain manufacturing unit in Pune on September 20.",
+          "category": "EV"
+        },
+        "full_article": {
+          "what_happened": "On September 20, Matel Motion cut the ribbon on its new Pune production lines.",
+          "key_stats": [{ "label": "Facility Size", "value": "50,000 sq ft" }]
+        },
+        "publishedAt": "2026-09-20T00:00:00.000Z"
+      }
+    ],
+    "expectedTimelineEvents": [
+      {
+        "titleKeyword": "Series B",
+        "expectedPrecision": "exact_day",
+        "expectedType": "financial",
+        "expectedDate": "2026-08-15",
+        "sourceCount": 1
+      },
+      {
+        "titleKeyword": "inaugurates",
+        "expectedPrecision": "exact_day",
+        "expectedType": "development",
+        "expectedDate": "2026-09-20",
+        "sourceCount": 1
+      }
+    ]
+  },
+  {
+    "id": "tb_07_tata_semiconductor",
+    "storyId": "st_tata_semiconductor",
+    "description": "Tata Electronics Dholera semiconductor fab construction",
+    "articles": [
+      {
+        "id": "art_tata_01",
+        "title": "Tata Electronics breaks ground on ₹91,000 Cr Dholera mega semiconductor fab",
+        "quick_brief": {
+          "headline": "Tata breaks ground on Dholera fab",
+          "quick_summary": "Tata Electronics commences foundation construction on August 12 for its 28nm/40nm semiconductor foundry in Dholera.",
+          "category": "Semiconductors"
+        },
+        "full_article": {
+          "what_happened": "On August 12, ground-breaking ceremonies took place at Dholera Smart City in Gujarat.",
+          "key_stats": [{ "label": "Project Cost", "value": "₹91,000 Cr" }]
+        },
+        "publishedAt": "2026-08-12T00:00:00.000Z"
+      },
+      {
+        "id": "art_tata_02",
+        "title": "Tata Semiconductor completes primary structural shell for Dholera cleanroom",
+        "quick_brief": {
+          "headline": "Dholera cleanroom shell completed",
+          "quick_summary": "Tata Electronics announces completion of cleanroom building structural envelope on September 25 in Dholera.",
+          "category": "Semiconductors"
+        },
+        "full_article": {
+          "what_happened": "On September 25, civil engineers completed the heavy structural enclosure for Fab 1.",
+          "key_stats": [{ "label": "Milestone", "value": "Cleanroom Shell" }]
+        },
+        "publishedAt": "2026-09-25T00:00:00.000Z"
+      }
+    ],
+    "expectedTimelineEvents": [
+      {
+        "titleKeyword": "breaks ground",
+        "expectedPrecision": "exact_day",
+        "expectedType": "development",
+        "expectedDate": "2026-08-12",
+        "sourceCount": 1
+      },
+      {
+        "titleKeyword": "cleanroom",
+        "expectedPrecision": "exact_day",
+        "expectedType": "development",
+        "expectedDate": "2026-09-25",
+        "sourceCount": 1
+      }
+    ]
+  },
+  {
+    "id": "tb_08_phonepe_indus",
+    "storyId": "st_phonepe_indus",
+    "description": "PhonePe Indus Appstore milestones and monetization rollout",
+    "articles": [
+      {
+        "id": "art_indus_01",
+        "title": "PhonePe Indus Appstore reaches 1 million daily active users milestone",
+        "quick_brief": {
+          "headline": "Indus Appstore reaches 1M DAU",
+          "quick_summary": "PhonePe announces on August 20 that Indus Appstore crossed 1 million DAU with 250,000 listed applications.",
+          "category": "Startups"
+        },
+        "full_article": {
+          "what_happened": "On August 20, PhonePe reported reaching 1 million daily active users on its alternative Android marketplace.",
+          "key_stats": [{ "label": "DAU", "value": "1 Million" }]
+        },
+        "publishedAt": "2026-08-20T00:00:00.000Z"
+      },
+      {
+        "id": "art_indus_02",
+        "title": "PhonePe Indus Appstore rolls out zero-commission in-app payment SDK for Indian developers",
+        "quick_brief": {
+          "headline": "Indus rolls out zero-commission SDK",
+          "quick_summary": "Indus Appstore officially deploys its zero-commission developer billing toolkit on September 15.",
+          "category": "Startups"
+        },
+        "full_article": {
+          "what_happened": "On September 15, PhonePe rolled out the developer billing kit eliminating traditional 30% store commissions.",
+          "key_stats": [{ "label": "Commission", "value": "0%" }]
+        },
+        "publishedAt": "2026-09-15T00:00:00.000Z"
+      }
+    ],
+    "expectedTimelineEvents": [
+      {
+        "titleKeyword": "milestone",
+        "expectedPrecision": "exact_day",
+        "expectedType": "development",
+        "expectedDate": "2026-08-20",
+        "sourceCount": 1
+      },
+      {
+        "titleKeyword": "zero-commission",
+        "expectedPrecision": "exact_day",
+        "expectedType": "launch",
+        "expectedDate": "2026-09-15",
+        "sourceCount": 1
+      }
+    ]
+  },
+  {
+    "id": "tb_09_npci_123pay",
+    "storyId": "st_npci_123pay",
+    "description": "NPCI UPI 123Pay feature phone adoption",
+    "articles": [
+      {
+        "id": "art_npci_01",
+        "title": "NPCI launches UPI 123Pay in 12 regional Indian languages for feature phones",
+        "quick_brief": {
+          "headline": "UPI 123Pay launched in 12 languages",
+          "quick_summary": "NPCI rolls out localized IVR payments in 12 languages on August 10 to expand rural digital transactions.",
+          "category": "Fintech"
+        },
+        "full_article": {
+          "what_happened": "On August 10, NPCI expanded UPI 123Pay voice processing to 12 scheduled languages.",
+          "key_stats": [{ "label": "Languages", "value": "12 Languages" }]
+        },
+        "publishedAt": "2026-08-10T00:00:00.000Z"
+      },
+      {
+        "id": "art_npci_02",
+        "title": "UPI 123Pay transactions cross 10 million monthly volume milestone",
+        "quick_brief": {
+          "headline": "UPI 123Pay hits 10M monthly transactions",
+          "quick_summary": "NPCI data reveals on September 19 that UPI 123Pay volume surpassed 10 million successful transactions.",
+          "category": "Fintech"
+        },
+        "full_article": {
+          "what_happened": "On September 19, NPCI released monthly metrics demonstrating accelerated adoption in Tier-3 towns.",
+          "key_stats": [{ "label": "Monthly Volume", "value": "10 Million" }]
+        },
+        "publishedAt": "2026-09-19T00:00:00.000Z"
+      }
+    ],
+    "expectedTimelineEvents": [
+      {
+        "titleKeyword": "launches",
+        "expectedPrecision": "exact_day",
+        "expectedType": "launch",
+        "expectedDate": "2026-08-10",
+        "sourceCount": 1
+      },
+      {
+        "titleKeyword": "volume",
+        "expectedPrecision": "exact_day",
+        "expectedType": "development",
+        "expectedDate": "2026-09-19",
+        "sourceCount": 1
+      }
+    ]
+  },
+  {
+    "id": "tb_10_sarvam_ai",
+    "storyId": "st_sarvam_ai",
+    "description": "Sarvam AI Indic foundation models release",
+    "articles": [
+      {
+        "id": "art_sarvam_01",
+        "title": "Sarvam AI launches Sarvam-1 Indic 2B LLM optimized for 10 Indian languages",
+        "quick_brief": {
+          "headline": "Sarvam AI launches Sarvam-1",
+          "quick_summary": "Sarvam AI introduces its 2-billion parameter sovereign foundation model on August 22.",
+          "category": "AI & ML"
+        },
+        "full_article": {
+          "what_happened": "On August 22, Bengaluru-based Sarvam AI unveiled Sarvam-1, an Indic-first compact language model.",
+          "key_stats": [{ "label": "Parameters", "value": "2 Billion" }]
+        },
+        "publishedAt": "2026-08-22T00:00:00.000Z"
+      },
+      {
+        "id": "art_sarvam_02",
+        "title": "Sarvam AI releases open weights and HuggingFace checkpoints for Indic voice models",
+        "quick_brief": {
+          "headline": "Sarvam releases open weights",
+          "quick_summary": "Sarvam AI open-sources its text-to-speech and Indic tokenizer weights on September 22.",
+          "category": "AI & ML"
+        },
+        "full_article": {
+          "what_happened": "On September 22, Sarvam AI made model weights publicly downloadable on HuggingFace.",
+          "key_stats": [{ "label": "License", "value": "Open Source" }]
+        },
+        "publishedAt": "2026-09-22T00:00:00.000Z"
+      }
+    ],
+    "expectedTimelineEvents": [
+      {
+        "titleKeyword": "Sarvam-1",
+        "expectedPrecision": "exact_day",
+        "expectedType": "launch",
+        "expectedDate": "2026-08-22",
+        "sourceCount": 1
+      },
+      {
+        "titleKeyword": "open weights",
+        "expectedPrecision": "exact_day",
+        "expectedType": "development",
+        "expectedDate": "2026-09-22",
+        "sourceCount": 1
+      }
+    ]
+  },
+  {
+    "id": "tb_11_skyroot_vikram",
+    "storyId": "st_skyroot_vikram",
+    "description": "Skyroot Aerospace Vikram-1 rocket testing and orbital launch manifest",
+    "articles": [
+      {
+        "id": "art_skyroot_01",
+        "title": "Skyroot Aerospace completes Kalam-1200 stage test for Vikram-1 launch vehicle",
+        "quick_brief": {
+          "headline": "Skyroot tests Kalam-1200 stage",
+          "quick_summary": "Skyroot completes full-duration burn test of Kalam-1200 carbon-composite stage on August 28.",
+          "category": "Space"
+        },
+        "full_article": {
+          "what_happened": "On August 28, Skyroot ignited the Kalam-1200 motor for 85 seconds in Nagpur.",
+          "key_stats": [{ "label": "Test Duration", "value": "85 seconds" }]
+        },
+        "publishedAt": "2026-08-28T00:00:00.000Z"
+      },
+      {
+        "id": "art_skyroot_02",
+        "title": "Skyroot secures IN-SPACe clearance for maiden Vikram-1 orbital mission from Sriharikota",
+        "quick_brief": {
+          "headline": "Skyroot gets IN-SPACe launch approval",
+          "quick_summary": "IN-SPACe grants technical launch authorization on September 26 for Vikram-1 orbital launch.",
+          "category": "Space"
+        },
+        "full_article": {
+          "what_happened": "On September 26, regulators cleared Skyroot for orbital launch from Sriharikota.",
+          "key_stats": [{ "label": "Status", "value": "Cleared" }]
+        },
+        "publishedAt": "2026-09-26T00:00:00.000Z"
+      }
+    ],
+    "expectedTimelineEvents": [
+      {
+        "titleKeyword": "Kalam-1200",
+        "expectedPrecision": "exact_day",
+        "expectedType": "development",
+        "expectedDate": "2026-08-28",
+        "sourceCount": 1
+      },
+      {
+        "titleKeyword": "IN-SPACe",
+        "expectedPrecision": "exact_day",
+        "expectedType": "regulatory",
+        "expectedDate": "2026-09-26",
+        "sourceCount": 1
+      }
+    ]
+  },
+  {
+    "id": "tb_12_ola_krutrim",
+    "storyId": "st_ola_krutrim",
+    "description": "Ola Krutrim Silicon and Cloud architecture expansion",
+    "articles": [
+      {
+        "id": "art_krutrim_01",
+        "title": "Ola Krutrim unveils roadmap for Bodhi AI silicon architecture and sovereign data centers",
+        "quick_brief": {
+          "headline": "Krutrim unveils Bodhi silicon roadmap",
+          "quick_summary": "Ola Krutrim presents plans on August 15 in Bengaluru for in-house custom AI processors by 2028.",
+          "category": "AI & ML"
+        },
+        "full_article": {
+          "what_happened": "On August 15, Bhavish Aggarwal announced the Bodhi family of silicon architectures.",
+          "key_stats": [{ "label": "Roadmap", "value": "Bodhi-1 & Bodhi-2" }]
+        },
+        "publishedAt": "2026-08-15T00:00:00.000Z"
+      },
+      {
+        "id": "art_krutrim_02",
+        "title": "Ola Krutrim launches 50 MW sovereign AI cloud facility in Tamil Nadu",
+        "quick_brief": {
+          "headline": "Krutrim launches 50MW cloud facility",
+          "quick_summary": "Krutrim powers on 50 MW AI datacenter capacity in Tamil Nadu on September 27.",
+          "category": "AI & ML"
+        },
+        "full_article": {
+          "what_happened": "On September 27, Krutrim commissioned 50 megawatts of high-density compute capacity.",
+          "key_stats": [{ "label": "Capacity", "value": "50 MW" }]
+        },
+        "publishedAt": "2026-09-27T00:00:00.000Z"
+      }
+    ],
+    "expectedTimelineEvents": [
+      {
+        "titleKeyword": "roadmap",
+        "expectedPrecision": "exact_day",
+        "expectedType": "announcement",
+        "expectedDate": "2026-08-15",
+        "sourceCount": 1
+      },
+      {
+        "titleKeyword": "sovereign AI cloud",
+        "expectedPrecision": "exact_day",
+        "expectedType": "launch",
+        "expectedDate": "2026-09-27",
+        "sourceCount": 1
+      }
+    ]
+  },
+  {
+    "id": "tb_13_cdac_param",
+    "storyId": "st_cdac_param",
+    "description": "C-DAC PARAM Rudra supercomputer deployment across national institutes",
+    "articles": [
+      {
+        "id": "art_param_01",
+        "title": "PM Modi inaugurates three PARAM Rudra supercomputers across Pune, Delhi and Kolkata",
+        "quick_brief": {
+          "headline": "PM inaugurates three PARAM Rudra supercomputers",
+          "quick_summary": "Three indigenous PARAM Rudra supercomputing systems dedicated to the nation on September 26.",
+          "category": "Supercomputing"
+        },
+        "full_article": {
+          "what_happened": "On September 26, the Prime Minister formally dedicated three PARAM Rudra supercomputers worth ₹130 crore.",
+          "key_stats": [{ "label": "Cost", "value": "₹130 Cr" }]
+        },
+        "publishedAt": "2026-09-26T00:00:00.000Z"
+      },
+      {
+        "id": "art_param_02",
+        "title": "PARAM Rudra high-performance compute clusters achieve 838 TFLOPS in national trials",
+        "quick_brief": {
+          "headline": "PARAM Rudra achieves 838 TFLOPS",
+          "quick_summary": "C-DAC certifies peak cluster performance of 838 TFLOPS on September 28.",
+          "category": "Supercomputing"
+        },
+        "full_article": {
+          "what_happened": "On September 28, C-DAC scientific teams validated sustained compute throughput.",
+          "key_stats": [{ "label": "Performance", "value": "838 TFLOPS" }]
+        },
+        "publishedAt": "2026-09-28T00:00:00.000Z"
+      }
+    ],
+    "expectedTimelineEvents": [
+      {
+        "titleKeyword": "inaugurates",
+        "expectedPrecision": "exact_day",
+        "expectedType": "development",
+        "expectedDate": "2026-09-26",
+        "sourceCount": 1
+      },
+      {
+        "titleKeyword": "TFLOPS",
+        "expectedPrecision": "exact_day",
+        "expectedType": "development",
+        "expectedDate": "2026-09-28",
+        "sourceCount": 1
+      }
+    ]
+  },
+  {
+    "id": "tb_14_zomato_blinkit",
+    "storyId": "st_zomato_blinkit",
+    "description": "Zomato Blinkit quick-commerce dark store expansion",
+    "articles": [
+      {
+        "id": "art_blinkit_01",
+        "title": "Blinkit expands to 100 new dark stores in 12 Tier-2 Indian cities",
+        "quick_brief": {
+          "headline": "Blinkit adds 100 dark stores",
+          "quick_summary": "Blinkit opens 100 dark stores on August 18 expanding 10-minute delivery to Jaipur, Lucknow and Indore.",
+          "category": "Startups"
+        },
+        "full_article": {
+          "what_happened": "On August 18, Blinkit expanded operations across 12 tier-2 urban clusters.",
+          "key_stats": [{ "label": "Dark Stores", "value": "100 Stores" }]
+        },
+        "publishedAt": "2026-08-18T00:00:00.000Z"
+      },
+      {
+        "id": "art_blinkit_02",
+        "title": "Blinkit announces goal of 2,000 dark stores by December 2026",
+        "quick_brief": {
+          "headline": "Blinkit targets 2,000 dark stores",
+          "quick_summary": "Zomato leadership revises Blinkit nationwide dark store target to 2,000 stores by December 2026.",
+          "category": "Startups"
+        },
+        "full_article": {
+          "what_happened": "In a shareholder presentation on September 21, Zomato leadership outlined acceleration plans.",
+          "key_stats": [{ "label": "Target", "value": "2,000 Stores" }]
+        },
+        "publishedAt": "2026-09-21T00:00:00.000Z"
+      }
+    ],
+    "expectedTimelineEvents": [
+      {
+        "titleKeyword": "dark stores",
+        "expectedPrecision": "exact_day",
+        "expectedType": "development",
+        "expectedDate": "2026-08-18",
+        "sourceCount": 1
+      },
+      {
+        "titleKeyword": "2,000",
+        "expectedPrecision": "exact_day",
+        "expectedType": "announcement",
+        "expectedDate": "2026-09-21",
+        "sourceCount": 1
+      }
+    ]
+  },
+  {
+    "id": "tb_15_correction_flow",
+    "storyId": "st_fintech_correction",
+    "description": "Funding reporting with subsequent correction and retraction",
+    "articles": [
+      {
+        "id": "art_cor_01",
+        "title": "PayZen reportedly raises $100M in Series C round from Tiger Global",
+        "quick_brief": {
+          "headline": "PayZen raises $100M",
+          "quick_summary": "Early reports on September 1 indicate PayZen secured $100M Series C round.",
+          "category": "Fintech"
+        },
+        "full_article": {
+          "what_happened": "On September 1, reports indicated PayZen closed $100M in Series C funding.",
+          "key_stats": [{ "label": "Funding", "value": "$100M" }]
+        },
+        "publishedAt": "2026-09-01T00:00:00.000Z"
+      },
+      {
+        "id": "art_cor_02",
+        "title": "CORRECTION: PayZen clarifies Series C funding round closed at $65M, not $100M",
+        "quick_brief": {
+          "headline": "CORRECTION: PayZen raised $65M",
+          "quick_summary": "PayZen issued an official clarification on September 3 stating the round concluded at $65M.",
+          "category": "Fintech"
+        },
+        "full_article": {
+          "what_happened": "On September 3, PayZen clarified that earlier $100M claims were revised to $65M.",
+          "key_stats": [{ "label": "Corrected Funding", "value": "$65M" }]
+        },
+        "publishedAt": "2026-09-03T00:00:00.000Z"
+      }
+    ],
+    "expectedTimelineEvents": [
+      {
+        "titleKeyword": "PayZen reportedly",
+        "expectedPrecision": "exact_day",
+        "expectedType": "financial",
+        "expectedDate": "2026-09-01",
+        "sourceCount": 1
+      },
+      {
+        "titleKeyword": "CORRECTION",
+        "expectedPrecision": "exact_day",
+        "expectedType": "correction",
+        "expectedDate": "2026-09-03",
+        "sourceCount": 1
+      }
+    ]
+  }
+]

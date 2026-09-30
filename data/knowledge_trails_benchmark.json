@@ -1,0 +1,98 @@
+[
+  {
+    "id": "tb_01",
+    "title": "How Rocket Propulsion Powers Space Access",
+    "entryConceptId": "con_rocket_propulsion",
+    "stepConceptIds": ["con_rocket_propulsion", "con_cryogenic_engine", "con_semi_cryogenic_engine", "con_thrust", "con_payload_capacity"],
+    "expectedValid": true,
+    "domain": "Space & Propulsion"
+  },
+  {
+    "id": "tb_02",
+    "title": "How RBI Monetary Policy Shapes the Economy",
+    "entryConceptId": "con_interest_rate",
+    "stepConceptIds": ["con_interest_rate", "con_repo_rate", "con_monetary_policy", "con_inflation_targeting"],
+    "expectedValid": true,
+    "domain": "Macroeconomics"
+  },
+  {
+    "id": "tb_03",
+    "title": "Building Sovereign AI & Sustainable Compute",
+    "entryConceptId": "con_large_language_model",
+    "stepConceptIds": ["con_large_language_model", "con_sovereign_ai", "con_waterless_cooling", "con_supercomputer"],
+    "expectedValid": true,
+    "domain": "Artificial Intelligence"
+  },
+  {
+    "id": "tb_04",
+    "title": "The Journey of Semiconductor Fabrication",
+    "entryConceptId": "con_semiconductor_fab",
+    "stepConceptIds": ["con_semiconductor_fab", "con_cleanroom", "con_atmp_osat"],
+    "expectedValid": true,
+    "domain": "Semiconductors"
+  },
+  {
+    "id": "tb_05",
+    "title": "Electric Vehicle Powertrains & Fast-Charging Grid",
+    "entryConceptId": "con_powertrain",
+    "stepConceptIds": ["con_powertrain", "con_fast_charging"],
+    "expectedValid": true,
+    "domain": "Electric Mobility"
+  },
+  {
+    "id": "tb_06",
+    "title": "How Global Capability Centres Elevate Indian Tech",
+    "entryConceptId": "con_it_services",
+    "stepConceptIds": ["con_it_services", "con_gcc"],
+    "expectedValid": true,
+    "domain": "Enterprise & Economy"
+  },
+  {
+    "id": "tb_07",
+    "title": "The Architecture of Instant Digital Payments",
+    "entryConceptId": "con_upi",
+    "stepConceptIds": ["con_upi", "con_interest_rate"],
+    "expectedValid": true,
+    "domain": "Fintech"
+  },
+  {
+    "id": "tb_08",
+    "title": "National Supercomputing Architecture",
+    "entryConceptId": "con_supercomputer",
+    "stepConceptIds": ["con_supercomputer", "con_sovereign_ai"],
+    "expectedValid": true,
+    "domain": "Artificial Intelligence"
+  },
+  {
+    "id": "tb_09",
+    "title": "From Transformer Architecture to Indic AI",
+    "entryConceptId": "con_transformer_model",
+    "stepConceptIds": ["con_transformer_model", "con_large_language_model", "con_sovereign_ai"],
+    "expectedValid": true,
+    "domain": "Artificial Intelligence"
+  },
+  {
+    "id": "tb_10",
+    "title": "The Startup Capital Lifecycle: VC to IPO",
+    "entryConceptId": "con_venture_capital",
+    "stepConceptIds": ["con_venture_capital", "con_ipo"],
+    "expectedValid": true,
+    "domain": "Enterprise & Economy"
+  },
+  {
+    "id": "tb_invalid_cycle",
+    "title": "Invalid Circular Trail Example",
+    "entryConceptId": "con_repo_rate",
+    "stepConceptIds": ["con_repo_rate", "con_monetary_policy", "con_repo_rate"],
+    "expectedValid": false,
+    "expectedError": "Duplicate concept detected"
+  },
+  {
+    "id": "tb_invalid_length",
+    "title": "Invalid Single Step Trail",
+    "entryConceptId": "con_repo_rate",
+    "stepConceptIds": ["con_repo_rate"],
+    "expectedValid": false,
+    "expectedError": "Trail length"
+  }
+]
