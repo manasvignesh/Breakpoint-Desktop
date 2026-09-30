@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import {
   Search as SearchIcon,
   X,
@@ -11,13 +11,13 @@ import {
   Bookmark,
   Clock,
   ChevronRight,
+  Info,
 } from 'lucide-react';
 import type { Story } from '../types/domain';
 import type { CanonicalConcept, CanonicalEntity, KnowledgeTrail } from '../types/knowledge';
-import { canonicalConceptService, SEED_CANONICAL_CONCEPTS } from '../services/canonicalConceptService';
-import { SEED_CANONICAL_ENTITIES } from '../services/canonicalEntityService';
-import { knowledgeTrailService, SEED_KNOWLEDGE_TRAILS } from '../services/knowledgeTrailService';
-import { toDomainKnowledgeTrail, toDomainConcept, toDomainEntity } from '../services/mappers/knowledgeMapper';
+import { canonicalConceptService } from '../services/canonicalConceptService';
+import { canonicalEntityService } from '../services/canonicalEntityService';
+import { knowledgeTrailService } from '../services/knowledgeTrailService';
 import { ConceptDetailModal } from './ConceptDetailModal';
 import { KnowledgeTrailViewer } from './KnowledgeTrailViewer';
 
@@ -41,21 +41,47 @@ export const SearchView: React.FC<SearchViewProps> = ({
   const [selectedConceptId, setSelectedConceptId] = useState<string | null>(null);
   const [selectedTrail, setSelectedTrail] = useState<KnowledgeTrail | null>(null);
 
-  // Load all entities, concepts, and trails
-  const allEntities = useMemo<CanonicalEntity[]>(() => {
-    return Object.values(SEED_CANONICAL_ENTITIES).map((ent) => toDomainEntity(ent as any));
-  }, []);
+  const [entities, setEntities] = useState<CanonicalEntity[]>([]);
+  const [concepts, setConcepts] = useState<CanonicalConcept[]>([]);
+  const [trails, setTrails] = useState<KnowledgeTrail[]>([]);
+  const [isLoadingEntities, setIsLoadingEntities] = useState(true);
+  const [isLoadingConcepts, setIsLoadingConcepts] = useState(true);
+  const [isLoadingTrails, setIsLoadingTrails] = useState(true);
 
-  const allConcepts = useMemo<CanonicalConcept[]>(() => {
-    const cached = canonicalConceptService.getAllCanonicalConcepts();
-    if (cached.length > 0) return cached;
-    return Object.values(SEED_CANONICAL_CONCEPTS).map((c) => toDomainConcept(c as any));
-  }, []);
+  // Subscribe to live canonical data from Firestore (ZERO seeds in production)
+  useEffect(() => {
+    setIsLoadingEntities(true);
+    const unsubEntities = canonicalEntityService.subscribeToEntities(
+      (data) => {
+        setEntities(data);
+        setIsLoadingEntities(false);
+      },
+      () => setIsLoadingEntities(false)
+    );
 
-  const allTrails = useMemo<KnowledgeTrail[]>(() => {
-    const cached = knowledgeTrailService.getAllKnowledgeTrails();
-    if (cached.length > 0) return cached;
-    return SEED_KNOWLEDGE_TRAILS.map((t) => toDomainKnowledgeTrail(t));
+    setIsLoadingConcepts(true);
+    const unsubConcepts = canonicalConceptService.subscribeToConcepts(
+      (data) => {
+        setConcepts(data);
+        setIsLoadingConcepts(false);
+      },
+      () => setIsLoadingConcepts(false)
+    );
+
+    setIsLoadingTrails(true);
+    const unsubTrails = knowledgeTrailService.subscribeToTrails(
+      (data) => {
+        setTrails(data);
+        setIsLoadingTrails(false);
+      },
+      () => setIsLoadingTrails(false)
+    );
+
+    return () => {
+      unsubEntities();
+      unsubConcepts();
+      unsubTrails();
+    };
   }, []);
 
   // Filtered search results
@@ -64,10 +90,10 @@ export const SearchView: React.FC<SearchViewProps> = ({
     if (!q) {
       return {
         matchedStories: stories.slice(0, 6),
-        matchedEntities: allEntities.slice(0, 4),
-        matchedConcepts: allConcepts.slice(0, 6),
-        matchedTrails: allTrails.slice(0, 3),
-        totalCount: stories.length + allEntities.length + allConcepts.length + allTrails.length,
+        matchedEntities: entities.slice(0, 4),
+        matchedConcepts: concepts.slice(0, 6),
+        matchedTrails: trails.slice(0, 3),
+        totalCount: stories.length + entities.length + concepts.length + trails.length,
       };
     }
 
@@ -82,25 +108,25 @@ export const SearchView: React.FC<SearchViewProps> = ({
       );
     });
 
-    const matchedEntities = allEntities.filter((e) => {
+    const matchedEntities = entities.filter((e) => {
       return (
         e.canonicalName.toLowerCase().includes(q) ||
         e.shortDescription?.toLowerCase().includes(q) ||
-        e.aliases.some((a) => a.toLowerCase().includes(q)) ||
+        e.aliases?.some((a) => a.toLowerCase().includes(q)) ||
         e.type?.toLowerCase().includes(q)
       );
     });
 
-    const matchedConcepts = allConcepts.filter((c) => {
+    const matchedConcepts = concepts.filter((c) => {
       return (
         c.name.toLowerCase().includes(q) ||
         c.shortDefinition?.toLowerCase().includes(q) ||
-        c.aliases.some((a) => a.toLowerCase().includes(q)) ||
+        c.aliases?.some((a) => a.toLowerCase().includes(q)) ||
         c.category?.toLowerCase().includes(q)
       );
     });
 
-    const matchedTrails = allTrails.filter((t) => {
+    const matchedTrails = trails.filter((t) => {
       return (
         t.title.toLowerCase().includes(q) ||
         t.description?.toLowerCase().includes(q) ||
@@ -121,7 +147,7 @@ export const SearchView: React.FC<SearchViewProps> = ({
       matchedTrails,
       totalCount,
     };
-  }, [query, stories, allEntities, allConcepts, allTrails]);
+  }, [query, stories, entities, concepts, trails]);
 
   return (
     <div className="max-w-6xl mx-auto space-y-8 animate-fadeIn pb-16">
@@ -145,7 +171,7 @@ export const SearchView: React.FC<SearchViewProps> = ({
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search stories, ISRO propulsion, Repo rates, TSMC, AI compute..."
+            placeholder="Search stories, entities, technologies, or concepts..."
             className="w-full pl-12 pr-10 py-3.5 bg-[#12141A] border border-[#232734] rounded-2xl text-white placeholder-[#8B949E] text-sm focus:outline-none focus:border-[#FF5A1F] focus:ring-1 focus:ring-[#FF5A1F] transition shadow-lg"
             autoFocus
           />
@@ -210,7 +236,7 @@ export const SearchView: React.FC<SearchViewProps> = ({
 
             {searchResults.matchedStories.length === 0 ? (
               <div className="p-8 rounded-2xl bg-[#12141A] border border-[#232734] text-center text-xs text-[#8B949E]">
-                No matching stories found.
+                {query ? `No stories matching "${query}"` : 'No stories available.'}
               </div>
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -287,9 +313,14 @@ export const SearchView: React.FC<SearchViewProps> = ({
               </h3>
             </div>
 
-            {searchResults.matchedEntities.length === 0 ? (
+            {isLoadingEntities ? (
               <div className="p-8 rounded-2xl bg-[#12141A] border border-[#232734] text-center text-xs text-[#8B949E]">
-                No matching entities found.
+                Loading canonical entities...
+              </div>
+            ) : searchResults.matchedEntities.length === 0 ? (
+              <div className="p-8 rounded-2xl bg-[#12141A] border border-[#232734] text-center text-xs text-[#8B949E] space-y-1">
+                <Info className="w-4 h-4 mx-auto text-[#8B949E]" />
+                <p>{query ? `No canonical entities matching "${query}"` : 'No canonical entities published yet in Firestore.'}</p>
               </div>
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -322,7 +353,7 @@ export const SearchView: React.FC<SearchViewProps> = ({
                       {entity.shortDescription}
                     </p>
 
-                    {entity.aliases.length > 0 && (
+                    {entity.aliases && entity.aliases.length > 0 && (
                       <div className="flex flex-wrap gap-1.5 pt-1">
                         {entity.aliases.slice(0, 4).map((alias) => (
                           <span
@@ -351,9 +382,14 @@ export const SearchView: React.FC<SearchViewProps> = ({
               </h3>
             </div>
 
-            {searchResults.matchedConcepts.length === 0 ? (
+            {isLoadingConcepts ? (
               <div className="p-8 rounded-2xl bg-[#12141A] border border-[#232734] text-center text-xs text-[#8B949E]">
-                No matching concepts found.
+                Loading canonical concepts...
+              </div>
+            ) : searchResults.matchedConcepts.length === 0 ? (
+              <div className="p-8 rounded-2xl bg-[#12141A] border border-[#232734] text-center text-xs text-[#8B949E] space-y-1">
+                <Info className="w-4 h-4 mx-auto text-[#8B949E]" />
+                <p>{query ? `No canonical concepts matching "${query}"` : 'No canonical technical concepts published yet in Firestore.'}</p>
               </div>
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -401,9 +437,14 @@ export const SearchView: React.FC<SearchViewProps> = ({
               </h3>
             </div>
 
-            {searchResults.matchedTrails.length === 0 ? (
+            {isLoadingTrails ? (
               <div className="p-8 rounded-2xl bg-[#12141A] border border-[#232734] text-center text-xs text-[#8B949E]">
-                No matching knowledge trails found.
+                Loading knowledge trails...
+              </div>
+            ) : searchResults.matchedTrails.length === 0 ? (
+              <div className="p-8 rounded-2xl bg-[#12141A] border border-[#232734] text-center text-xs text-[#8B949E] space-y-1">
+                <Info className="w-4 h-4 mx-auto text-[#8B949E]" />
+                <p>{query ? `No knowledge trails matching "${query}"` : 'No published knowledge trails available yet in Firestore.'}</p>
               </div>
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

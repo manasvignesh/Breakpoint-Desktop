@@ -716,6 +716,18 @@ export const StoryDetail: React.FC<StoryDetailProps> = ({
                     const contentNorm = normalizeText(sec.content);
                     const shouldShowSummary = summaryNorm && summaryNorm !== contentNorm;
 
+                    // Deduplicate items within the section (remove items matching summary/content or duplicate titles/descriptions)
+                    const deduplicatedItems = (sec.items || []).filter((item, itemIdx, arr) => {
+                      const itemDescNorm = normalizeText(item.description);
+                      const itemTitleNorm = normalizeText(item.title);
+                      if (!itemDescNorm && !itemTitleNorm) return false;
+                      if (itemDescNorm && (itemDescNorm === summaryNorm || itemDescNorm === contentNorm)) return false;
+                      return arr.findIndex((other) =>
+                        normalizeText(other.title) === itemTitleNorm &&
+                        normalizeText(other.description) === itemDescNorm
+                      ) === itemIdx;
+                    });
+
                     return (
                       <div
                         key={idx}
@@ -747,9 +759,9 @@ export const StoryDetail: React.FC<StoryDetailProps> = ({
                                 {sec.content}
                               </div>
                             )}
-                            {sec.items && sec.items.length > 0 && (
+                            {deduplicatedItems.length > 0 && (
                               <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-3">
-                                {sec.items.map((item, itemIdx) => (
+                                {deduplicatedItems.map((item, itemIdx) => (
                                   <div
                                     key={itemIdx}
                                     className="p-3 bg-[#0F1015] border border-[#232734] rounded-xl"

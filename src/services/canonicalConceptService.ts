@@ -1,4 +1,4 @@
-import { doc, getDoc, setDoc } from 'firebase/firestore';
+import { doc, getDoc, setDoc, collection, getDocs, onSnapshot } from 'firebase/firestore';
 import { db } from './firebase';
 import type { PlatformConceptRecord, CanonicalConcept, ConceptDifficulty } from '../types/knowledge';
 import { toDomainConcept } from './mappers/knowledgeMapper';
@@ -281,24 +281,48 @@ export class CanonicalConceptService {
   private conceptCache: Map<string, CanonicalConcept> = new Map();
 
   constructor() {
-    this.initCacheFromSeeds();
+    // Runtime starts with an empty cache and populates dynamically from Firestore
   }
 
-  private initCacheFromSeeds() {
-    for (const [id, concept] of Object.entries(SEED_CANONICAL_CONCEPTS)) {
-      this.conceptCache.set(id, {
-        id: concept.id,
-        name: concept.name,
-        aliases: concept.aliases,
-        shortDefinition: concept.shortDefinition,
-        category: concept.category,
-        difficulty: concept.difficulty,
-        parentConceptIds: concept.parentConceptIds || [],
-        relatedConceptIds: concept.relatedConceptIds || [],
-        createdAt: '2026-09-01T00:00:00.000Z',
-        updatedAt: '2026-09-01T00:00:00.000Z',
+  /**
+   * Fetches all published canonical concepts from Firestore into cache.
+   */
+  async fetchAllConcepts(): Promise<CanonicalConcept[]> {
+    try {
+      const snap = await getDocs(collection(db, 'concepts'));
+      const concepts: CanonicalConcept[] = [];
+      snap.forEach(docSnap => {
+        const concept = toDomainConcept({ ...(docSnap.data() as PlatformConceptRecord), id: docSnap.id });
+        this.conceptCache.set(concept.id, concept);
+        concepts.push(concept);
       });
+      return concepts;
+    } catch (err) {
+      console.warn('[CanonicalConceptService] Failed to fetch concepts from Firestore:', err);
+      return Array.from(this.conceptCache.values());
     }
+  }
+
+  /**
+   * Subscribes to real-time canonical concepts in Firestore.
+   */
+  subscribeToConcepts(onData: (concepts: CanonicalConcept[]) => void, onError?: (err: Error) => void): () => void {
+    return onSnapshot(
+      collection(db, 'concepts'),
+      (snap) => {
+        const concepts: CanonicalConcept[] = [];
+        snap.forEach(docSnap => {
+          const concept = toDomainConcept({ ...(docSnap.data() as PlatformConceptRecord), id: docSnap.id });
+          this.conceptCache.set(concept.id, concept);
+          concepts.push(concept);
+        });
+        onData(concepts);
+      },
+      (err) => {
+        console.warn('[CanonicalConceptService] Snapshot error:', err);
+        if (onError) onError(err);
+      }
+    );
   }
 
   /**

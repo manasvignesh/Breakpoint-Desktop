@@ -3,8 +3,17 @@ import { Search, Sparkles, Layers, ArrowRight } from 'lucide-react';
 import { StoryCard } from './StoryCard';
 import { DailyBriefBanner } from './DailyBriefBanner';
 import { subscribeToAllReadingStates } from '../services/readingStateService';
+import { storyTimelineService } from '../services/storyTimelineService';
 import type { Story, ReadingState } from '../types/domain';
 import type { DailyBrief, DailyBriefProgress } from '../types/brief';
+
+interface ContinuingStoryCardItem {
+  story: Story;
+  type: 'update' | 'partial_read';
+  progress?: number;
+  meaningfulChangeCount?: number;
+  sortTimestamp: number;
+}
 
 interface StoryFeedProps {
   stories: Story[];
@@ -34,11 +43,13 @@ export const StoryFeed: React.FC<StoryFeedProps> = ({
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [readingStates, setReadingStates] = useState<ReadingState[]>([]);
+  const [timelineUpdatesMap, setTimelineUpdatesMap] = useState<Map<string, { changeCount: number; timestamp: number }>>(new Map());
 
   // Real-time subscription to cloud reading states
   useEffect(() => {
     if (!userId) {
       setReadingStates([]);
+      setTimelineUpdatesMap(new Map());
       return;
     }
 
@@ -50,6 +61,53 @@ export const StoryFeed: React.FC<StoryFeedProps> = ({
 
     return () => unsubscribe();
   }, [userId]);
+
+  // Derive meaningful updates for read stories
+  useEffect(() => {
+    if (!userId || readingStates.length === 0 || stories.length === 0) {
+      return;
+    }
+
+    let isMounted = true;
+    const readStoryIds = new Set(readingStates.map((rs) => rs.articleId));
+    const targetStories = stories.filter((s) => readStoryIds.has(s.id) || (s.storyId && readStoryIds.has(s.storyId)));
+
+    const checkUpdates = async () => {
+      const updatesMap = new Map<string, { changeCount: number; timestamp: number }>();
+      
+      await Promise.all(
+        targetStories.map(async (story) => {
+          const storyId = story.storyId || story.id;
+          try {
+            const result = await storyTimelineService.getChangesSinceLastRead(userId, storyId);
+            if (result.meaningfulChangeCount > 0 && result.changes.length > 0) {
+              const updates = await storyTimelineService.getUpdates(storyId);
+              const latestTime =
+                updates.length > 0 && updates[0].createdAt
+                  ? new Date(updates[0].createdAt).getTime()
+                  : Date.now();
+              updatesMap.set(story.id, {
+                changeCount: result.meaningfulChangeCount,
+                timestamp: latestTime,
+              });
+            }
+          } catch (e) {
+            console.warn(`[StoryFeed] Failed to check timeline changes for ${storyId}:`, e);
+          }
+        })
+      );
+
+      if (isMounted) {
+        setTimelineUpdatesMap(updatesMap);
+      }
+    };
+
+    checkUpdates();
+
+    return () => {
+      isMounted = false;
+    };
+  }, [userId, readingStates, stories]);
 
   const categories = useMemo(() => {
     const set = new Set<string>();
@@ -63,35 +121,60 @@ export const StoryFeed: React.FC<StoryFeedProps> = ({
     return stories.filter((s) => s.isTodaysDrop || s.isFeatured).slice(0, 3);
   }, [stories]);
 
-  // Compute canonical continuing stories (partially read or recent with progress)
+  // Compute canonical continuing stories (meaningful updates prioritized over partial reads, deduplicated)
   const continuingStories = useMemo(() => {
-    if (!readingStates.length) return [];
+    if (!readingStates.length || !stories.length) return [];
 
-    const stateMap = new Map<string, ReadingState>();
+    const storyMap = new Map<string, Story>();
+    stories.forEach((s) => {
+      storyMap.set(s.id, s);
+      if (s.storyId) storyMap.set(s.storyId, s);
+    });
+
+    const updateItems: ContinuingStoryCardItem[] = [];
+    const partialReadItems: ContinuingStoryCardItem[] = [];
+    const seenStoryIds = new Set<string>();
+
+    // 1. First collect meaningful updates (ranked first)
+    timelineUpdatesMap.forEach((info, storyId) => {
+      const story = storyMap.get(storyId);
+      if (story && !seenStoryIds.has(story.id)) {
+        seenStoryIds.add(story.id);
+        updateItems.push({
+          story,
+          type: 'update',
+          meaningfulChangeCount: info.changeCount,
+          sortTimestamp: info.timestamp,
+        });
+      }
+    });
+
+    // 2. Then collect partial reads (progress between 5% and 90%)
     readingStates.forEach((rs) => {
-      // In progress (between 5% and 95% complete) or recently active
-      if (rs.progress >= 0.05 && rs.progress < 0.95) {
-        stateMap.set(rs.articleId, rs);
+      if (rs.progress >= 0.05 && rs.progress < 0.90) {
+        const story = storyMap.get(rs.articleId);
+        if (story && !seenStoryIds.has(story.id)) {
+          seenStoryIds.add(story.id);
+          const time = rs.lastOpenedAt ? new Date(rs.lastOpenedAt).getTime() : 0;
+          partialReadItems.push({
+            story,
+            type: 'partial_read',
+            progress: rs.progress,
+            sortTimestamp: time,
+          });
+        }
       }
     });
 
-    const matched: { story: Story; state: ReadingState }[] = [];
-    stories.forEach((story) => {
-      const st = stateMap.get(story.id);
-      if (st) {
-        matched.push({ story, state: st });
-      }
-    });
+    // Sort update items by timestamp desc
+    updateItems.sort((a, b) => b.sortTimestamp - a.sortTimestamp);
 
-    // Sort by lastOpenedAt desc
-    matched.sort((a, b) => {
-      const timeA = a.state.lastOpenedAt ? new Date(a.state.lastOpenedAt).getTime() : 0;
-      const timeB = b.state.lastOpenedAt ? new Date(b.state.lastOpenedAt).getTime() : 0;
-      return timeB - timeA;
-    });
+    // Sort partial read items by lastOpenedAt desc
+    partialReadItems.sort((a, b) => b.sortTimestamp - a.sortTimestamp);
 
-    return matched.slice(0, 3);
-  }, [stories, readingStates]);
+    // Combine: Updates FIRST, then Partial Reads
+    return [...updateItems, ...partialReadItems].slice(0, 3);
+  }, [stories, readingStates, timelineUpdatesMap]);
 
   const filteredStories = useMemo(() => {
     return stories.filter((s) => {
@@ -161,36 +244,65 @@ export const StoryFeed: React.FC<StoryFeedProps> = ({
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {continuingStories.map(({ story, state }) => (
+            {continuingStories.map((item) => (
               <div
-                key={story.id}
-                onClick={() => onSelectStory(story)}
-                className="group p-4 bg-[#12141A] border border-[#232734] hover:border-emerald-500/50 rounded-2xl cursor-pointer transition flex flex-col justify-between space-y-3 shadow-md hover:shadow-xl"
+                key={item.story.id}
+                onClick={() => onSelectStory(item.story)}
+                className={`group p-4 bg-[#12141A] border ${
+                  item.type === 'update'
+                    ? 'border-amber-500/40 hover:border-amber-400/80 shadow-amber-500/5'
+                    : 'border-[#232734] hover:border-emerald-500/50'
+                } rounded-2xl cursor-pointer transition flex flex-col justify-between space-y-3 shadow-md hover:shadow-xl`}
               >
                 <div className="space-y-2">
                   <div className="flex items-center justify-between">
-                    <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
-                      {Math.round(state.progress * 100)}% Read
-                    </span>
-                    <span className="text-[10px] text-[#8B949E]">{story.category}</span>
+                    {item.type === 'update' ? (
+                      <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-amber-500/15 text-amber-300 border border-amber-500/30 flex items-center gap-1">
+                        <Sparkles className="w-2.5 h-2.5 text-amber-400" />
+                        {item.meaningfulChangeCount} New {item.meaningfulChangeCount === 1 ? 'Fact' : 'Facts'}
+                      </span>
+                    ) : (
+                      <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
+                        {Math.round((item.progress || 0) * 100)}% Read
+                      </span>
+                    )}
+                    <span className="text-[10px] text-[#8B949E]">{item.story.category}</span>
                   </div>
 
-                  <h4 className="text-sm font-bold text-white group-hover:text-emerald-300 transition line-clamp-2 leading-snug">
-                    {story.title}
+                  <h4
+                    className={`text-sm font-bold text-white transition line-clamp-2 leading-snug ${
+                      item.type === 'update'
+                        ? 'group-hover:text-amber-300'
+                        : 'group-hover:text-emerald-300'
+                    }`}
+                  >
+                    {item.story.title}
                   </h4>
 
-                  {/* Progress Bar */}
-                  <div className="w-full bg-[#181B22] h-1.5 rounded-full overflow-hidden">
-                    <div
-                      className="bg-emerald-400 h-full rounded-full transition-all duration-300"
-                      style={{ width: `${Math.round(state.progress * 100)}%` }}
-                    />
-                  </div>
+                  {/* Progress Bar (for partial reads) or Updated Indicator (for updates) */}
+                  {item.type === 'partial_read' && item.progress !== undefined ? (
+                    <div className="w-full bg-[#181B22] h-1.5 rounded-full overflow-hidden">
+                      <div
+                        className="bg-emerald-400 h-full rounded-full transition-all duration-300"
+                        style={{ width: `${Math.round(item.progress * 100)}%` }}
+                      />
+                    </div>
+                  ) : (
+                    <p className="text-[11px] text-amber-400/90 line-clamp-1 italic">
+                      Timeline updated since you last read
+                    </p>
+                  )}
                 </div>
 
                 <div className="pt-2 border-t border-[#232734] flex items-center justify-between text-xs text-[#8B949E]">
-                  <span>Resume reading</span>
-                  <ArrowRight className="w-3.5 h-3.5 text-emerald-400 group-hover:translate-x-1 transition" />
+                  <span>
+                    {item.type === 'update' ? 'Catch up on updates' : 'Resume reading'}
+                  </span>
+                  <ArrowRight
+                    className={`w-3.5 h-3.5 ${
+                      item.type === 'update' ? 'text-amber-400' : 'text-emerald-400'
+                    } group-hover:translate-x-1 transition`}
+                  />
                 </div>
               </div>
             ))}

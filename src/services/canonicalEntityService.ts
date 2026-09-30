@@ -1,4 +1,4 @@
-import { doc, getDoc, setDoc } from 'firebase/firestore';
+import { doc, getDoc, setDoc, collection, getDocs, onSnapshot } from 'firebase/firestore';
 import { db } from './firebase';
 import type { PlatformEntityRecord, CanonicalEntity, EntityType } from '../types/knowledge';
 import { toDomainEntity } from './mappers/knowledgeMapper';
@@ -220,22 +220,48 @@ export class CanonicalEntityService {
   private entityCache: Map<string, CanonicalEntity> = new Map();
 
   constructor() {
-    this.initCacheFromSeeds();
+    // Runtime starts with an empty cache and populates dynamically from Firestore
   }
 
-  private initCacheFromSeeds() {
-    for (const [id, entity] of Object.entries(SEED_CANONICAL_ENTITIES)) {
-      this.entityCache.set(id, {
-        id: entity.id,
-        canonicalName: entity.canonicalName,
-        type: entity.type,
-        aliases: entity.aliases,
-        shortDescription: entity.shortDescription,
-        externalIds: entity.externalIds,
-        createdAt: '2026-09-01T00:00:00.000Z',
-        updatedAt: '2026-09-01T00:00:00.000Z',
+  /**
+   * Fetches all published canonical entities from Firestore into cache.
+   */
+  async fetchAllEntities(): Promise<CanonicalEntity[]> {
+    try {
+      const snap = await getDocs(collection(db, 'entities'));
+      const entities: CanonicalEntity[] = [];
+      snap.forEach(docSnap => {
+        const entity = toDomainEntity({ ...(docSnap.data() as PlatformEntityRecord), id: docSnap.id });
+        this.entityCache.set(entity.id, entity);
+        entities.push(entity);
       });
+      return entities;
+    } catch (err) {
+      console.warn('[CanonicalEntityService] Failed to fetch entities from Firestore:', err);
+      return Array.from(this.entityCache.values());
     }
+  }
+
+  /**
+   * Subscribes to real-time canonical entities in Firestore.
+   */
+  subscribeToEntities(onData: (entities: CanonicalEntity[]) => void, onError?: (err: Error) => void): () => void {
+    return onSnapshot(
+      collection(db, 'entities'),
+      (snap) => {
+        const entities: CanonicalEntity[] = [];
+        snap.forEach(docSnap => {
+          const entity = toDomainEntity({ ...(docSnap.data() as PlatformEntityRecord), id: docSnap.id });
+          this.entityCache.set(entity.id, entity);
+          entities.push(entity);
+        });
+        onData(entities);
+      },
+      (err) => {
+        console.warn('[CanonicalEntityService] Snapshot error:', err);
+        if (onError) onError(err);
+      }
+    );
   }
 
   /**

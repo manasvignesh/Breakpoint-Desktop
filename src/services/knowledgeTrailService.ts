@@ -1,4 +1,4 @@
-import { doc, getDoc, setDoc } from 'firebase/firestore';
+import { doc, getDoc, setDoc, collection, getDocs, onSnapshot, query, where } from 'firebase/firestore';
 import { db } from './firebase';
 import type {
   PlatformKnowledgeTrailRecord,
@@ -358,13 +358,50 @@ export class KnowledgeTrailService {
   private trailCache: Map<string, KnowledgeTrail> = new Map();
 
   constructor() {
-    this.initCacheFromSeeds();
+    // Runtime starts with an empty cache and populates dynamically from Firestore
   }
 
-  private initCacheFromSeeds() {
-    for (const trail of SEED_KNOWLEDGE_TRAILS) {
-      this.trailCache.set(trail.id, toDomainKnowledgeTrail(trail));
+  /**
+   * Fetches all published canonical knowledge trails from Firestore into cache.
+   */
+  async fetchAllTrails(): Promise<KnowledgeTrail[]> {
+    try {
+      const q = query(collection(db, 'knowledgeTrails'), where('status', '==', 'published'));
+      const snap = await getDocs(q);
+      const trails: KnowledgeTrail[] = [];
+      snap.forEach(docSnap => {
+        const trail = toDomainKnowledgeTrail({ ...(docSnap.data() as PlatformKnowledgeTrailRecord), id: docSnap.id });
+        this.trailCache.set(trail.id, trail);
+        trails.push(trail);
+      });
+      return trails;
+    } catch (err) {
+      console.warn('[KnowledgeTrailService] Failed to fetch trails from Firestore:', err);
+      return Array.from(this.trailCache.values());
     }
+  }
+
+  /**
+   * Subscribes to real-time published knowledge trails in Firestore.
+   */
+  subscribeToTrails(onData: (trails: KnowledgeTrail[]) => void, onError?: (err: Error) => void): () => void {
+    const q = query(collection(db, 'knowledgeTrails'), where('status', '==', 'published'));
+    return onSnapshot(
+      q,
+      (snap) => {
+        const trails: KnowledgeTrail[] = [];
+        snap.forEach(docSnap => {
+          const trail = toDomainKnowledgeTrail({ ...(docSnap.data() as PlatformKnowledgeTrailRecord), id: docSnap.id });
+          this.trailCache.set(trail.id, trail);
+          trails.push(trail);
+        });
+        onData(trails);
+      },
+      (err) => {
+        console.warn('[KnowledgeTrailService] Snapshot error:', err);
+        if (onError) onError(err);
+      }
+    );
   }
 
   /**

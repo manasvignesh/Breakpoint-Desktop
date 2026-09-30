@@ -171,6 +171,7 @@ export async function sendChatMessage({
   receiverId,
   content,
   idToken,
+  refreshToken,
   clientMessageId,
 }: {
   conversationId: string;
@@ -178,6 +179,7 @@ export async function sendChatMessage({
   receiverId: string;
   content: string;
   idToken: string;
+  refreshToken?: (forceRefresh?: boolean) => Promise<string | null>;
   clientMessageId?: string;
 }): Promise<{ messageId?: string; ok: boolean }> {
   const cleanContent = content.trim();
@@ -186,7 +188,7 @@ export async function sendChatMessage({
 
   const endpoint = `${TRUSTED_BACKEND_BASE_URL.replace(/\/+$/, '')}/send-message`;
 
-  const response = await fetch(endpoint, {
+  let response = await fetch(endpoint, {
     method: 'POST',
     headers: {
       Authorization: `Bearer ${idToken}`,
@@ -200,6 +202,32 @@ export async function sendChatMessage({
       receiverId,
     }),
   });
+
+  // Handle 401 with token refresh and single retry
+  if (response.status === 401 && refreshToken) {
+    console.warn('[chatService] 401 received from send-message endpoint, attempting token force-refresh...');
+    try {
+      const freshToken = await refreshToken(true);
+      if (freshToken) {
+        response = await fetch(endpoint, {
+          method: 'POST',
+          headers: {
+            Authorization: `Bearer ${freshToken}`,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            conversationId,
+            content: cleanContent,
+            clientMessageId: requestId,
+            senderId,
+            receiverId,
+          }),
+        });
+      }
+    } catch (refreshErr) {
+      console.error('[chatService] Token refresh retry failed:', refreshErr);
+    }
+  }
 
   if (!response.ok) {
     const errBody = await response.json().catch(() => ({}));

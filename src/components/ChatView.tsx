@@ -152,6 +152,7 @@ export const ChatView: React.FC<ChatViewProps> = ({ initialConversationId }) => 
         receiverId: partnerId,
         content: cleanText,
         idToken: token,
+        refreshToken: getIdToken,
         clientMessageId: clientMsgId,
       });
 
@@ -188,6 +189,7 @@ export const ChatView: React.FC<ChatViewProps> = ({ initialConversationId }) => 
         receiverId: partnerId,
         content: optMsg.content,
         idToken: token,
+        refreshToken: getIdToken,
         clientMessageId: optMsg.clientMessageId,
       });
     } catch (err) {
