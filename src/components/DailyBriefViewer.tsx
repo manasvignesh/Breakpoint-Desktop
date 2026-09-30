@@ -370,10 +370,10 @@ export const DailyBriefViewer: React.FC<DailyBriefViewerProps> = ({
 
               {/* Deep Dive & Source Actions */}
               <div className="flex items-center justify-between pt-2">
-                {currentItem.articleId && onOpenArticle ? (
+                {(currentItem.articleId || currentItem.storyId) && onOpenArticle ? (
                   <button
                     onClick={() => {
-                      onOpenArticle(currentItem.articleId!);
+                      onOpenArticle((currentItem.articleId || currentItem.storyId)!);
                       onClose();
                     }}
                     className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#FF7A45] hover:text-[#FF5A1F] transition-colors"

@@ -63,35 +63,40 @@ export const NotificationsPopover: React.FC<NotificationsPopoverProps> = ({
     setIsOpen(false);
 
     const type = (notif.contentType || notif.type || '').toLowerCase();
-    const targetId = notif.contentId || notif.conversationId || undefined;
 
+    // 1. Chat / Direct Conversation: strictly prefer conversationId, fallback to contentId (pairId in notification schema)
     if (type === 'chat' || type === 'conversation') {
+      const targetConversationId = notif.conversationId || notif.contentId || undefined;
       if (onNavigateTarget) {
-        onNavigateTarget({ type: 'chat', id: targetId });
+        onNavigateTarget({ type: 'chat', id: targetConversationId });
       }
       return;
     }
 
+    // 2. Knowledge / Concept / Trail: strictly use knowledge contentId
     if (type === 'trail' || type === 'knowledge' || type === 'concept') {
+      const targetKnowledgeId = notif.contentId || undefined;
       if (onNavigateTarget) {
-        onNavigateTarget({ type: 'knowledge', id: targetId });
+        onNavigateTarget({ type: 'knowledge', id: targetKnowledgeId });
       }
       return;
     }
 
-    if (type === 'brief') {
+    // 3. Daily Brief: strictly route to brief destination
+    if (type === 'brief' || type === 'daily_brief') {
       if (onNavigateTarget) {
         onNavigateTarget({ type: 'brief' });
       }
       return;
     }
 
-    // Default: Article / Story Content
-    if (targetId) {
+    // 4. Default: Article / Story / Creator Content
+    const targetArticleId = notif.contentId || undefined;
+    if (targetArticleId) {
       if (onNavigateTarget) {
-        onNavigateTarget({ type: 'article', id: targetId });
+        onNavigateTarget({ type: 'article', id: targetArticleId });
       } else if (onSelectStoryId) {
-        onSelectStoryId(targetId);
+        onSelectStoryId(targetArticleId);
       }
     }
   };

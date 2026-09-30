@@ -1,0 +1,306 @@
+﻿[
+  {
+    "id": "trail_isro_propulsion",
+    "title": "How Rocket Propulsion Powers Space Access",
+    "description": "Understand the engineering progression from fundamental rocket propulsion to high-thrust semi-cryogenic engines.",
+    "entryConceptId": "con_rocket_propulsion",
+    "steps": [
+      {
+        "position": 1,
+        "conceptId": "con_rocket_propulsion",
+        "title": "Fundamental Rocket Propulsion",
+        "explanation": "How rockets produce momentum by burning propellants and expelling exhaust gases at supersonic velocity.",
+        "reason": "Essential foundational physics needed before understanding specialized propulsion cycles."
+      },
+      {
+        "position": 2,
+        "conceptId": "con_cryogenic_engine",
+        "title": "Cryogenic Liquid Propulsion",
+        "explanation": "Why storing supercooled liquid hydrogen and oxygen provides unmatched fuel efficiency for upper orbital stages.",
+        "reason": "Explains ISRO’s existing upper-stage architecture before introducing the new booster upgrade."
+      },
+      {
+        "position": 3,
+        "conceptId": "con_semi_cryogenic_engine",
+        "title": "Semi-Cryogenic Booster Technology",
+        "explanation": "How substituting kerosene for liquid hydrogen delivers denser propellant packing and massive liftoff thrust.",
+        "reason": "Directly explains the core technology tested at Mahendragiri."
+      },
+      {
+        "position": 4,
+        "conceptId": "con_thrust",
+        "title": "Maximizing Liftoff Thrust",
+        "explanation": "How 2000 kN of semi-cryogenic thrust allows rockets to lift heavier payloads without expanding vehicle diameter.",
+        "reason": "Demonstrates the physical advantage gained by the engine upgrade."
+      },
+      {
+        "position": 5,
+        "conceptId": "con_payload_capacity",
+        "title": "Heavy-Lift Payload Capability",
+        "explanation": "How upgrading the LVM3 core stage enables India to launch 6-tonne commercial communication satellites independently.",
+        "reason": "Connects the engineering breakthrough directly to national economic and sovereign space capability."
+      }
+    ],
+    "relatedEntityIds": ["ent_isro"],
+    "relatedStoryIds": ["st_isro_01"],
+    "status": "published"
+  },
+  {
+    "id": "trail_rbi_monetary_policy",
+    "title": "How RBI Monetary Policy Shapes the Economy",
+    "description": "Follow how interest rates, inflation targets, and central bank decisions dictate borrowing costs across India.",
+    "entryConceptId": "con_interest_rate",
+    "steps": [
+      {
+        "position": 1,
+        "conceptId": "con_interest_rate",
+        "title": "Interest Rates & The Cost of Money",
+        "explanation": "How borrowing costs determine consumer spending, home loans, and corporate capital investment.",
+        "reason": "The fundamental building block for understanding monetary policy transmission."
+      },
+      {
+        "position": 2,
+        "conceptId": "con_repo_rate",
+        "title": "The Benchmark Policy Repo Rate",
+        "explanation": "How the Reserve Bank of India sets the benchmark lending rate for commercial banks.",
+        "reason": "Explains the specific policy lever announced in the MPC meeting."
+      },
+      {
+        "position": 3,
+        "conceptId": "con_monetary_policy",
+        "title": "Central Banking Monetary Policy",
+        "explanation": "How the MPC balances liquidity, currency stability, and GDP growth via rate decisions.",
+        "reason": "Broadens understanding to the institutional decision-making process."
+      },
+      {
+        "position": 4,
+        "conceptId": "con_inflation_targeting",
+        "title": "The 4% Retail Inflation Mandate",
+        "explanation": "Why RBI keeps rates elevated when food or energy inflation threatens price stability.",
+        "reason": "Explains why the MPC opted to maintain an unchanged stance rather than cutting rates."
+      }
+    ],
+    "relatedEntityIds": ["ent_rbi"],
+    "status": "published"
+  },
+  {
+    "id": "trail_sovereign_ai",
+    "title": "Building Sovereign AI & Sustainable Compute",
+    "description": "From foundation models to waterless thermal engineering and indigenous AI data centers.",
+    "entryConceptId": "con_large_language_model",
+    "steps": [
+      {
+        "position": 1,
+        "conceptId": "con_large_language_model",
+        "title": "Foundational AI Models",
+        "explanation": "How generative models are trained to process and generate language across languages and code.",
+        "reason": "Foundational baseline for modern AI computing demands."
+      },
+      {
+        "position": 2,
+        "conceptId": "con_sovereign_ai",
+        "title": "The Sovereign AI Imperative",
+        "explanation": "Why nations require indigenous datacenter infrastructure to protect domestic data and model sovereignty.",
+        "reason": "Explains why IndiaAI mission and indigenous hardware exist."
+      },
+      {
+        "position": 3,
+        "conceptId": "con_waterless_cooling",
+        "title": "Waterless Datacenter Engineering",
+        "explanation": "How high-density compute boxes like Vigyanlabs FEMTO operate without consuming municipal water.",
+        "reason": "Directly addresses the environmental constraint of enterprise AI computing."
+      },
+      {
+        "position": 4,
+        "conceptId": "con_supercomputer",
+        "title": "National Supercomputing Grids",
+        "explanation": "How clusters like PARAM Rudra interconnect to power national healthcare and scientific breakthroughs.",
+        "reason": "Demonstrates end-to-end sovereign compute deployment."
+      }
+    ],
+    "relatedEntityIds": ["ent_vigyanlabs", "ent_cdac", "ent_meity"],
+    "status": "published"
+  },
+  {
+    "id": "trail_semiconductor_fab",
+    "title": "The Journey of Semiconductor Fabrication",
+    "description": "How silicon wafers, cleanroom environments, and packaging create microchips in Dholera.",
+    "entryConceptId": "con_semiconductor_fab",
+    "steps": [
+      {
+        "position": 1,
+        "conceptId": "con_semiconductor_fab",
+        "title": "What is a Semiconductor Fab?",
+        "explanation": "The industrial facility where microscopic transistors are patterned onto pure silicon wafers.",
+        "reason": "Establishes the core facility context for India’s ₹91,000 crore semiconductor investments."
+      },
+      {
+        "position": 2,
+        "conceptId": "con_cleanroom",
+        "title": "Cleanroom Physics & Contamination Control",
+        "explanation": "Why manufacturing microchips requires air 1,000 times cleaner than an operating room.",
+        "reason": "Explains the critical milestone of Tata Electronics completing its Dholera cleanroom shell."
+      },
+      {
+        "position": 3,
+        "conceptId": "con_atmp_osat",
+        "title": "Downstream Packaging & Testing (ATMP)",
+        "explanation": "How finished silicon wafers are diced into chips, housed in protective casings, and tested.",
+        "reason": "Connects foundry fabrication to final commercial deployment in consumer and automotive devices."
+      }
+    ],
+    "relatedEntityIds": ["ent_tata_electronics", "ent_tsmc", "ent_loc_dholera"],
+    "status": "published"
+  },
+  {
+    "id": "trail_ev_powertrain",
+    "title": "Electric Vehicle Powertrains & Fast-Charging Grid",
+    "description": "How battery motors and highway fast-charging networks unlock mainstream EV adoption.",
+    "entryConceptId": "con_powertrain",
+    "steps": [
+      {
+        "position": 1,
+        "conceptId": "con_powertrain",
+        "title": "The Electric Powertrain",
+        "explanation": "How motors, inverters, and controllers convert electrical energy into mechanical movement with 90%+ efficiency.",
+        "reason": "The fundamental engineering core of any electric scooter or vehicle."
+      },
+      {
+        "position": 2,
+        "conceptId": "con_fast_charging",
+        "title": "Fast-Charging Grid Infrastructure",
+        "explanation": "How high-power DC charging grids eliminate range anxiety by delivering 80% charge in minutes.",
+        "reason": "Directly explains Ather Energy’s expansion of 500 highway fast-charging points."
+      }
+    ],
+    "relatedEntityIds": ["ent_ather_energy"],
+    "status": "published"
+  },
+  {
+    "id": "trail_gcc_expansion",
+    "title": "How Global Capability Centres Elevate Indian Tech",
+    "description": "The shift from back-office IT outsourcing to high-value AI research and core engineering hubs.",
+    "entryConceptId": "con_it_services",
+    "steps": [
+      {
+        "position": 1,
+        "conceptId": "con_it_services",
+        "title": "Traditional IT Services & Outsourcing",
+        "explanation": "How India built global leadership in software exports, digital transformation, and cloud maintenance.",
+        "reason": "Historical baseline showing the foundation of Indian technical talent."
+      },
+      {
+        "position": 2,
+        "conceptId": "con_gcc",
+        "title": "The Global Capability Centre (GCC) Model",
+        "explanation": "How global companies build proprietary engineering centres in cities like Navi Mumbai and Hyderabad.",
+        "reason": "Explains Fuel Cycle and global enterprises expanding dedicated engineering hubs."
+      }
+    ],
+    "relatedEntityIds": ["ent_fuel_cycle", "ent_loc_navi_mumbai", "ent_loc_hyderabad"],
+    "status": "published"
+  },
+  {
+    "id": "trail_upi_payments",
+    "title": "The Architecture of Instant Digital Payments",
+    "description": "How interoperable public digital rails transformed consumer payments and banking.",
+    "entryConceptId": "con_upi",
+    "steps": [
+      {
+        "position": 1,
+        "conceptId": "con_upi",
+        "title": "Unified Payments Interface (UPI)",
+        "explanation": "How virtual payment addresses enable instant 24/7 bank-to-bank transfers without exposing account numbers.",
+        "reason": "Foundational digital public infrastructure underpinning India’s fintech growth."
+      },
+      {
+        "position": 2,
+        "conceptId": "con_interest_rate",
+        "title": "Credit Lines on UPI",
+        "explanation": "How pre-sanctioned credit lines on UPI integrate digital lending directly into merchant checkout.",
+        "reason": "Explains NPCI’s latest expansion to 15 commercial banks."
+      }
+    ],
+    "relatedEntityIds": ["ent_npci"],
+    "status": "published"
+  },
+  {
+    "id": "trail_supercomputing",
+    "title": "National Supercomputing Architecture",
+    "description": "From parallel compute nodes to national grid applications in healthcare and quantum-safe communications.",
+    "entryConceptId": "con_supercomputer",
+    "steps": [
+      {
+        "position": 1,
+        "conceptId": "con_supercomputer",
+        "title": "Supercomputing Architecture",
+        "explanation": "How thousands of interconnected CPU and GPU nodes execute complex numerical simulations concurrently.",
+        "reason": "Foundational high-performance compute context."
+      },
+      {
+        "position": 2,
+        "conceptId": "con_sovereign_ai",
+        "title": "National AI Infrastructure Integration",
+        "explanation": "How supercomputers like PARAM Rudra power indigenous Indic language models and cancer research (iOncology.ai).",
+        "reason": "Explains the public deployment across Pune, Delhi, and Kolkata."
+      }
+    ],
+    "relatedEntityIds": ["ent_cdac"],
+    "status": "published"
+  },
+  {
+    "id": "trail_indic_llm",
+    "title": "From Transformer Architecture to Indic AI",
+    "description": "How self-attention neural networks power multilingual reasoning models for Indian languages.",
+    "entryConceptId": "con_transformer_model",
+    "steps": [
+      {
+        "position": 1,
+        "conceptId": "con_transformer_model",
+        "title": "Self-Attention & Transformers",
+        "explanation": "How attention mechanisms weigh contextual relationships across long paragraphs of text.",
+        "reason": "The foundational neural architecture behind every modern LLM."
+      },
+      {
+        "position": 2,
+        "conceptId": "con_large_language_model",
+        "title": "Large Language Models",
+        "explanation": "How foundation models learn broad linguistic and logical reasoning patterns from text corpora.",
+        "reason": "Connects basic architecture to applied foundation models."
+      },
+      {
+        "position": 3,
+        "conceptId": "con_sovereign_ai",
+        "title": "Indic Language Optimization",
+        "explanation": "Why training models on native tokenizers (like Sarvam-1 and BharatGPT) outperforms generic English models.",
+        "reason": "Explains the practical impact for multilingual Indian applications."
+      }
+    ],
+    "relatedEntityIds": ["ent_sarvam_ai", "ent_meity"],
+    "status": "published"
+  },
+  {
+    "id": "trail_startup_ipo",
+    "title": "The Startup Capital Lifecycle: VC to IPO",
+    "description": "How high-growth technology companies scale from early-stage venture funding to public market listing.",
+    "entryConceptId": "con_venture_capital",
+    "steps": [
+      {
+        "position": 1,
+        "conceptId": "con_venture_capital",
+        "title": "Venture Capital & Growth Equity",
+        "explanation": "How startups raise institutional equity rounds (Series A/B) to fund technology R&D and market expansion.",
+        "reason": "The initial funding mechanism for emerging tech startups."
+      },
+      {
+        "position": 2,
+        "conceptId": "con_ipo",
+        "title": "Initial Public Offering (IPO)",
+        "explanation": "How mature growth companies file prospectuses with SEBI to list on public stock exchanges.",
+        "reason": "Explains major tech public listings and regulatory compliance."
+      }
+    ],
+    "relatedEntityIds": ["ent_sebi"],
+    "status": "published"
+  }
+]

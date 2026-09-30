@@ -1,0 +1,188 @@
+﻿[
+  {
+    "id": "ent_isro",
+    "canonicalName": "Indian Space Research Organisation",
+    "type": "organization",
+    "aliases": ["isro", "indian space research organisation", "indian space agency", "isro india"],
+    "shortDescription": "The national space agency of India, responsible for space-based research and launch vehicle development.",
+    "externalIds": { "officialUrl": "https://www.isro.gov.in" }
+  },
+  {
+    "id": "ent_rbi",
+    "canonicalName": "Reserve Bank of India",
+    "type": "government_body",
+    "aliases": ["rbi", "reserve bank of india", "central bank of india", "indian central bank"],
+    "shortDescription": "India's central bank and regulatory authority for banking and monetary policy.",
+    "externalIds": { "officialUrl": "https://www.rbi.org.in" }
+  },
+  {
+    "id": "ent_nvidia",
+    "canonicalName": "NVIDIA Corporation",
+    "type": "company",
+    "aliases": ["nvidia", "nvidia corp", "nvidia corporation", "jensen huang"],
+    "shortDescription": "A global technology company that designs graphics processing units (GPUs) and AI computing platforms.",
+    "externalIds": { "officialUrl": "https://www.nvidia.com" }
+  },
+  {
+    "id": "ent_openai",
+    "canonicalName": "OpenAI",
+    "type": "company",
+    "aliases": ["openai", "openai inc", "chatgpt", "sam altman"],
+    "shortDescription": "An artificial intelligence research and deployment company that develops large language models.",
+    "externalIds": { "officialUrl": "https://openai.com" }
+  },
+  {
+    "id": "ent_ather_energy",
+    "canonicalName": "Ather Energy",
+    "type": "company",
+    "aliases": ["ather", "ather energy", "ather electric", "tarun mehta"],
+    "shortDescription": "An Indian electric vehicle manufacturer known for smart electric scooters and fast-charging grid infrastructure.",
+    "externalIds": { "officialUrl": "https://www.atherenergy.com" }
+  },
+  {
+    "id": "ent_vigyanlabs",
+    "canonicalName": "Vigyanlabs Innovations",
+    "type": "company",
+    "aliases": ["vigyanlabs", "vigyanlabs innovations", "vigyanlabs india"],
+    "shortDescription": "A Mysuru-based clean-tech and sovereign computing company developing waterless-cooled AI hardware (FEMTO).",
+    "externalIds": { "officialUrl": "https://www.vigyanlabs.com" }
+  },
+  {
+    "id": "ent_npci",
+    "canonicalName": "National Payments Corporation of India",
+    "type": "organization",
+    "aliases": ["npci", "national payments corporation of india", "national payments corp"],
+    "shortDescription": "An umbrella organization for operating retail payments and settlement systems in India, including UPI.",
+    "externalIds": { "officialUrl": "https://www.npci.org.in" }
+  },
+  {
+    "id": "ent_tata_electronics",
+    "canonicalName": "Tata Electronics",
+    "type": "company",
+    "aliases": ["tata electronics", "tata semiconductor", "tata electronics private limited", "tata"],
+    "shortDescription": "A Tata Group enterprise leading semiconductor fabrication in Dholera and electronics manufacturing.",
+    "externalIds": { "officialUrl": "https://www.tata.com" }
+  },
+  {
+    "id": "ent_apple",
+    "canonicalName": "Apple Inc.",
+    "type": "company",
+    "aliases": ["apple", "apple inc", "tim cook", "cupertino"],
+    "shortDescription": "A global technology company that designs consumer electronics, software, and custom silicon processors.",
+    "externalIds": { "officialUrl": "https://www.apple.com" }
+  },
+  {
+    "id": "ent_tsmc",
+    "canonicalName": "Taiwan Semiconductor Manufacturing Company",
+    "type": "company",
+    "aliases": ["tsmc", "taiwan semiconductor", "taiwan semiconductor manufacturing company"],
+    "shortDescription": "The world’s largest dedicated semiconductor foundry, partnering with Tata Electronics for Dholera.",
+    "externalIds": { "officialUrl": "https://www.tsmc.com" }
+  },
+  {
+    "id": "ent_cdac",
+    "canonicalName": "Centre for Development of Advanced Computing",
+    "type": "institution",
+    "aliases": ["c-dac", "cdac", "centre for development of advanced computing"],
+    "shortDescription": "An autonomous R&D institution under MeitY developing sovereign supercomputing and AI architectures.",
+    "externalIds": { "officialUrl": "https://www.cdac.in" }
+  },
+  {
+    "id": "ent_fuel_cycle",
+    "canonicalName": "Fuel Cycle",
+    "type": "company",
+    "aliases": ["fuel cycle", "fuel cycle inc", "fuelcycle"],
+    "shortDescription": "A market research and intelligence platform that expanded engineering GCC hubs across India.",
+    "externalIds": { "officialUrl": "https://www.fuelcycle.com" }
+  },
+  {
+    "id": "ent_meity",
+    "canonicalName": "Ministry of Electronics and Information Technology",
+    "type": "government_body",
+    "aliases": ["meity", "ministry of electronics and information technology", "ministry of it india"],
+    "shortDescription": "An executive agency of the Union Government of India responsible for IT policy and the IndiaAI mission.",
+    "externalIds": { "officialUrl": "https://www.meity.gov.in" }
+  },
+  {
+    "id": "ent_sebi",
+    "canonicalName": "Securities and Exchange Board of India",
+    "type": "government_body",
+    "aliases": ["sebi", "securities and exchange board of india", "indian securities regulator"],
+    "shortDescription": "The regulatory body for securities and commodity markets in India.",
+    "externalIds": { "officialUrl": "https://www.sebi.gov.in" }
+  },
+  {
+    "id": "ent_brics",
+    "canonicalName": "BRICS",
+    "type": "organization",
+    "aliases": ["brics", "brics alliance", "brics group"],
+    "shortDescription": "An intergovernmental organization comprising emerging national economies including Brazil, Russia, India, China, and South Africa."
+  },
+  {
+    "id": "ent_sarvam_ai",
+    "canonicalName": "Sarvam AI",
+    "type": "company",
+    "aliases": ["sarvam", "sarvam ai", "sarvam.ai"],
+    "shortDescription": "An Indian frontier AI research startup building foundational Indic language models and speech systems.",
+    "externalIds": { "officialUrl": "https://www.sarvam.ai" }
+  },
+  {
+    "id": "ent_salesforce",
+    "canonicalName": "Salesforce",
+    "type": "company",
+    "aliases": ["salesforce", "salesforce.com", "marc benioff"],
+    "shortDescription": "A global cloud enterprise software company pioneering autonomous AI agents with Agentforce.",
+    "externalIds": { "officialUrl": "https://www.salesforce.com" }
+  },
+  {
+    "id": "ent_google",
+    "canonicalName": "Google",
+    "type": "company",
+    "aliases": ["google", "google cloud", "alphabet inc", "sundar pichai", "deepmind"],
+    "shortDescription": "A multinational technology company focusing on search, AI, cloud computing, and software.",
+    "externalIds": { "officialUrl": "https://www.google.com" }
+  },
+  {
+    "id": "ent_meta",
+    "canonicalName": "Meta Platforms",
+    "type": "company",
+    "aliases": ["meta", "meta platforms", "facebook inc", "mark zuckerberg"],
+    "shortDescription": "A multinational technology conglomerate developing open-weight Llama AI models and social platforms.",
+    "externalIds": { "officialUrl": "https://about.meta.com" }
+  },
+  {
+    "id": "ent_loc_bengaluru",
+    "canonicalName": "Bengaluru",
+    "type": "place",
+    "aliases": ["bengaluru", "bangalore", "silicon valley of india"],
+    "shortDescription": "The capital of Karnataka and India’s primary high-tech and startup hub."
+  },
+  {
+    "id": "ent_loc_hyderabad",
+    "canonicalName": "Hyderabad",
+    "type": "place",
+    "aliases": ["hyderabad", "cyberabad", "telangana capital"],
+    "shortDescription": "A major Indian IT, pharmaceutical, and technology engineering centre in Telangana."
+  },
+  {
+    "id": "ent_loc_navi_mumbai",
+    "canonicalName": "Navi Mumbai",
+    "type": "place",
+    "aliases": ["navi mumbai", "new mumbai"],
+    "shortDescription": "A planned satellite city of Mumbai, hosting enterprise data centres and Global Capability Centres."
+  },
+  {
+    "id": "ent_loc_pune",
+    "canonicalName": "Pune",
+    "type": "place",
+    "aliases": ["pune", "poona"],
+    "shortDescription": "A prominent manufacturing, automotive EV powertrain, and software engineering hub in Maharashtra."
+  },
+  {
+    "id": "ent_loc_dholera",
+    "canonicalName": "Dholera",
+    "type": "place",
+    "aliases": ["dholera", "dholera special investment region", "dholera sir"],
+    "shortDescription": "A planned smart city in Gujarat home to India’s first commercial semiconductor fab."
+  }
+]

@@ -70,7 +70,7 @@ export const StoryFeed: React.FC<StoryFeedProps> = ({
 
     let isMounted = true;
     const readStoryIds = new Set(readingStates.map((rs) => rs.articleId));
-    const targetStories = stories.filter((s) => readStoryIds.has(s.id) || (s.storyId && readStoryIds.has(s.storyId)));
+    const targetStories = stories.filter((s) => !!s.storyId || readStoryIds.has(s.id));
 
     const checkUpdates = async () => {
       const updatesMap = new Map<string, { changeCount: number; timestamp: number }>();

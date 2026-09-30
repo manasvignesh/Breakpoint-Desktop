@@ -67,12 +67,42 @@ export async function fetchArticleById(
   preferredLanguage = 'en',
   currentUserId?: string,
 ): Promise<Story | null> {
-  const docRef = doc(db, 'posts', id);
-  const docSnap = await getDoc(docRef);
-  if (!docSnap.exists()) return null;
+  if (!id) return null;
 
-  const data = docSnap.data() as PlatformArticleRecord;
-  return toDomainStory({ ...data, id: docSnap.id }, currentUserId, preferredLanguage);
+  // 1. Try fetching article directly from posts collection
+  const postDocRef = doc(db, 'posts', id);
+  const postSnap = await getDoc(postDocRef);
+  if (postSnap.exists()) {
+    const data = postSnap.data() as PlatformArticleRecord;
+    return toDomainStory({ ...data, id: postSnap.id }, currentUserId, preferredLanguage);
+  }
+
+  // 2. Fallback: Check if id is a canonical storyId in stories collection
+  try {
+    const storyDocRef = doc(db, 'stories', id);
+    const storySnap = await getDoc(storyDocRef);
+    if (storySnap.exists()) {
+      const storyData = storySnap.data() as {
+        latestArticleId?: string;
+        leadArticleId?: string;
+        articleIds?: string[];
+      };
+      const targetArticleId =
+        storyData.latestArticleId ||
+        storyData.leadArticleId ||
+        (Array.isArray(storyData.articleIds) && storyData.articleIds.length > 0
+          ? storyData.articleIds[storyData.articleIds.length - 1]
+          : null);
+
+      if (targetArticleId && targetArticleId !== id) {
+        return await fetchArticleById(targetArticleId, preferredLanguage, currentUserId);
+      }
+    }
+  } catch (err) {
+    console.warn(`[ArticleService] Story fallback lookup failed for ${id}:`, err);
+  }
+
+  return null;
 }
 
 export async function toggleArticleSaved(
