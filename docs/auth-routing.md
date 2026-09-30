@@ -10,7 +10,7 @@ flowchart TD
     B -- Not Authenticated --> C[Public Reader Mode]
     B -- Authenticated --> D[Resolve User Claims & Firestore Profile]
     D --> E{User Role?}
-    E -- Admin / Editor --> F[Enable Admin Studio Access & Switcher]
+    E -- Admin / Editor --> F[Enable Breakpoint Admin Access & Switcher]
     E -- Standard Reader --> G[Reader Experience Only]
     F --> H[Direct Navigation to /admin or /app]
     G --> I[Attempt /admin -> Redirect to /app]

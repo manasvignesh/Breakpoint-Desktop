@@ -13,13 +13,18 @@ import { AppShell } from './components/AppShell';
 import { StoryFeed } from './components/StoryFeed';
 import { StoryDetail } from './components/StoryDetail';
 import { LibraryView } from './components/LibraryView';
-import { AuthModal } from './components/AuthModal';
+import { DailyBriefView } from './components/DailyBriefView';
 import { DailyBriefViewer } from './components/DailyBriefViewer';
+import { ChatView } from './components/ChatView';
+import { SearchView } from './components/SearchView';
+import { KnowledgeView } from './components/KnowledgeView';
+import { AuthModal } from './components/AuthModal';
 import { toggleArticleSaved, fetchArticleById } from './services/articleService';
 import { briefGenerationService } from './services/briefGenerationService';
 import { briefProgressService } from './services/briefProgressService';
 import type { Story } from './types/domain';
 import type { DailyBrief, DailyBriefProgress } from './types/brief';
+import type { NotificationNavigationTarget } from './components/NotificationsPopover';
 
 // Lazy-load Breakpoint Admin workspace for optimal performance and separation
 const BreakpointAdmin = lazy(() => import('./admin/BreakpointAdmin'));
@@ -63,6 +68,7 @@ const ReaderApp: React.FC = () => {
   const [currentLanguage, setCurrentLanguage] = useState<string>('en');
   const [activeNav, setActiveNav] = useState<string>('feed');
   const [selectedStory, setSelectedStory] = useState<Story | null>(null);
+  const [activeChatConversationId, setActiveChatConversationId] = useState<string | null>(null);
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
 
   // Daily Brief States
@@ -76,9 +82,12 @@ const ReaderApp: React.FC = () => {
 
   const { stories, isLoading, error } = useArticles(currentLanguage);
 
-  // Handle deep-linked story query param: ?story=<id> or ?storyId=<id>
+  // Handle URL deep-links: ?story=<id>, ?tab=<nav>, ?chat=<convId>
   useEffect(() => {
     const storyId = searchParams.get('story') || searchParams.get('storyId');
+    const tab = searchParams.get('tab');
+    const chat = searchParams.get('chat');
+
     if (storyId) {
       const match = stories.find((s) => s.id === storyId);
       if (match) {
@@ -90,15 +99,24 @@ const ReaderApp: React.FC = () => {
           })
           .catch((err) => console.warn('[App] Deep-link story load error:', err));
       }
+    } else if (tab) {
+      setActiveNav(tab);
+      setSelectedStory(null);
+    }
+
+    if (chat) {
+      setActiveChatConversationId(chat);
+      setActiveNav('chat');
+      setSelectedStory(null);
     }
   }, [searchParams, stories, currentLanguage, firebaseUser?.uid]);
 
   // Load and subscribe to Daily Brief
-  useEffect(() => {
+  const loadDailyBrief = () => {
     if (!firebaseUser?.uid) {
       setDailyBrief(null);
       setBriefProgress(null);
-      return;
+      return () => {};
     }
 
     const userId = firebaseUser.uid;
@@ -108,7 +126,6 @@ const ReaderApp: React.FC = () => {
     let unsubBrief = () => {};
     let unsubProgress = () => {};
 
-    // Generate or fetch brief via trusted backend
     firebaseUser
       .getIdToken()
       .then((token) => briefGenerationService.getOrGenerateDailyBrief(userId, token, currentBriefId))
@@ -116,7 +133,6 @@ const ReaderApp: React.FC = () => {
         setDailyBrief(b);
         setIsBriefLoading(false);
 
-        // Subscribe to live brief updates
         unsubBrief = briefGenerationService.subscribeToDailyBrief(
           userId,
           currentBriefId,
@@ -126,7 +142,6 @@ const ReaderApp: React.FC = () => {
           (err) => console.warn('[App] Brief subscription error:', err)
         );
 
-        // Subscribe to live progress updates
         unsubProgress = briefProgressService.subscribeToProgress(
           userId,
           currentBriefId,
@@ -145,6 +160,11 @@ const ReaderApp: React.FC = () => {
       unsubBrief();
       unsubProgress();
     };
+  };
+
+  useEffect(() => {
+    const unsub = loadDailyBrief();
+    return () => unsub();
   }, [firebaseUser?.uid]);
 
   // Merge optimistic saved states into stories
@@ -178,16 +198,12 @@ const ReaderApp: React.FC = () => {
     }
 
     const nextState = !story.isSaved;
-
-    // 1. Optimistic UI update
     setOptimisticSaved((prev) => ({ ...prev, [story.id]: nextState }));
 
     try {
-      // 2. Cloud authoritative write
       await toggleArticleSaved(story.id, firebaseUser.uid, story.isSaved);
     } catch (err) {
       console.error('[App] Toggle bookmark failed, rolling back UI:', err);
-      // 3. Rollback UI if write fails
       setOptimisticSaved((prev) => ({ ...prev, [story.id]: story.isSaved }));
     }
   };
@@ -230,6 +246,33 @@ const ReaderApp: React.FC = () => {
     setIsBriefViewerOpen(true);
   };
 
+  const handleNavigateTarget = (target: NotificationNavigationTarget) => {
+    if (target.type === 'chat') {
+      setActiveNav('chat');
+      setSelectedStory(null);
+      if (target.id) {
+        setActiveChatConversationId(target.id);
+      }
+      return;
+    }
+
+    if (target.type === 'knowledge') {
+      setActiveNav('knowledge');
+      setSelectedStory(null);
+      return;
+    }
+
+    if (target.type === 'brief') {
+      setActiveNav('brief');
+      setSelectedStory(null);
+      return;
+    }
+
+    if (target.type === 'article' && target.id) {
+      handleSelectStoryById(target.id);
+    }
+  };
+
   return (
     <AppShell
       activeNav={activeNav}
@@ -243,17 +286,33 @@ const ReaderApp: React.FC = () => {
       }}
       onOpenAuth={() => setIsAuthModalOpen(true)}
       onSelectStoryId={handleSelectStoryById}
+      onNavigateTarget={handleNavigateTarget}
       onSwitchToAdmin={() => navigate('/admin')}
     >
       {selectedStory ? (
         <StoryDetail
           story={
-            // Update selected story reference if language or saved state changed
             enrichedStories.find((s) => s.id === selectedStory.id) || selectedStory
           }
           onBack={handleBackToFeed}
           onToggleBookmark={handleToggleBookmark}
           onLanguageChange={setCurrentLanguage}
+        />
+      ) : activeNav === 'brief' ? (
+        <DailyBriefView
+          brief={dailyBrief}
+          progress={briefProgress}
+          isLoading={isBriefLoading}
+          onOpenViewer={handleOpenBrief}
+          onGenerateRetry={loadDailyBrief}
+          onOpenArticle={handleSelectStoryById}
+        />
+      ) : activeNav === 'search' ? (
+        <SearchView
+          stories={enrichedStories}
+          userId={firebaseUser?.uid}
+          onSelectStory={handleSelectStory}
+          onToggleBookmark={handleToggleBookmark}
         />
       ) : activeNav === 'saved' ? (
         <LibraryView
@@ -262,11 +321,22 @@ const ReaderApp: React.FC = () => {
           onSelectStory={handleSelectStory}
           onToggleBookmark={handleToggleBookmark}
         />
+      ) : activeNav === 'chat' ? (
+        <ChatView
+          initialConversationId={activeChatConversationId}
+          onOpenArticle={handleSelectStoryById}
+        />
+      ) : activeNav === 'knowledge' ? (
+        <KnowledgeView
+          userId={firebaseUser?.uid}
+          onSelectStoryId={handleSelectStoryById}
+        />
       ) : (
         <StoryFeed
           stories={displayedStories}
           isLoading={isLoading}
           error={error}
+          userId={firebaseUser?.uid}
           onSelectStory={handleSelectStory}
           onToggleBookmark={handleToggleBookmark}
           brief={dailyBrief}
@@ -276,7 +346,7 @@ const ReaderApp: React.FC = () => {
         />
       )}
 
-      {/* Daily Brief Viewer Modal */}
+      {/* Daily Brief Modal Carousel Viewer */}
       {isBriefViewerOpen && dailyBrief && (
         <DailyBriefViewer
           brief={dailyBrief}
@@ -335,4 +405,3 @@ export const App: React.FC = () => {
 };
 
 export default App;
-

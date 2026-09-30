@@ -114,6 +114,7 @@ export const MedhaContextPanel: React.FC<MedhaContextPanelProps> = ({
     try {
       const response = await queryMedha({
         idToken: token,
+        getToken: getIdToken,
         question: queryText,
         companion: selectedCompanion,
         context: {

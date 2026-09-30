@@ -1,18 +1,26 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Bell, Check, Sparkles, MessageSquare, Flame } from 'lucide-react';
+import { Bell, Check, Sparkles, MessageSquare, Flame, Compass } from 'lucide-react';
 import {
   subscribeToUserNotifications,
   markNotificationAsRead,
+  markAllNotificationsAsRead,
 } from '../services/notificationService';
 import { useAuth } from '../contexts/AuthContext';
 import type { Notification } from '../types/domain';
 
+export interface NotificationNavigationTarget {
+  type: 'article' | 'chat' | 'knowledge' | 'brief';
+  id?: string;
+}
+
 interface NotificationsPopoverProps {
   onSelectStoryId?: (storyId: string) => void;
+  onNavigateTarget?: (target: NotificationNavigationTarget) => void;
 }
 
 export const NotificationsPopover: React.FC<NotificationsPopoverProps> = ({
   onSelectStoryId,
+  onNavigateTarget,
 }) => {
   const { firebaseUser } = useAuth();
   const [isOpen, setIsOpen] = useState(false);
@@ -52,15 +60,48 @@ export const NotificationsPopover: React.FC<NotificationsPopoverProps> = ({
     if (!notif.isRead) {
       await markNotificationAsRead(notif.id).catch(console.warn);
     }
-    if (notif.contentId && onSelectStoryId) {
-      onSelectStoryId(notif.contentId);
-      setIsOpen(false);
+    setIsOpen(false);
+
+    const type = (notif.contentType || notif.type || '').toLowerCase();
+    const targetId = notif.contentId || notif.conversationId || undefined;
+
+    if (type === 'chat' || type === 'conversation') {
+      if (onNavigateTarget) {
+        onNavigateTarget({ type: 'chat', id: targetId });
+      }
+      return;
+    }
+
+    if (type === 'trail' || type === 'knowledge' || type === 'concept') {
+      if (onNavigateTarget) {
+        onNavigateTarget({ type: 'knowledge', id: targetId });
+      }
+      return;
+    }
+
+    if (type === 'brief') {
+      if (onNavigateTarget) {
+        onNavigateTarget({ type: 'brief' });
+      }
+      return;
+    }
+
+    // Default: Article / Story Content
+    if (targetId) {
+      if (onNavigateTarget) {
+        onNavigateTarget({ type: 'article', id: targetId });
+      } else if (onSelectStoryId) {
+        onSelectStoryId(targetId);
+      }
     }
   };
 
   const handleMarkAllRead = async () => {
-    const unread = notifications.filter((n) => !n.isRead);
-    await Promise.allSettled(unread.map((n) => markNotificationAsRead(n.id)));
+    try {
+      await markAllNotificationsAsRead(notifications);
+    } catch (err) {
+      console.warn('[Notifications] Mark all read error:', err);
+    }
   };
 
   const formatTime = (date: Date) => {
@@ -117,15 +158,18 @@ export const NotificationsPopover: React.FC<NotificationsPopoverProps> = ({
           <div className="max-h-96 overflow-y-auto divide-y divide-[#232734]/50">
             {notifications.length === 0 ? (
               <div className="p-8 text-center text-xs text-[#8B949E]">
-                No notifications yet.
+                You are all caught up! No notifications.
               </div>
             ) : (
               notifications.map((notif) => {
+                const type = (notif.contentType || notif.type || '').toLowerCase();
                 const icon =
-                  notif.type === 'creator_content' || notif.type === 'article' ? (
-                    <Sparkles className="w-3.5 h-3.5 text-[#FF5A1F]" />
-                  ) : notif.type === 'chat' ? (
+                  type === 'chat' || type === 'conversation' ? (
                     <MessageSquare className="w-3.5 h-3.5 text-cyan-400" />
+                  ) : type === 'trail' || type === 'knowledge' ? (
+                    <Compass className="w-3.5 h-3.5 text-emerald-400" />
+                  ) : type === 'creator_content' || type === 'article' ? (
+                    <Sparkles className="w-3.5 h-3.5 text-[#FF5A1F]" />
                   ) : (
                     <Flame className="w-3.5 h-3.5 text-amber-400" />
                   );
@@ -142,18 +186,23 @@ export const NotificationsPopover: React.FC<NotificationsPopoverProps> = ({
                       {icon}
                     </div>
 
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center justify-between gap-1 mb-0.5">
+                    <div className="flex-1 min-w-0 space-y-0.5">
+                      <div className="flex items-baseline justify-between gap-2">
                         <h5 className="text-xs font-bold text-[#F0F3F6] truncate">
-                          {notif.title}
+                          {notif.actorName || notif.title}
                         </h5>
                         <span className="text-[10px] text-[#8B949E] shrink-0">
                           {formatTime(notif.createdAt)}
                         </span>
                       </div>
-                      <p className="text-xs text-[#8B949E] line-clamp-2 leading-relaxed">
+                      <p className="text-xs text-[#C9D1D9] line-clamp-2 leading-relaxed">
                         {notif.body}
                       </p>
+                      {notif.actorName && notif.title !== notif.actorName && (
+                        <p className="text-[10px] text-[#8B949E] truncate">
+                          {notif.title}
+                        </p>
+                      )}
                     </div>
 
                     {!notif.isRead && (
@@ -169,3 +218,4 @@ export const NotificationsPopover: React.FC<NotificationsPopoverProps> = ({
     </div>
   );
 };
+

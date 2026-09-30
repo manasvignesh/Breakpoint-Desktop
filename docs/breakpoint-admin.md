@@ -34,6 +34,6 @@ Breakpoint Admin is the editorial, publishing, generative AI pipeline, media man
 12. **Settings (`/admin/settings`)**: Environment diagnostics, Firestore contract checks, and backend health indicators.
 
 ## 4. Cross-Workspace Navigation
-- **Reader to Admin**: Authenticated Admins and Editors see an "Admin Studio" badge in the Reader sidebar and top navigation header. Clicking it navigates to `/admin`.
+- **Reader to Admin**: Authenticated Admins and Editors see a "Breakpoint Admin" badge in the Reader sidebar and top navigation header. Clicking it navigates to `/admin`.
 - **Admin to Reader**: The top navigation bar in Breakpoint Admin features a "View Breakpoint Reader" toggle button.
 - **Article Deep-Linking**: From the Articles list or Article Editor, clicking "Open in Breakpoint" or "Reader View" immediately transitions to the Reader viewport at `/app?story={storyId}`.

@@ -20,15 +20,21 @@ function parseDate(value: unknown): Date {
 }
 
 export function toDomainNotification(
-  record: PlatformNotificationRecord & { actorName?: string; actorAvatar?: string },
+  record: PlatformNotificationRecord,
 ): Notification {
   return {
     id: record.id,
     userId: record.userId,
     title: record.title || 'Notification',
     body: record.body || '',
-    type: record.type || 'system',
-    contentId: record.contentId || null,
+    type: (record.type || record.contentType || 'system').toLowerCase(),
+    contentType: record.contentType,
+    contentId: record.contentId || record.conversationId || null,
+    conversationId: record.conversationId,
+    senderId: record.senderId || record.actorId,
+    actorId: record.actorId,
+    actorName: record.actorName,
+    actorAvatar: record.actorAvatar,
     isRead: Boolean(record.isRead),
     createdAt: parseDate(record.createdAt),
   };

@@ -56,9 +56,29 @@ export function subscribeToUserNotifications(
 }
 
 /**
- * Marks a notification as read in Firestore.
+ * Marks a single notification as read in Firestore.
  */
 export async function markNotificationAsRead(notificationId: string): Promise<void> {
+  if (!notificationId) return;
   const notifRef = doc(db, 'notifications', notificationId);
   await updateDoc(notifRef, { isRead: true });
 }
+
+/**
+ * Marks all unread notifications as read using a single batched write.
+ */
+export async function markAllNotificationsAsRead(notifications: Notification[]): Promise<void> {
+  const unread = notifications.filter((n) => !n.isRead);
+  if (unread.length === 0) return;
+
+  const { writeBatch } = await import('firebase/firestore');
+  const batch = writeBatch(db);
+
+  for (const notif of unread) {
+    const notifRef = doc(db, 'notifications', notif.id);
+    batch.update(notifRef, { isRead: true });
+  }
+
+  await batch.commit();
+}
+

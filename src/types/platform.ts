@@ -185,6 +185,11 @@ export interface PlatformNotificationRecord {
   type?: string;
   contentType?: string;
   contentId?: string;
+  conversationId?: string;
+  senderId?: string;
+  actorId?: string;
+  actorName?: string;
+  actorAvatar?: string;
   isRead?: boolean;
   pushStatus?: string;
   createdAt?: unknown;

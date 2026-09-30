@@ -203,7 +203,13 @@ export interface Notification {
   title: string;
   body: string;
   type: string;
+  contentType?: string;
   contentId: string | null;
+  conversationId?: string;
+  senderId?: string;
+  actorId?: string;
+  actorName?: string;
+  actorAvatar?: string;
   isRead: boolean;
   createdAt: Date;
 }

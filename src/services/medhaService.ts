@@ -55,6 +55,7 @@ function generateRequestId(): string {
 
 export async function queryMedha({
   idToken,
+  getToken,
   question,
   companion,
   context,
@@ -62,6 +63,7 @@ export async function queryMedha({
   history = [],
 }: {
   idToken: string;
+  getToken?: (forceRefresh?: boolean) => Promise<string | null>;
   question: string;
   companion: MedhaCompanion;
   context: MedhaContext;
@@ -69,7 +71,7 @@ export async function queryMedha({
   history?: MedhaTurn[];
 }): Promise<MedhaResponse> {
   if (!idToken) {
-    throw new Error('You must be signed in to consult MEDHA.');
+    throw new Error('Please sign in to ask MEDHA.');
   }
 
   const endpoint = `${TRUSTED_BACKEND_BASE_URL.replace(/\/+$/, '')}/medha-chat`;
@@ -90,25 +92,46 @@ export async function queryMedha({
     question: question.trim(),
     companion,
     context: {
-      articleId: context.articleId,
-      articleTitle: context.articleTitle,
-      articleSummary: context.articleSummary,
-      category: context.category,
+      articleId: context.articleId || 'general',
+      articleTitle: context.articleTitle || 'General Engineering Inquiry',
+      articleSummary: context.articleSummary || context.articleTitle || 'Engineering Discussion',
+      category: context.category || 'Technology',
       keyNumbers: context.keyNumbers || [],
       selectedText: context.selectedText || '',
     },
-    chunks: effectiveChunks,
+    chunks: effectiveChunks.length ? effectiveChunks : [{ text: question, source: 'currentStory' as const }],
     history: history.slice(-6).map((h) => ({ role: h.role, content: h.content })),
   };
 
-  const response = await fetch(endpoint, {
-    method: 'POST',
-    headers: {
-      Authorization: `Bearer ${idToken}`,
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(payload),
-  });
+  async function sendRequest(token: string): Promise<Response> {
+    return fetch(endpoint, {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${token}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(payload),
+    });
+  }
+
+  let currentToken = idToken;
+  let response: Response;
+
+  try {
+    response = await sendRequest(currentToken);
+    
+    // Auto-refresh token on 401 and retry once
+    if (response.status === 401 && getToken) {
+      const refreshed = await getToken(true);
+      if (refreshed) {
+        currentToken = refreshed;
+        response = await sendRequest(currentToken);
+      }
+    }
+  } catch (netErr: any) {
+    console.warn('[medhaService] Network error reaching MEDHA:', netErr);
+    throw new Error("Couldn't reach MEDHA. Please check your connection and retry.");
+  }
 
   if (!response.ok) {
     const errorBody = await response.json().catch(() => ({}));
@@ -117,6 +140,9 @@ export async function queryMedha({
     }
     if (response.status === 429) {
       throw new Error('Too many requests to MEDHA. Please wait a moment.');
+    }
+    if (response.status >= 500) {
+      throw new Error('MEDHA is temporarily unavailable. Please retry in a moment.');
     }
     throw new Error(
       errorBody.message || `MEDHA assistant service returned HTTP ${response.status}`,
@@ -138,3 +164,4 @@ export async function queryMedha({
     sections,
   };
 }
+

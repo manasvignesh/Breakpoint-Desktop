@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect, useCallback } from 'react';
-import { Play, Pause, Volume2, RotateCcw, FastForward } from 'lucide-react';
+import { Play, Pause, Volume2, RotateCcw, FastForward, Loader2, AlertCircle } from 'lucide-react';
 import type { AudioTrack } from '../types/domain';
 
 interface AudioPlayerProps {
@@ -62,11 +62,31 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
     };
   }, [performCheckpoint]);
 
+  const status = audioTrack.status || (audioTrack.isAvailable && audioTrack.audioUrl ? 'ready' : 'unavailable');
+
+  if (status === 'processing' || status === 'pending') {
+    return (
+      <div className="flex items-center gap-3 px-4 py-3 bg-[#12141A] border border-[#232734] rounded-xl text-[#8B949E] text-xs">
+        <Loader2 className="w-4 h-4 text-[#FF5A1F] animate-spin" />
+        <span>Audio narration in <strong>{audioTrack.language.toUpperCase()}</strong> is generating high-fidelity synthesis...</span>
+      </div>
+    );
+  }
+
+  if (status === 'failed') {
+    return (
+      <div className="flex items-center gap-3 px-4 py-3 bg-[#12141A] border border-red-500/20 rounded-xl text-red-400 text-xs">
+        <AlertCircle className="w-4 h-4" />
+        <span>Audio narration generation failed for {audioTrack.language.toUpperCase()}. Reading mode available.</span>
+      </div>
+    );
+  }
+
   if (!audioTrack.isAvailable || !audioTrack.audioUrl) {
     return (
       <div className="flex items-center gap-3 px-4 py-3 bg-[#12141A] border border-[#232734] rounded-xl text-[#8B949E] text-xs">
         <Volume2 className="w-4 h-4 opacity-50" />
-        <span>Audio narration in {audioTrack.language.toUpperCase()} is currently generating or unavailable.</span>
+        <span>Audio narration in {audioTrack.language.toUpperCase()} is not yet available.</span>
       </div>
     );
   }
